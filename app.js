@@ -249,7 +249,7 @@ var app_index = {
 		let data = tools.load_template({
 			'name': name,
 			'vocal': vocal,
-			'img': img
+			'img': tools.get_img_link(img),
 		},app_data.template_album_card);
 		$('#index-alums-list').append(data);
 	}
@@ -279,7 +279,7 @@ var app_vocal = {
 	init: function(vocal){
 		let figure = data.get_figure(vocal);
 		if(figure == null) return;
-		$('#vocal-img').css('background', 'url(' + app_config.figure_img_path+ figure['img'] + ')');
+		$('#vocal-img').css('background', 'url(' + tools.get_figure_img_link(figure['img']) + ')');
 		$('#vocal-name').text(figure['name']);
 		$('#vocal-name-jp').text(figure['jpname']);
 		model_song_list.load_song_list($('#vocal-song-list'), data.get_song_from_vocal(vocal));
@@ -340,11 +340,11 @@ var app_all_figures = {
 		group = $('#figures-list-'+figure.group);
 		group.append(app_all_figures.load_template_figure_card(figure.name, figure.img, figure.jpname));
 	},
-	load_template_figure_card: function(name, pic, jpname){
+	load_template_figure_card: function(name, img, jpname){
 		let data = tools.load_template({
 			'name': name,
 			'jpname': jpname,
-			'pic': pic,
+			'img': tools.get_img_link(),
 		},app_data.template_figure_card_ext);
 		return data;
 	},
@@ -386,14 +386,14 @@ var model_music_card = {
 		}
 		return res;
 	},
-	load_template_music_card: function(song_id, name, vocal, img_id){
+	load_template_music_card: function(song_id, name, vocal, img){
 		let vocal_name = tools.get_vocal_name(vocal);
 		let data = tools.load_template({
 			'song_id': song_id,
 			'name': name,
 			'vocal': vocal_name,
 			'vocals_link': tools.load_template_vocal(vocal),
-			'img_id': img_id || vocal[0]+'.jpg',
+			'img': tools.get_img_link(img || vocal[0]+'.jpg'),
 			'song_path': app_config.song_path,
 		},app_data.template_music_card);
 		return data;
@@ -412,10 +412,10 @@ var model_figure_card = {
 		}
 		return res;
 	},
-	load_template_figure_card: function(name, pic){
+	load_template_figure_card: function(name, img){
 		let data = tools.load_template({
 			'name': name,
-			'pic': pic,
+			'img': tools.get_figure_img_link(img),
 		},app_data.template_figure_card);
 		return data;
 	},
@@ -443,6 +443,9 @@ var tools = {
 	},
 	get_img_link: function(img){
 		return app_config.img_path + img;
+	},
+	get_figure_img_link: function(img){
+		return app_config.figure_img_path + img;
 	},
 	get_time: function(time){
 		let min=parseInt(time/60);
