@@ -481,10 +481,10 @@ var app_config = {
 	//data
 	cookies_save_day: 365,
 	template_path: './source/template/',
-	lyric_path: './source/lyric/',
-	song_path: './source/song/',
-	img_path: './source/img/',
-	figure_img_path: './source/img/figure/'
+	lyric_path: 'https://gitee.com/santiego/vtb-music-source-lyric/raw/master/lyric/',
+	song_path: 'https://gitee.com/santiego/vtb-music-source-song/raw/master/song/',
+	img_path: 'https://gitee.com/santiego/vtb-music-source-img/raw/master/img/',
+	figure_img_path: 'https://gitee.com/santiego/vtb-music-source-img/raw/master/img/figure/'
 }
 
 $(document).ready(function(){
