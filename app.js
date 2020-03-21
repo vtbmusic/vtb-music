@@ -344,7 +344,7 @@ var app_all_figures = {
 		let data = tools.load_template({
 			'name': name,
 			'jpname': jpname,
-			'img': tools.get_img_link(),
+			'img': tools.get_img_link(img),
 		},app_data.template_figure_card_ext);
 		return data;
 	},
