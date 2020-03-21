@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-cn">
+	<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="main.css">
+	
+    <title>Vtb-Muisc</title>
+	</head>
+	<body>
+		<audio id="player">
+  			<source type="audio/mpeg">
+			抱歉，请升级您的浏览器
+		</audio>
+		<div id="nav" class="nav-player">
+			<div style="width: 30%; height: 100%; display: inline-block;text-align: center;">
+				<div class="nav-btns">
+					<a class="nav-btn nav-btn-play-random" id="btn-nav-random"></a>
+					<a class="nav-btn nav-btn-pre" id="btn-nav-pre"></a>
+					<a class="nav-btn nav-btn-play" id="btn-nav-play"></a>
+					<a class="nav-btn nav-btn-nxt" id="btn-nav-nxt"></a>
+					<a class="nav-btn nav-btn-play-repeat" id="btn-nav-repeat"></a>
+					
+				</div>
+			</div>
+			<div style="width: 40%; height: 100%; display: inline-block; text-align: center">
+				<div class="nav-music-card">
+					<div class="nav-music-head">
+						<div class="nav-music-card-img" id="nav-music-card-img"></div>
+					</div>
+					<div class="nav-music-card-body" id="nav-music-card-body">
+						<div class="nav-text">
+							<div class="nav-music-card-title" id="nav-music-card-title">Vtb-Music</div>
+							<div class="nav-music-card-subtitle" id="nav-music-card-subtitle">...</div>
+						</div>
+						<div class="nav-play-bar-bg" id="nav-play-bar-bg"></div>
+						<div class="nav-play-bar" id="bar-nav-play"></div>
+						<span class="nav-play-time" id="nav-play-time">...</span>
+					</div>
+				</div>
+			</div>
+			<div style="height: 100%;display: inline-block;text-align: right;float: right; margin-right: 1rem">
+				<div class="nav-btns">
+					<a class="nav-btn nav-btn-list btn-scale" id="btn-nav-list"></a>
+				</div>
+			</div>
+			<div>
+			</div>
+		</div>
+		<div class="playlist" id="playlist" data-ui-on="false">
+			<div class="playlist-title">
+				<span>播放列表</span>
+				<span class="playlist-clear" id="btn-playlist-clear">清空</span>
+			</div>
+			<div class="playlist-list" id="playlist-list">
+			</div>
+		</div>
+		<div id="app-index" style="display: none;">
+			<div class="block" id="app-gallery" style="margin-top: 5rem;">
+				<div>
+					<div class="headline">浏览</div>
+					<div class="left-link" id="index-btn-show-all-songs">所有歌曲</div>
+				</div>
+				<div class="hr"></div>
+				<div class="music-cards-list" id="index-music-cards-list">
+				</div>
+			</div>
+			<div class="block" id="app-figures">
+				<div>
+					<div class="headline">人物</div>
+					<div class="left-link" id="index-btn-show-all-figures">所有人物</div>
+				</div>
+				<div class="hr"></div>
+				<div class="figures-list" id="index-figures-list">
+				</div>
+			</div>
+			<div class="block" id="app-alums">
+				<div class="headline">歌单</div>
+				<div class="hr"></div>
+				<div class="album-cards-list" id="index-alums-list">
+					
+				</div>
+			</div>
+		</div>
+		<div id="app-bigplayer" class="app-bigplayer" style="display: none;">
+			<div class="btn-close bigplayer-btn-close" id="bigplayer-btn-close"></div>
+			<div class="bigplayer-bg" style="background: url(./source/img/%E5%A4%8F%E8%89%B2%E7%A5%AD.jpg)">
+			</div>
+			<div class="bigplayer-lyric">
+				<p>
+				</p>
+			</div>
+		</div>
+		<div id="app-vocal" style="display: none;">
+			<div class="vocal-body block">
+				<div class="song-list-btn-back" btn-role="back">
+					 <div class="btn-back"></div>
+				</div>
+				<div>
+					<div class="vocal-img" style="background: url(./source/img/figure/夏色祭.png)" id="vocal-img"></div>
+					<div class="vocal-info">
+						<div class="vocal-info-text">
+							<div class="vocal-name" id="vocal-name">夏色祭</div>
+							<div class="vocal-name-jp" id="vocal-name-jp">夏色 まつり</div>
+							<div class="vocal-btn" id="vocal-btn-playlist-add-all" onclick="ui.song_list_add_all_songs('#app-vocal')">全部添加到列表</div>
+							<div class="vocal-btn" id="vocal-btn-play-all" onclick="ui.song_list_play_all_songs('#app-vocal')">播放全部</div>
+						</div>
+						<div class="song-list" id="vocal-song-list">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="app-album" style="display: none;">
+			<div class="vocal-body block">
+				<div class="song-list-btn-back" btn-role="back">
+					 <div class="btn-back"></div>
+				</div>
+				<div>
+					<div class="vocal-img" style="background: url(./source/img/figure/夏色祭.png)" id="album-img"></div>
+					<div class="vocal-info">
+						<div class="vocal-info-text">
+							<div class="vocal-name" id="album-name">夏色祭</div>
+							<div class="vocal-name-jp" id="album-name-jp">夏色 まつり</div>
+							<div class="vocal-btn" id="album-btn-playlist-add-all" onclick="ui.song_list_add_all_songs('#app-vocal')">全部添加到列表</div>
+							<div class="vocal-btn" id="album-btn-play-all" onclick="ui.song_list_play_all_songs('#app-vocal')">播放全部</div>
+						</div>
+						<div class="song-list" id="album-song-list">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="app-all-songs" style="display: none">
+			<div class="all-songs-body block">
+				<div style="padding-bottom: 2rem;">
+					<div>
+						<div class="all-song-list-btn-back" btn-role="back">
+							<div class="btn-back"></div>
+						</div>
+						<div class="all-song-list-title">所有歌曲</div>
+					</div>
+					<div>
+						<div class="vocal-btn" id="album-btn-playlist-add-all" onclick="ui.song_list_add_all_songs('#all-songs-music-cards-list')">全部添加到列表</div>
+						<div class="vocal-btn" id="album-btn-play-all" onclick="ui.song_list_play_all_songs('#all-songs-music-cards-list')">播放全部</div>
+					</div>
+				</div>
+				<div class="song-list" id="all-songs-music-cards-list">
+					
+				</div>
+			</div>
+		</div>
+		<div id="app-all-figures" style="display: none">
+			<div class="all-songs-body block">
+				<div style="margin-bottom: 1rem;">
+					<div class="all-song-list-btn-back" btn-role="back">
+						<div class="btn-back"></div>
+					</div>
+					<div class="all-song-list-title">所有人物</div>
+				</div>
+				<div id="all-figures-body">
+				</div>
+			</div>
+		</div>
+		<footer id="footer" class="footer">
+			<div>
+				<div>
+				</div>
+			</div>
+			<div class="footer-block">
+				<div style="padding-top: 1rem;">Vtb-Music</div>
+				<div style="font-size: 0.5rem;">目前收录<span id="footer-song-cnt"></span>首歌曲，<span id="footer-figure-cnt"></span>个vtuber</div>
+				<hr>
+				<div class="footer-text-block">
+					<span>项目部署于<a href="#">Gitee</a> 欢迎参与开发 </span>
+					<span style="float: right">
+						<a href="">上传歌曲</a>
+						<span class="divider"></span>
+						<a href="">关于本站</a>
+					</span>
+				</div>
+			</div>
+		</footer>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script src="data.js"></script>	
+	<script src="app.js"></script>
+	<script src="ui.js"></script>
+	
+	<!-- Data -->
+	<script src="./source/data/songs.js"></script>
+	<script src="./source/data/figures.js"></script>
+	<script src="./source/data/albums.js"></script>
+		
+	<!-- Plug -->
+	<script src="./plug/js-cookie.js"></script>
+	
+	</body>
+</html>

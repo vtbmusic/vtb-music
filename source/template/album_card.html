@@ -1,0 +1,14 @@
+<div class="album-card">
+	<div class="album-card-title">{{name}}</div>
+	<div class="album-card-subtitle">{{vocal}}</div>
+	<div class="album-card-body">
+		<div class="album-card-img" style="background: url(./source/img/{{img}});"></div>
+		<span class="cover" onclick="app.switch_app(app_album,'{{name}}')"></span>
+		<div class="btn-sm btn-sm-more">
+			<div class="dropdown-content">
+				<a href="javascript:void(0);" onclick="player.add_album_to_list('{{name}}')">添加到列表</a>
+				<a href="#">查看</a>
+			</div>
+		</div>
+	</div>
+</div>

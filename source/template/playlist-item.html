@@ -1,0 +1,6 @@
+<div class="playlist-song">
+	<div class="nav-btn-play btn-playlist" data-btn-play="{{song_id}}" onclick="ui.btn_playlist_play_pause({{song_id}})"></div>
+	<div class="playlist-song-name" onclick="ui.btn_playlist_play_pause({{song_id}})">{{name}}</div>
+	{{vocals_link}}
+	<div class="playlist-btn-remove" onclick="player.delete_song_from_list({{song_id}})">删除</div>
+</div>
