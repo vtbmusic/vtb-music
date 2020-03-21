@@ -3,6 +3,6 @@
 	<div class="playlist-song-name" onclick="ui.btn_playlist_play_pause({{song_id}})">{{name}}</div>
 	{{vocals_link}}
 	<div class="playlist-song-time">{{date}}</div>
-	<a class="playlist-btn-primary" href="{{song_path}}{{song_id}}.mp3" download>下载</a>
+	<a class="playlist-btn-primary" href="{{song_path}}{{song_id}}.mp3" download="{{name}}">下载</a>
 	<div class="playlist-btn-primary" onclick="player.add_song_to_list({{song_id}})">添加到列表</div>
 </div>
