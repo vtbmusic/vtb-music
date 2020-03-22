@@ -682,6 +682,9 @@ span{
 .bigplayer-lyric::-webkit-scrollbar{
 	color: transparent;
 }
+*{
+	-webkit-overflow-scrolling: touch;
+}
 /*div ::-webkit-scrollbar{
 	color: transparent;
 }*/
