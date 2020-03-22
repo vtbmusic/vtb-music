@@ -18,7 +18,6 @@
 	background-size: cover!important;
 }
 .nav-btn:hover{
-	transform: scale(1.1,1.1);
 	transition: all 0.3s ease-out;
 }
 .nav-btn-pause{
@@ -52,11 +51,15 @@
 	background: url(./source/icon/icon-play-random-on.png)
 }
 .nav-music-card{
-	display: inline-block;
+	display: block;
+    position: fixed;
+    width: 100%;
+    top: 90%;
+    height: 10%;
+    z-index: 3;
 }
 .nav-btns{
 	display: inline-block;
-	margin-left: 1rem;
 }
 .nav-btn-list{
 	background: url(./source/icon/icon-list-nav.png);
@@ -82,9 +85,8 @@
 .nav-music-card-body{
 	display: inline-block;
 	vertical-align: top;
-	margin-left: -0.5rem;
-	width: 15rem;
-	height: 2.4rem;
+	width: 100%;
+	height: 100%;
 	background: white;
 	border-radius: 0.35rem;
 	border-bottom-left-radius: 0rem;
@@ -94,8 +96,11 @@
 	text-align: center;
 	position: relative;
 }
+.nav-text{
+	margin-top: 0.5rem;
+}
 .nav-music-card-title{
-	font-size: 0.2rem;
+	font-size: 0.8rem;
 	cursor: default;
 }
 .nav-music-card-subtitle a{
@@ -149,7 +154,7 @@
 .playlist{
 	position: fixed;
 	height: 92%;
-	width: 25%;
+	width: 95%;
 	top: 8%;
 	left: 100%;
 	overflow-y: auto;
@@ -176,9 +181,6 @@
 .playlist-song:hover{
 	transform: scale(1.025,1.025);
 	transition: all 0.1s ease-out;
-}
-.playlist-song:hover .playlist-btn-remove{
-	display: inline-block;
 }
 .playlist-song-name{
 	display: inline-block;
@@ -215,7 +217,7 @@
 	transition: all 0.3s ease-out;
 }
 .playlist-btn-remove{
-	display: none;
+	display: inline-block;
 	float: right;
 	font-size: 0.5rem;
 	color: gray;
@@ -279,7 +281,7 @@
 	height: 1.2rem;
 	position: absolute;
 	top: 11%;
-	left: 88%;
+	left: 82%;
 }
 .bigplayer-btn-close:hover{
 	transform: scale(1.2,1.2);
@@ -331,13 +333,14 @@
 }
 
 #app-index{
-	padding-left: 6rem;
-	padding-right: 6rem;
+	
 }
 
 .music-cards-list{
-	overflow: hidden;
-	height: 29rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	height: 16rem;
 }
 .music-card{
 	margin: 10px;
@@ -463,7 +466,7 @@
 }
 .vocal-body{
 	height: 100%;
-	padding: 6rem;
+	padding-top: 4rem;
 }
 .vocal-img{
 	display: inline-block;
@@ -497,7 +500,7 @@
 .playlist-song-time{
 	float: right;
 	vertical-align: top;
-	display: inline-block;
+	display: none;
 	font-size: 0.8rem;
 	color: gray;
 	cursor: default;
@@ -512,9 +515,6 @@
 }
 .playlist-btn-primary:hover{
 	color: rgb(15,127,254);
-}
-.playlist-song:hover .playlist-btn-primary{
-	display: inline-block!important;
 }
 .song-list-btn-back{
 	box-shadow: 0rem 0.2rem 0.3rem 0rem rgba(0,0,0,0.2);
@@ -547,8 +547,6 @@
 .all-songs-body{
 	height: 100%;
 	padding-top: 4rem;
-	padding-left: 6rem;
-	padding-right: 6rem;
 }
 .all-songs-list{
 	overflow: auto;
@@ -564,8 +562,6 @@
 	cursor: default;
 }
 #all-songs-music-cards-list{
-	padding-left: 6rem;
-	padding-right: 6rem;
 }
 .all-song-list-btn-back{
 	display: inline-block;
