@@ -7,10 +7,13 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="main.css">
-	<script type=”text/javascript”>
-      if('ontouchstart' in window){
-	  	window.location.href = './index-mobile.html';
-	  }
+	<script type="text/javascript">
+		function jump_to_mobile(){
+			if('ontouchstart' in window){
+	  			window.location.href = './index-mobile.html';
+	  		}
+		}
+		jump_to_mobile();
 	</script>
     <title>Vtb-Muisc</title>
 	</head>
