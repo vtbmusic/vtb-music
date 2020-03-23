@@ -1,4 +1,11 @@
 var data_data_songs = [
+    {
+		name: "NEXT COLOR PLANET",
+		vocal: ["星街彗星"],
+		id: 1020,
+		img: "1020.jpg",
+		date: "2020-03-23"
+	},
 	{
 		name: "カブトムシ(独角仙)",
 		vocal: ["夏色祭", "律可"],
