@@ -139,6 +139,13 @@ var data_data_songs = [
 		date: "2019-12-22"
 	},
 	{
+		name: "心做し",
+		vocal: ["夏色祭"],
+		id: 1023,
+		img: "1023.jpg",
+		date: "2019-12-14"
+	},
+	{
 		name: "夏祭り",
 		vocal: ["夏色祭", "赤井心"],
 		id: 1008,
