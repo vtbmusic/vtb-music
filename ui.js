@@ -54,6 +54,9 @@ var ui = {
 		$('#index-btn-show-all-figures').click(function(){
 			app.switch_app(app_all_figures);
 		})
+		$('#nav-music-card-title').click(function(){
+			ui.btn_show_hide_bigplayer();
+		})
 		$('#footer-song-cnt').text(data_data_songs.length);
 		$('#footer-figure-cnt').text(data_data_figures.length);
 	},

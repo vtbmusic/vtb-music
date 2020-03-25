@@ -36,6 +36,9 @@ var ui = {
 		$('#btn-nav-pre').click(function(){
 			player.play_pre();
 		});
+		$('#nav-music-card-title').click(function(){
+			ui.btn_show_hide_bigplayer();
+		})
 		$('#bigplayer-btn-close').click(function(){
 			ui.btn_show_hide_bigplayer();
 		});
@@ -140,12 +143,6 @@ var ui = {
 		$('#nav-music-card-title').text(song['name']);
 		$('#nav-music-card-subtitle').html(tools.load_template_vocal(song['vocal']));
 	},
-	btn_show_hide_bigplayer: function(){
-		if(app_bigplayer.dom_jq.css('display') == 'none')
-			app.switch_app(app_bigplayer, player.cur_song);
-		else
-			app.close_app();
-	},
 	click_mode_repeat: function(){
 		if(player.mode_play_repeat){
 			player.switch_mode_repeat_off();
@@ -165,6 +162,12 @@ var ui = {
 			console.log('song_id', song_id);
 			player.add_song_to_list(song_id);
 		}
+	},
+	btn_show_hide_bigplayer: function(){
+		if(app_bigplayer.dom_jq.css('display') == 'none')
+			app.switch_app(app_bigplayer, player.cur_song);
+		else
+			app.close_app();
 	},
 	// 相关ui进入play模式
 	switch_play: function(song_id){

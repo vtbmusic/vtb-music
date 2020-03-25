@@ -7,6 +7,13 @@
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="expires" content="0" />
+	<script type="text/javascript">
+		function check_mobile(){
+			if('ontouchstart' in window) return true;
+			else return false
+		}
+		if(!check_mobile()) window.location.href = './index.html';
+	</script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="main-mobile.css">
@@ -19,7 +26,7 @@
 		</audio>
 		<div id="nav" class="nav-player">
 			<div style="width: 100%;display: inline-block;text-align: center;">
-				<div class="nav-btns">
+				<div class="nav-btns" style="padding-left: 1.5rem;">
 					<a class="nav-btn nav-btn-play-random" id="btn-nav-random"></a>
 					<a class="nav-btn nav-btn-pre" id="btn-nav-pre"></a>
 					<a class="nav-btn nav-btn-play" id="btn-nav-play"></a>
@@ -157,9 +164,11 @@
 					<div class="nav-music-card-title" id="nav-music-card-title">Vtb-Music</div>
 					<div class="nav-music-card-subtitle" id="nav-music-card-subtitle">...</div>
 				</div>
-				<div class="nav-play-bar-bg" id="nav-play-bar-bg"></div>
-				<div class="nav-play-bar" id="bar-nav-play"></div>
-				<span class="nav-play-time" id="nav-play-time">...</span>
+				<div class="nav-play-items">
+					<div class="nav-play-bar" id="bar-nav-play"></div>
+					<div class="nav-play-bar-bg" id="nav-play-bar-bg"></div>
+				</div>
+				<div class="nav-play-time" id="nav-play-time">...</div>
 			</div>
 		</div>
 		<footer id="footer" class="footer">

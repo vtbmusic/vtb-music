@@ -345,6 +345,7 @@
 }
 .music-card-title{
 	font-size: 1rem;
+	cursor: default;
 }
 .music-card-subtitle{
 	font-size: 0.5rem;
