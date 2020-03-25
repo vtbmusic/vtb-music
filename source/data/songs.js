@@ -10,7 +10,7 @@ var data_data_songs = [
 		name: "天球、彗星は夜を跨いで",
 		vocal: ["星街彗星"],
 		id: 1021,
-		img: "1020.png",
+		img: "1021.png",
 		date: "2020-03-21"
 	},
 	{
