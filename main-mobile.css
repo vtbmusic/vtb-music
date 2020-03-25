@@ -54,8 +54,8 @@
 	display: block;
     position: fixed;
     width: 100%;
-    top: 90%;
-    height: 10%;
+    top: 85%;
+    height: 15%;
     z-index: 3;
 }
 .nav-btns{
@@ -150,7 +150,7 @@
 	color: gray;
 	position: absolute;
 	left: 85%;
-	top: 36%;
+	top: 30%;
 	z-index: 3;
 	cursor: default;
 }
