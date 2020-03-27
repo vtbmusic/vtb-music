@@ -7,6 +7,13 @@ var data_data_songs = [
 		date: "2020-03-23"
 	},
 	{
+		name: "天球、彗星は夜を跨いで",
+		vocal: ["星街彗星"],
+		id: 1021,
+		img: "1021.png",
+		date: "2020-03-21"
+	},
+	{
 		name: "二時間だけのバカンス",
 		vocal: ["星街彗星"],
 		id: 1022,
@@ -38,13 +45,6 @@ var data_data_songs = [
 		name: "Get Over Dress-code",
 		vocal: ["星街彗星"],
 		id: 1027,
-		img: "1021.png",
-		date: "2020-03-21"
-	},
-	{
-		name: "天球、彗星は夜を跨いで",
-		vocal: ["星街彗星"],
-		id: 1021,
 		img: "1021.png",
 		date: "2020-03-21"
 	},
