@@ -14,6 +14,34 @@ var data_data_songs = [
 		date: "2020-03-21"
 	},
 	{
+		name: "Knights the Phantom Thief",
+		vocal: ["星街彗星"],
+		id: 1025,
+		img: "1021.png",
+		date: "2020-03-21"
+	},
+	{
+		name: "佐賀事変",
+		vocal: ["星街彗星"],
+		id: 1024,
+		img: "1021.png",
+		date: "2020-03-21"
+	},
+	{
+		name: "Trust me",
+		vocal: ["星街彗星"],
+		id: 1026,
+		img: "1021.png",
+		date: "2020-03-21"
+	},
+	{
+		name: "Get Over Dress-code",
+		vocal: ["星街彗星"],
+		id: 1027,
+		img: "1021.png",
+		date: "2020-03-21"
+	},
+	{
 		name: "天球、彗星は夜を跨いで",
 		vocal: ["星街彗星"],
 		id: 1021,
