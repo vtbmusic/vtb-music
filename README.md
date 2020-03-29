@@ -25,35 +25,35 @@
 
 #### 第一步 上传歌曲
 
-首先前往[vtb-music-source-song仓库](https://gitee.com/santiego/vtb-music-source-song)，点击右上角`Fork`按钮，`fork`本仓库，如果已经`fork`过本仓库的跳过此步。
+首先前往[song仓库](https://gitee.com/santiego/vtb-music-source-song)，点击右上角`Fork`按钮，`fork`本仓库，如果已经`fork`过本仓库的跳过此步。
 
-![Fork](https://images.gitee.com/uploads/images/2020/0329/111510_32f963ed_1303165.png)
+![Fork](https://images.gitee.com/uploads/images/2020/0329/113110_9bb3ddfb_1303165.png)
 
 然后来到刚才`fork`后创建的仓库，然后进入`song`文件夹后，点击右侧`上传文件`按钮
 
-![](https://images.gitee.com/uploads/images/2020/0329/111510_58e48409_1303165.png)
+![](https://images.gitee.com/uploads/images/2020/0329/113110_3327cf46_1303165.png)
 
 **注意！上传前，要将上传的文件重命名为四位数字样式以作为歌曲id，方便管理**
 
-![](https://images.gitee.com/uploads/images/2020/0329/111510_a01b4b9e_1303165.png)
+![](https://images.gitee.com/uploads/images/2020/0329/113110_a68c9f01_1303165.png)
 
 上传之后，点击上方`Pull Requests`
 
-![](https://images.gitee.com/uploads/images/2020/0329/111510_1ce4ac30_1303165.png)
+![](https://images.gitee.com/uploads/images/2020/0329/113110_4f72a9df_1303165.png)
 
 然后点击`新建Pull Request`
 
-![](https://images.gitee.com/uploads/images/2020/0329/111510_79d5482b_1303165.png)
+![](https://images.gitee.com/uploads/images/2020/0329/113110_9219d7f9_1303165.png)
 
 点击`创建`即可（建议附加歌曲信息方便管理员审核）
 
 #### 第二步 添加歌曲封面
 
-首先，首先前往[vtb-music-source-img仓库](https://gitee.com/santiego/vtb-music-source-img)，同第一步`fork`此仓库。
+首先前往[img仓库](https://gitee.com/santiego/vtb-music-source-img)，同第一步`fork`此仓库。
 
 然后进入`img`文件夹后，点击右侧`上传文件`按钮
 
-![](https://images.gitee.com/uploads/images/2020/0329/111510_58e48409_1303165.png)
+![](https://images.gitee.com/uploads/images/2020/0329/113110_3327cf46_1303165.png)
 
 同第一步上传歌曲封面。
 
@@ -61,7 +61,19 @@
 
 之后同第一步，创建`Pull Request`即可
 
-#### 第三步 添加song信息
+#### 第三步 上传歌词
+
+可以跳过此步
+
+同第一步，前往[lyric仓库](https://gitee.com/santiego/vtb-music-source-lyric)，`fork`此仓库
+
+然后上传歌词文件即可
+
+**注意！上传前，要将上传的文件重命名为歌曲id**
+
+之后同第一步，创建`Pull Request`即可
+
+#### 第四步 添加song信息
 
 前往[source/data/songs.js](https://gitee.com/santiego/vtb-music/blob/master/source/data/songs.js)，点击右侧`编辑`按钮，按着下面的格式说明添加歌曲信息
 
@@ -75,7 +87,9 @@
  },
 ```
 
-将歌曲信息按照歌曲时间递减的顺序添加到文件后，提交审核即可！
+将歌曲信息**按照歌曲时间递减的顺序**添加到文件后，提交审核即可！
+
+![](https://images.gitee.com/uploads/images/2020/0329/113110_8fee4ce7_1303165.png)
 
 此时上传歌曲已完成，请耐心等待管理员审核`Pull Request`
 
