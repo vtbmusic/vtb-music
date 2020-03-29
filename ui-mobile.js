@@ -27,9 +27,6 @@ var ui = {
 		$('#btn-nav-play').click(function(){
 			ui.btn_nav_play_pause();
 		});
-		$('#nav-music-card-title').click(function(){
-			ui.btn_show_hide_bigplayer();
-		})
 		$('#btn-nav-nxt').click(function(){
 			player.play_nxt();
 		});
