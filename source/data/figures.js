@@ -1,4 +1,10 @@
 var data_data_figures = [
+    {
+		"name": "星街彗星",
+		"jpname": "星街すいせい",
+		"img": "星街彗星.png",
+		"group": ["hololive"],
+	},
 	{
 		"name": "夏色祭",
 		"jpname": "夏色 まつり",
@@ -23,10 +29,10 @@ var data_data_figures = [
 		"img": "百鬼绫目.png",
 		"group": ["hololive"],
 	},
-	{
-		"name": "星街彗星",
-		"jpname": "星街すいせい",
-		"img": "星街彗星.png",
+    {
+		"name": "天音彼方",
+		"jpname": "天音かなた",
+		"img": "天音彼方.png",
 		"group": ["hololive"],
 	},
 	{
@@ -34,6 +40,12 @@ var data_data_figures = [
 		"jpname": "りっか",
 		"img": "律可.png",
 		"group": ["hololive"],
+	},
+    {
+		"name": "神乐七奈",
+		"jpname": "かぐらなな",
+		"img": "神乐七奈.png",
+		"group": [],
 	},
 	{
 		"name": "神乐mea",
