@@ -180,6 +180,13 @@ var data_data_songs = [
 		img: "1023.jpg",
 		date: "2019-12-14"
 	},
+    {
+		name: "Summer Color Festival",
+		vocal: ["夏色祭"],
+		id: 1029,
+		img: "1029.jpg",
+		date: "2019-10-04"
+	},
 	{
 		name: "夏祭り",
 		vocal: ["夏色祭", "赤井心"],
@@ -200,13 +207,6 @@ var data_data_songs = [
 		id: 1007,
 		img: "1007.jpg",
 		date: "2019-06-02"
-	},
-	{
-		name: "Summer Color Festival",
-		vocal: ["夏色祭"],
-		id: 1029,
-		img: "1029.jpg",
-		date: "2019-10-04"
 	},
 	
 ]
