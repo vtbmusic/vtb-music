@@ -145,6 +145,13 @@ var data_data_songs = [
 		img: "1003.jpg",
 		date: "2020-02-13"
 	},
+    {
+		name: "横竖撇点折",
+		vocal: ["泠鸢yousa"],
+		id: 1030,
+		img: "1030.jpg",
+		date: "2020-01-25"
+	},
 	{
 		name: "星之回响",
 		vocal: ["琉绮Ruki","泠鸢yousa","鹿乃","花丸晴琉","神乐mea","物述有栖","白上吹雪","夏色祭"],
