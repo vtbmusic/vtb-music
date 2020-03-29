@@ -141,7 +141,7 @@
 	background-color: gainsboro;
 	position: absolute;
 	width: 100%;
-	top:65%;
+	top:67%;
 	transition: all 0.2s ease-out;
 }
 .nav-play-time{
@@ -395,6 +395,7 @@
 .album-cards-list{
 	overflow:auto;
 	height: 15rem;
+	white-space: nowrap;
 }
 .album-card{
 	margin: 10px;
@@ -651,6 +652,7 @@ body{
 	height: 8rem;
 	width: 100%;
 	background-color: #f2f2f2;
+	margin-bottom: 20%;
 }
 .footer-block{
 	color: gray;
@@ -661,7 +663,7 @@ body{
 	padding-right: 20%;
 }
 .footer-text-block{
-	text-align: left;
+	text-align: center;
 	font-size: 0.5rem;
 }
 .footer a{
