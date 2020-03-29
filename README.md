@@ -1,6 +1,8 @@
-# Vtb-Music
+# [Vtb-Music](https://santiego.gitee.io/vtb-music/)
 
-一个收录VTuber歌回的音乐网站
+[https://santiego.gitee.io/vtb-music/](https://santiego.gitee.io/vtb-music/)
+
+**一个收录VTuber歌回的音乐网站**
 
 得利于Gitee，各位有能DD都可以新建艺人、上传歌曲、创建歌单
 
@@ -12,12 +14,16 @@
 
 下一步开发目标：
 
-- [ ] 适配手机端
+- [x] 适配手机端
 - [ ] 考虑使用`vue.js`重构
 
 ## 用户指南
 
 ### 上传歌曲
+
+
+>  注意： **下面方法稍有难度，您也可以通过加QQ群737972812，让管理人员帮助您上传歌曲**
+
 
 本站是完全开源开放且部署在[gitee](https://gitee.com/)上的，所以各位dd可以通过gitee上传歌曲甚至参与开发。
 
