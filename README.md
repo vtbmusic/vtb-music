@@ -1,4 +1,4 @@
-# Vtb-Music
+# [Vtb-Music](https://santiego.gitee.io/vtb-music/)
 
 一个收录VTuber歌回的音乐网站
 
