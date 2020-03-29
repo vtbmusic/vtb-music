@@ -146,6 +146,13 @@ var data_data_songs = [
 		date: "2020-02-13"
 	},
     {
+		name: "ゴーストルール(幽灵法则)",
+		vocal: ["天音彼方"],
+		id: 1031,
+		img: "1031.jpg",
+		date: "2020-01-28"
+	},
+    {
 		name: "横竖撇点折",
 		vocal: ["泠鸢yousa"],
 		id: 1030,
@@ -202,7 +209,7 @@ var data_data_songs = [
 		date: "2019-09-06"
 	},
 	{
-		name: "カタオモイ",
+		name: "カタオモイ(单恋)",
 		vocal: ["夏色祭"],
 		id: 1018,
 		img: "1018.jpg",
