@@ -22,7 +22,7 @@ var data_data_songs = [
 	},
 	{
 		name: "二時間だけのバカンス",
-		vocal: ["星街彗星"],
+		vocal: ["星街彗星","天音彼方"],
 		id: 1022,
 		img: "1021.png",
 		date: "2020-03-21"
