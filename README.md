@@ -34,7 +34,7 @@
 
 #### 第一步 上传歌曲
 
-首先前往[song仓库](https://gitee.com/santiego/vtb-music-source-song)，点击右上角`Fork`按钮，`fork`本仓库，如果已经`fork`过本仓库的跳过此步。
+首先前往[song仓库](https://gitee.com/santiego/vtb-music-source-song)，点击右上角`Fork`按钮，`fork`本仓库，如果已经`fork`过本仓库的跳过此步**并保证您fork的仓库与本仓库同步**（即执行命令`git pull`）。
 
 ![Fork](https://images.gitee.com/uploads/images/2020/0329/113110_9bb3ddfb_1303165.png)
 
