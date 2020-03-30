@@ -35,9 +35,9 @@ var app = {
 			if(status!='success') alert('Erro. \n Can\'t get data.');
 			app_data.template_figure_card_ext = data;
 		});
+        app.switch_app(app_index);
 		player.init();
 		ui.init();
-		app.switch_app(app_index);
 	},
 	create_app_info: function(app, srollTop, vars){
 		var res = new Object();
@@ -77,6 +77,7 @@ var player = {
 		player.cur_song = song_id;
 		player.dom.load();
 		ui.load_song(song_id);
+        if(player.cur_song != null && app.app_info_list[0].app == app_bigplayer) app_bigplayer.init(player.cur_song);
 		Cookies.set('cur_song', song_id);
 	},
 	get_song_index: function(song_id){
