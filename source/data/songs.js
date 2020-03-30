@@ -180,6 +180,13 @@ var data_data_songs = [
 		img: "1010.jpg",
 		date: "2020-01-23"
 	},
+    {
+		name: "君の知らない物語",
+		vocal: ["天音彼方"],
+		id: 1035,
+		img: "1035.jpg",
+		date: "2020-01-11"
+	},
 	{
 		name: "Only my railgun",
 		vocal: ["白上吹雪"],
@@ -214,6 +221,13 @@ var data_data_songs = [
 		id: 1008,
 		img: "1008.jpg",
 		date: "2019-09-06"
+	},
+    {
+		name: "君の知らない物語",
+		vocal: ["夏色祭"],
+		id: 1036,
+		img: "1036.jpg",
+		date: "2019-08-31"
 	},
     {
 		name: "钢铁直男",
