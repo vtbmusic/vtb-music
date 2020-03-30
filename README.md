@@ -2,9 +2,9 @@
 
 [https://santiego.gitee.io/vtb-music/](https://santiego.gitee.io/vtb-music/)
 
-**一个收录VTuber歌回的音乐网站**
+**一个收录VTuber歌回的音乐网站🎧**
 
-得利于Gitee，各位有能DD都可以新建艺人、上传歌曲、创建歌单
+得利于Gitee，各位有能DD都可以参与贡献开发！
 
 ## 开发
 
@@ -15,6 +15,10 @@
 下一步开发目标：
 
 - [x] 适配手机端
+- [ ] 音量控制
+- [ ] 移动端播放体验
+- [ ] 添加艺人官方账号链接
+- [ ] 播放器UI改进
 - [ ] 考虑使用`vue.js`重构
 
 ## 用户指南
