@@ -98,6 +98,9 @@
 	font-size: 0.2rem;
 	cursor: default;
 }
+.nav-music-card-title:hover{
+    color: rgb(15,127,254);
+}
 .nav-music-card-subtitle a{
 	font-size: 0.1rem;
 	color: gray;
