@@ -173,6 +173,13 @@ var data_data_songs = [
 		img: "1019.jpg",
 		date: "2020-01-24"
 	},
+    {
+		name: "心拍数",
+		vocal: ["夏色祭","白上吹雪"],
+		id: 1038,
+		img: "1038.jpg",
+		date: "2020-01-24"
+	},
 	{
 		name: "Say!ファンファーレ!",
 		vocal: ["白上吹雪"],
