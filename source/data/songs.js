@@ -216,6 +216,13 @@ var data_data_songs = [
 		date: "2019-12-14"
 	},
     {
+		name: "マリーゴールド(あいみょん)",
+		vocal: ["夏色祭"],
+		id: 1039,
+		img: "1039.jpg",
+		date: "2019-10-09"
+	},
+    {
 		name: "Summer Color Festival",
 		vocal: ["夏色祭"],
 		id: 1029,
