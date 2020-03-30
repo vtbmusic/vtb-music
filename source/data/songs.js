@@ -278,5 +278,11 @@ var data_data_songs = [
 		img: "1007.jpg",
 		date: "2019-06-02"
 	},
-	
+	{
+		name: "战斗呼吸狐",
+		vocal: ["白上吹雪"],
+		id: 1040,
+		img: "1040.png",
+		date: "2019-04-16"
+	},
 ]
