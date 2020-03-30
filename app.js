@@ -77,7 +77,6 @@ var player = {
 		player.cur_song = song_id;
 		player.dom.load();
 		ui.load_song(song_id);
-		if(app.app_info_list[0].app == app_bigplayer) app_bigplayer.init()
 		Cookies.set('cur_song', song_id);
 	},
 	get_song_index: function(song_id){
