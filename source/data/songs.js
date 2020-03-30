@@ -215,6 +215,13 @@ var data_data_songs = [
 		img: "1029.jpg",
 		date: "2019-10-04"
 	},
+    {
+		name: "紅蓮華",
+		vocal: ["白上吹雪"],
+		id: 1037,
+		img: "1037.jpg",
+		date: "2019-09-14"
+	},
 	{
 		name: "夏祭り",
 		vocal: ["夏色祭", "赤井心"],
