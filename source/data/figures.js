@@ -45,8 +45,8 @@ var data_data_figures = [
 		"img": "天音彼方.png",
 		"group": ["hololive"],
 		"links":{
-			"Bilibili": "https://space.bilibili.com/336731767/",
-			"Youtube": "https://www.youtube.com/channel/UCQ0UDLQCjY0rmuxCDE38FGg",
+			"Bilibili": "https://space.bilibili.com/491474048",
+			"Youtube": "https://www.youtube.com/channel/UCZlDXzGoo7d44bwdNObFacg",
 		}
 	},
 	{
