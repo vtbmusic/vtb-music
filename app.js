@@ -226,7 +226,6 @@ var app_index = {
 	dom: $('#app-index')[0],
 	init: function(){
 		app_index.dom_jq.show();
-		ui.switch_play(player.cur_song);
 	},
 	exit: function(){
 		app_index.dom_jq.hide();
@@ -287,7 +286,7 @@ var app_vocal = {
 		$('#vocal-links').empty();
 		$('#vocal-links').append(tools.load_template_links(figure.links));
 		model_song_list.load_song_list($('#vocal-song-list'), data.get_song_from_vocal(vocal));
-		ui.switch_play(player.cur_song);
+		ui.refresh_ui();
 		app_vocal.dom_jq.show();
 	},
 	exit: function(){
@@ -308,7 +307,7 @@ var app_album = {
 			let song = data.get_song(album.songs[i]);
 			$('#album-song-list').append(model_song_list.load_template_song_item(song));
 		}
-		ui.switch_play(player.cur_song);
+		ui.refresh_ui();
 		app_album.dom_jq.show();
 	},
 	exit: function(){

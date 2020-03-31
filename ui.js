@@ -192,6 +192,16 @@ var ui = {
 		$(".playlist-song [data-btn-play='" + song_id + "']").removeClass('nav-btn-pause');
 		$(".playlist-song [data-btn-play='" + song_id + "'] + .playlist-song-name").css('color', '');
 	},
+	refresh_ui: function(){
+		$(".playlist-song [data-btn-play='" + player.cur_song + "'] + .playlist-song-name").css('color', 'rgb(15, 127, 254)');
+		if(player.dom.paused) return;
+		// app-index music card
+		$(".music-card [data-btn-play='" + player.cur_song + "']").addClass('btn-sm-pause');
+		$(".music-card [data-btn-play='" + player.cur_song + "']").removeClass('btn-sm-play');
+		// playlist
+		$(".playlist-song [data-btn-play='" + player.cur_song + "']").addClass('nav-btn-pause');
+		$(".playlist-song [data-btn-play='" + player.cur_song + "']").removeClass('nav-btn-play');
+	},
 	switch_mode_random_on: function(){
 		player.mode_play_random = true;
 		$('#btn-nav-random').attr('class', 'nav-btn nav-btn-play-random-on');
