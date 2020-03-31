@@ -153,6 +153,34 @@ var data_data_songs = [
 		date: "2020-02-13"
 	},
     {
+		name: "シャルル",
+		vocal: ["天音彼方"],
+		id: 1042,
+		img: "1042.jpg",
+		date: "2020-01-29"
+	},
+    {
+		name: "Rain stops, good-bye",
+		vocal: ["天音彼方"],
+		id: 1043,
+		img: "1043.jpg",
+		date: "2020-01-29"
+	},
+    {
+		name: "Just be friends",
+		vocal: ["天音彼方"],
+		id: 1044,
+		img: "1044.jpg",
+		date: "2020-01-29"
+	},
+    {
+		name: "小夜子",
+		vocal: ["天音彼方"],
+		id: 1045,
+		img: "1045.jpg",
+		date: "2020-01-29"
+	},
+    {
 		name: "ゴーストルール(幽灵法则)",
 		vocal: ["天音彼方"],
 		id: 1031,
@@ -192,6 +220,13 @@ var data_data_songs = [
 		vocal: ["天音彼方"],
 		id: 1035,
 		img: "1035.jpg",
+		date: "2020-01-11"
+	},
+    {
+		name: "Roki",
+		vocal: ["天音彼方"],
+		id: 1041,
+		img: "1041.jpg",
 		date: "2020-01-11"
 	},
 	{
