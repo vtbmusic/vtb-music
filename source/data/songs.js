@@ -258,6 +258,13 @@ var data_data_songs = [
 		date: "2019-12-14"
 	},
     {
+		name: "藍二乗",
+		vocal: ["百鬼绫目"],
+		id: 1049,
+		img: "1049.png",
+		date: "2019-12-13"
+	},
+    {
 		name: "マリーゴールド(あいみょん)",
 		vocal: ["夏色祭"],
 		id: 1039,
@@ -319,6 +326,13 @@ var data_data_songs = [
 		id: 1007,
 		img: "1007.jpg",
 		date: "2019-06-02"
+	},
+    {
+		name: "渡月桥",
+		vocal: ["百鬼绫目"],
+		id: 1048,
+		img: "1048.png",
+		date: "2019-04-20"
 	},
 	{
 		name: "战斗呼吸狐",
