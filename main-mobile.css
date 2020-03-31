@@ -488,6 +488,19 @@
 	box-shadow: 0rem 0.5rem 0.5rem 0rem rgba(0,0,0,0.2);
 	margin-bottom: 3rem;
 }
+.vocal-links{
+	margin-top: 0.5rem;
+}
+.vocal-links a{
+	font-size: 0.8rem;
+    color: gray;
+    cursor: default;
+    margin-right: 0.2rem;
+    text-decoration: none;
+}
+.vocal-links a:hover{
+	color: rgb(15,127,254);
+}
 .vocal-info{
 	width: 70%;
 	display: inline-block;
@@ -546,10 +559,12 @@
 	background-size: cover!important;
 }
 .vocal-btn{
+	display: inline-block;
 	float: right;
 	font-size: 0.8rem;
 	color: gray;
-	margin-left: 1rem;
+	padding-top: 0.5rem;
+	padding-left: 1rem;
 	cursor: default;
 }
 .vocal-btn:hover{

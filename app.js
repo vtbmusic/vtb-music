@@ -77,7 +77,7 @@ var player = {
 		player.cur_song = song_id;
 		player.dom.load();
 		ui.load_song(song_id);
-        if(player.cur_song != null && app.app_info_list[0].app == app_bigplayer) app_bigplayer.init(player.cur_song);
+        if(player.cur_song != null && app.app_info_list[0].app == app_bigplayer) 	app_bigplayer.init(player.cur_song);
 		Cookies.set('cur_song', song_id);
 	},
 	get_song_index: function(song_id){
@@ -99,11 +99,11 @@ var player = {
 		player.dom.onended = player.event_play_on_end;
 		setInterval(player.event_updata, 500);
 		$("#nav-play-bar-bg").mousedown(function(ev){
-			let tmp = (ev.clientX - $(this).offset().left)/$('#nav-music-card-body').width();
+			let tmp = (ev.clientX - $(this).offset().left)/$("#nav-play-bar-bg").width();
 			player.dom.currentTime = player.dom.duration * tmp;		
 		});
 		$("#bar-nav-play").mousedown(function(ev){
-			let tmp = (ev.clientX - $(this).offset().left)/$('#nav-music-card-body').width();
+			let tmp = (ev.clientX - $(this).offset().left)/$("#nav-play-bar-bg").width();
 			player.dom.currentTime = player.dom.duration * tmp;		
 		});
 		player.load_settings_from_cookie();
@@ -226,6 +226,7 @@ var app_index = {
 	dom: $('#app-index')[0],
 	init: function(){
 		app_index.dom_jq.show();
+		ui.switch_play(player.cur_song);
 	},
 	exit: function(){
 		app_index.dom_jq.hide();
@@ -283,7 +284,10 @@ var app_vocal = {
 		$('#vocal-img').css('background', 'url(' + tools.get_figure_img_link(figure['img']) + ')');
 		$('#vocal-name').text(figure['name']);
 		$('#vocal-name-jp').text(figure['jpname']);
+		$('#vocal-links').empty();
+		$('#vocal-links').append(tools.load_template_links(figure.links));
 		model_song_list.load_song_list($('#vocal-song-list'), data.get_song_from_vocal(vocal));
+		ui.switch_play(player.cur_song);
 		app_vocal.dom_jq.show();
 	},
 	exit: function(){
@@ -304,6 +308,7 @@ var app_album = {
 			let song = data.get_song(album.songs[i]);
 			$('#album-song-list').append(model_song_list.load_template_song_item(song));
 		}
+		ui.switch_play(player.cur_song);
 		app_album.dom_jq.show();
 	},
 	exit: function(){
@@ -441,6 +446,17 @@ var tools = {
 	load_template_figure_title: function(group_name){
 		let template = "<div class=\"all-figures-list\" id=\"figures-list-{{group}}\"><div><div class=\"headline\">{{group}}</div><div class=\"hr\"></div></div>"
 		return template.replace(new RegExp('{{group}}', "g"), group_name);
+	},
+	load_template_links: function(data){
+		let template = "<a href=\"{{link}}\" target=\"_blank\">{{name}}</a>";
+		let res = "";
+		for(let iter in data){
+			res+=tools.load_template({
+				"name": iter,
+				"link": data[iter],
+			}, template);
+		}
+		return res;
 	},
 	get_img_link: function(img){
 		return app_config.img_path + img;

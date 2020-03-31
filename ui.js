@@ -165,7 +165,6 @@ var ui = {
 		let songs = $(target).find('[data-btn-play]');
 		for(let i=0;i<songs.length;++i){
 			let song_id = Number($(songs[i]).attr('data-btn-play'));
-			console.log('song_id', song_id);
 			player.add_song_to_list(song_id);
 		}
 	},
@@ -180,6 +179,7 @@ var ui = {
 		// playlist
 		$(".playlist-song [data-btn-play='" + song_id + "']").addClass('nav-btn-pause');
 		$(".playlist-song [data-btn-play='" + song_id + "']").removeClass('nav-btn-play');
+		$(".playlist-song [data-btn-play='" + song_id + "'] + .playlist-song-name").css('color', 'rgb(15, 127, 254)');
 	},
 	// 相关ui进入pause模式
 	switch_pause: function(song_id){
@@ -190,6 +190,7 @@ var ui = {
 		
 		$(".playlist-song [data-btn-play='" + song_id + "']").addClass('nav-btn-play');
 		$(".playlist-song [data-btn-play='" + song_id + "']").removeClass('nav-btn-pause');
+		$(".playlist-song [data-btn-play='" + song_id + "'] + .playlist-song-name").css('color', '');
 	},
 	switch_mode_random_on: function(){
 		player.mode_play_random = true;

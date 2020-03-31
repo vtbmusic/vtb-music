@@ -250,6 +250,7 @@
 	width: 100%;
 	height: 100%;
 	filter: blur(1rem);
+	transition: all 0.5s ease-out;
 }
 .bigplayer-lyric{
 	padding-top: 2rem;
@@ -477,6 +478,19 @@
 	border-radius: 0.35rem;
 	box-shadow: 0rem 0.5rem 0.5rem 0rem rgba(0,0,0,0.2);
 	margin-bottom: 3rem;
+}
+.vocal-links{
+	margin-top: 0.5rem;
+}
+.vocal-links a{
+	font-size: 0.8rem;
+    color: gray;
+    cursor: default;
+    margin-right: 0.2rem;
+    text-decoration: none;
+}
+.vocal-links a:hover{
+	color: rgb(15,127,254);
 }
 .vocal-info{
 	width: 70%;
