@@ -75,7 +75,7 @@ var player = {
 	load_song: function(song_id){
 		player.dom.src = app_config.song_path + song_id + '.mp3';
 		player.cur_song = song_id;
-		player.dom.load();
+		//player.dom.load();
 		ui.load_song(song_id);
         if(player.cur_song != null && app.app_info_list[0].app == app_bigplayer) 	app_bigplayer.init(player.cur_song);
 		Cookies.set('cur_song', song_id);
