@@ -1,5 +1,12 @@
 var data_data_songs = [
     {
+		name: "エンゼルフィッシュ",
+		vocal: ["星街彗星","天音彼方"],
+		id: 1050,
+		img: "1050.jpg",
+		date: "2020-03-31"
+	},
+    {
 		name: "白日",
 		vocal: ["紫咲诗音"],
 		id: 1046,
