@@ -99,6 +99,16 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCfuz6xYbYFGsWWBi3SpJI1w",
 		}
 	},
+    {
+		"name": "紫咲诗音",
+		"jpname": "紫咲 シオン",
+		"img": "紫咲诗音.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389857640",
+			"Youtube": "https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw",
+		}
+	},
 	{
 		"name": "泠鸢yousa",
 		"jpname": "",
