@@ -1,4 +1,11 @@
 var data_data_songs = [
+    {
+		name: "白日",
+		vocal: ["紫咲诗音"],
+		id: 1046,
+		img: "1046.jpg",
+		date: "2020-03-30"
+	},
      {
 		name: "紅蓮華",
 		vocal: ["星街彗星"],
@@ -319,5 +326,12 @@ var data_data_songs = [
 		id: 1040,
 		img: "1040.png",
 		date: "2019-04-16"
+	},
+    {
+		name: "乙女解剖",
+		vocal: ["紫咲诗音"],
+		id: 1047,
+		img: "1047.jpg",
+		date: "2019-03-31"
 	},
 ]
