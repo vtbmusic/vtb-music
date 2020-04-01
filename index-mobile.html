@@ -15,7 +15,7 @@
 		if(!check_mobile()){
 			let tmp = './index.html';
 			if(window.location.href.indexOf('?') != -1)
-				tmp += substring(window.location.href.indexOf('?'));
+				tmp += window.location.href.substring(window.location.href.indexOf('?'));
 			window.location.href = tmp;
 		}
 	</script>
