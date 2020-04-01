@@ -27,6 +27,13 @@ var data_data_songs = [
 		img: "1020.jpg",
 		date: "2020-03-23"
 	},
+    {
+		name: "流年如歌",
+		vocal: ["泠鸢yousa"],
+		id: 1051,
+		img: "1051.png",
+		date: "2020-03-21"
+	},
 	{
 		name: "天球、彗星は夜を跨いで",
 		vocal: ["星街彗星"],
@@ -319,6 +326,13 @@ var data_data_songs = [
 		id: 1032,
 		img: "1032.jpg",
 		date: "2019-07-14"
+	},
+    {
+		name: "Again (钢之炼金术师 OP1)",
+		vocal: ["星街彗星"],
+		id: 1052,
+		img: "1052.jpg",
+		date: "2019-07-02"
 	},
 	{
 		name: "カタオモイ(单恋)",
