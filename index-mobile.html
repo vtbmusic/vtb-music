@@ -13,10 +13,10 @@
 			else return false
 		}
 		if(!check_mobile()){
-			let href = './index.html';
+			let tmp = './index.html';
 			if(window.location.href.indexOf('?') != -1)
-				href += substring(window.location.href.indexOf('?'));
-			window.location.href = href;
+				tmp += substring(window.location.href.indexOf('?'));
+			window.location.href = tmp;
 		}
 	</script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">

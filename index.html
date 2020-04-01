@@ -16,10 +16,10 @@
 			else return false
 		}
 		if(check_mobile()){
-			let href = './index-mobile.html';
+			let tmp = './index-mobile.html';
 			if(window.location.href.indexOf('?') != -1)
-				href += substring(window.location.href.indexOf('?'));
-			window.location.href = href;
+				tmp += substring(window.location.href.indexOf('?'));
+			window.location.href = tmp;
 		}
 	</script>
     <title>Vtb-Music</title>
