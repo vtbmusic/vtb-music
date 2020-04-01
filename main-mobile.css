@@ -270,7 +270,7 @@
     left: 7.5%;
     height: 85%;
     width: 85%;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.3);
 	-webkit-backdrop-filter: blur(0.5rem);
 	backdrop-filter: blur(0.5rem);
 	box-shadow: 0rem 0.5rem 0.5rem 0rem rgba(0,0,0,0.2);
