@@ -485,7 +485,7 @@ var model_load_lyric = {
 		return res;
 	},
 	load_lyric: function(data){
-		return "<p>"+data+"</p>";
+		return "<p>"+tools.format_lyric(data)+"</p>";
 	},
 	lyric_data: [],
 	scroll_timer: null,
