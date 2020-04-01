@@ -56,6 +56,12 @@ var ui = {
 		})
 		$('#footer-song-cnt').text(data_data_songs.length);
 		$('#footer-figure-cnt').text(data_data_figures.length);
+		
+		// set player pos,sz
+		$('#app-bigplayer').height(document.documentElement.clientHeight - $('.nav').height() - $('.nav-music-card').height());
+		$('#app-bigplayer').css('margin-top', $('.nav').height()+'px');
+		$('.footer').css('margin-bottom', $('.nav-music-card').height());
+		
 	},
 	init_music_cards: function(){
 		$('.music-card-body .btn-sm-more').click(function(){

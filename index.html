@@ -15,7 +15,11 @@
 			if('ontouchstart' in window) return true;
 			else return false
 		}
-		if(check_mobile()) window.location.href = './index-mobile.html';
+		if(check_mobile()){
+			window.location.href = './index-mobile.html';
+			if(window.location.href.indexOf('?') != -1)
+				window.location.href += substring(window.location.href.indexOf('?'));
+		}
 	</script>
     <title>Vtb-Music</title>
 	</head>
@@ -95,12 +99,19 @@
 			</div>
 		</div>
 		<div id="app-bigplayer" class="app-bigplayer" style="display: none;">
-			<div class="btn-close bigplayer-btn-close" id="bigplayer-btn-close"></div>
 			<div class="bigplayer-bg" style="background: url(./source/img/%E5%A4%8F%E8%89%B2%E7%A5%AD.jpg);">
 			</div>
 			<div class="bigplayer-lyric">
-				<p>
-				</p>
+				<div style="position: relative;height: 100%;width: 100%">
+					<div class="bigplayer-bar">
+						<span class="bigplayer-btns">
+							<a href="javascript:void(0);" id="bigplayer-btn-share">分享</a>
+							<a href="" id="bigplayer-btn-download">下载</a>
+						</span>
+					</div>
+					<div class="bigplayer-lyric-p" id="bigplayer-lyric-p">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="app-vocal" style="display: none;">
@@ -208,6 +219,7 @@
 		
 	<!-- Plug -->
 	<script src="./plug/js-cookie.js"></script>
+	<script src="./plug/clipboard.min.js"></script>
 	
 	</body>
 </html>

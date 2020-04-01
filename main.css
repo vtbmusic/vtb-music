@@ -67,8 +67,8 @@
 }
 .nav-music-card-img{
 	display: inline-block;
-	width: 5rem;
-	height: 3rem;
+	width: 5.1rem;
+	height: 3.2rem;
 	border-radius: 0.35rem;
 	border-bottom-right-radius: 0rem;
 	border-top-right-radius: 0rem;
@@ -84,7 +84,7 @@
 	vertical-align: top;
 	margin-left: -0.5rem;
 	width: 15rem;
-	height: 2.4rem;
+	height: 2.65rem;
 	background: white;
 	border-radius: 0.35rem;
 	border-bottom-left-radius: 0rem;
@@ -253,7 +253,6 @@
 	transition: all 0.5s ease-out;
 }
 .bigplayer-lyric{
-	padding-top: 2rem;
 	text-align: center;
 	position: absolute;
 	color: white;
@@ -261,33 +260,64 @@
 	left: 10%;
 	height: 80%;
 	width: 80%;
-	overflow: auto;
 	background-color: rgba(0,0,0,0.2);
 	-webkit-backdrop-filter: blur(0.5rem);
 	backdrop-filter: blur(0.5rem);
 	box-shadow: 0rem 0.5rem 0.5rem 0rem rgba(0,0,0,0.2);
 }
-.bigplayer-lyric p{
+.bigplayer-lyric-p{
+	position: absolute;
+	overflow: auto;
+	top:5%;
+	width: 100%;
+	height: 95%;
+}
+.bigplayer-lyric-p p{
+	height: 100%;
 	word-wrap: break-word;
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
 	line-height: 2rem;
+}
+.lyric-text-on{
+	color: #c9e7ff;
+	font-weight: bold;
 }
 .btn-close{
 	background: url("./source/icon/icon-close.png");
 	background-size: cover;
 }
 .bigplayer-btn-close{
-	z-index: 1;
 	width: 1.2rem;
 	height: 1.2rem;
-	position: absolute;
-	top: 11%;
-	left: 88%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 0.5rem;
 }
-.bigplayer-btn-close:hover{
-	transform: scale(1.2,1.2);
-	transition: all 0.2s ease-out;
+.bigplayer-bar{
+	z-index: 1;
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	width: 100%;
+	height: 5%;
+	display: block;
+}
+.bigplayer-bar a{
+	text-decoration: none;
+	color: white;
+	font-size: 0.9rem;
+	cursor: default;
+}
+.bigplayer-bar a:hover{
+	color: rgb(15,127,254);
+}
+.bigplayer-bar:hover .bigplayer-btns{
+	display: inline-block;
+}
+.bigplayer-btns{
+	display: none;
+	float: right;
 }
 .btn-sm{
 	width: 2rem;
@@ -350,6 +380,12 @@
 .music-card-title{
 	font-size: 1rem;
 	cursor: default;
+	color: black;
+	text-decoration: none;
+	margin-right: 0.5rem;
+}
+.music-card-title:hover{
+	color: rgb(15,127,254);
 }
 .music-card-subtitle{
 	font-size: 0.5rem;
@@ -701,7 +737,7 @@ span{
 #index-music-cards-list::-webkit-scrollbar{
 	color: transparent;
 }
-.bigplayer-lyric::-webkit-scrollbar{
+.bigplayer-lyric-p::-webkit-scrollbar{
 	color: transparent;
 }
 /*div ::-webkit-scrollbar{

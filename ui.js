@@ -223,5 +223,5 @@ var ui = {
 	},
 	event_onplay: function(){
 		$('#btn-nav-play').attr('class' ,'nav-btn nav-btn-pause');
-	}
+	},
 }
