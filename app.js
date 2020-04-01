@@ -475,7 +475,7 @@ var model_load_lyric = {
 			if(tmp[i] == "") continue;
 			let idx = tmp[i].indexOf(']');
 			let stime = tools.get_seconds_from_text(tmp[i].substring(0,idx));
-			let lyric_text = tmp[i].slice(idx+2);
+			let lyric_text = tools.format_lyric(tmp[i].slice(idx+2));
 			res+=tools.load_template({
 				'id': i,
 				'text': lyric_text,
