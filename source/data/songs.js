@@ -153,6 +153,13 @@ var data_data_songs = [
 		img: "1011.png",
 		date: "2020-03-01"
 	},
+    {
+		name: "刹那ティックコード",
+        vocal: ["时乃空","AZKi"],
+        id: 1068,
+        img: "1068.jpg",
+        date: "2020-02-27"
+	},
 	{
 		name: "被生命所厌恶",
 		vocal: ["神乐mea"],
@@ -165,6 +172,13 @@ var data_data_songs = [
 		id: 1034,
 		img: "1034.jpg",
 		date: "2020-02-14"
+	},
+    {
+		name: "chocolate box",
+        vocal: ["时乃空","夏色祭"],
+        id: 1062,
+        img: "1062.jpg",
+        date: "2020-02-13"
 	},
 	{
 		name: "別の人の彼女になったよ",
@@ -332,6 +346,20 @@ var data_data_songs = [
 		date: "2019-11-15"
 	},
     {
+		name: "暁の車",
+        vocal: ["时乃空","AZKi"],
+        id: 1069,
+        img: "1069.jpg",
+        date: "2019-10-25"
+	},
+    	{
+		name: "Happy Halloween",
+        vocal: ["时乃空"],
+        id: 1064,
+        img: "1064.jpg",
+        date: "2019-10-20"
+	},
+    {
 		name: "マリーゴールド(あいみょん)",
 		vocal: ["夏色祭"],
 		id: 1039,
@@ -358,6 +386,13 @@ var data_data_songs = [
 		id: 1008,
 		img: "1008.jpg",
 		date: "2019-09-06"
+	},
+    	{
+		name: "you",
+        vocal: ["时乃空"],
+        id: 1066,
+        img: "1066.jpg",
+        date: "2019-08-31"
 	},
     {
 		name: "君の知らない物語",
@@ -386,6 +421,13 @@ var data_data_songs = [
 		id: 1052,
 		img: "1052.jpg",
 		date: "2019-07-02"
+	},
+    {
+		name: "愛言葉ⅲ",
+        vocal: ["时乃空"],
+        id: 1067,
+        img: "1067.jpg",
+        date: "2019-07-01"
 	},
 	{
 		name: "カタオモイ(单恋)",
@@ -421,5 +463,19 @@ var data_data_songs = [
 		id: 1047,
 		img: "1047.jpg",
 		date: "2019-03-31"
+	},
+    	{
+		name: "Dream☆Story",
+        vocal: ["时乃空"],
+        id: 1063,
+        img: "1063.jpg",
+        date: "2019-01-08"
+	},
+    {
+		name: "Wandering Days",
+        vocal: ["时乃空"],
+        id: 1065,
+        img: "1065.jpg",
+        date: "2018-11-12"
 	},
 ]
