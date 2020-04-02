@@ -181,7 +181,7 @@ var data_data_figures = [
 		"name": "时乃空",
 		"jpname": "ときのそら",
 		"img": "时乃空.jpg",
-		"group": [],
+		"group": ["hololive"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/286179206",
 			"Youtube": "https://www.youtube.com/channel/UCp6993wxpyDPHUpavwDFqgg",
