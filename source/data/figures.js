@@ -147,4 +147,14 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCyIcOCH-VWaRKH9IkR8hz7Q",
 		}
 	},
+    {
+		"name": "花园Sereena",
+		"jpname": "花園セレナ",
+		"img": "",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/380829248",
+			"Youtube": "https://www.youtube.com/channel/UCRXBTd80F5IIWWY4HatJ5Ug",
+		}
+	},
 ]
