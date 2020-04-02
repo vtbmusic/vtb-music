@@ -89,6 +89,26 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCWCc8tO-uUl_7SJXIKJACMw",
 		}
 	},
+    {
+		"name": "凑阿库娅",
+		"jpname": "湊 あくあ",
+		"img": "凑阿库娅.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/375504219",
+			"Youtube": "https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg",
+		}
+	},
+    {
+		"name": "犬山玉姬",
+		"jpname": "犬山たまき",
+		"img": "犬山玉姬.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/12362451",
+			"Youtube": "https://www.youtube.com/channel/UC8NZiqKx6fsDT3AVcMiVFyA",
+		}
+	},
 	{
 		"name": "鹿乃",
 		"jpname": "かの",
