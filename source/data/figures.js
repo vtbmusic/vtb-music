@@ -122,7 +122,7 @@ var data_data_figures = [
     {
 		"name": "时乃空",
 		"jpname": "ときのそら",
-		"img": "时乃空.jpg",
+		"img": "时乃空.png",
 		"group": ["hololive"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/286179206",
