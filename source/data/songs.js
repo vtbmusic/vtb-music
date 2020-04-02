@@ -174,6 +174,14 @@ var data_data_songs = [
 		date: "2020-02-13"
 	},
     {
+        // SkUeNL2SLus
+		name: "きらきら武士",
+		vocal: ["星街彗星"],
+		id: 1060,
+		img: "1060.jpg",
+		date: "2020-02-08"
+	},
+    {
 		name: "シャルル",
 		vocal: ["天音彼方"],
 		id: 1042,
@@ -277,6 +285,14 @@ var data_data_songs = [
 		id: 1049,
 		img: "1049.png",
 		date: "2019-12-13"
+	},
+    {
+        // BV1eJ411R7Ms
+		name: "天真烂漫机能",
+		vocal: ["犬山玉姬"],
+		id: 1058,
+		img: "1058.jpg",
+		date: "2019-11-25"
 	},
     {
         // BV19J411U7MG
