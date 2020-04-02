@@ -150,7 +150,7 @@ var data_data_figures = [
     {
 		"name": "花园Sereena",
 		"jpname": "花園セレナ",
-		"img": "",
+		"img": "花园Serena.jpg",
 		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/380829248",
