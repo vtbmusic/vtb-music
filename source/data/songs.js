@@ -287,6 +287,14 @@ var data_data_songs = [
 		date: "2019-12-13"
 	},
     {
+        //BV1AJ411v7QK
+		name: "Ubiquitous dB",
+		vocal: ["凑阿库娅"],
+		id: 1059,
+		img: "1059.jpg",
+		date: "2019-12-08"
+	},
+    {
         // BV1eJ411R7Ms
 		name: "天真烂漫机能",
 		vocal: ["犬山玉姬"],
