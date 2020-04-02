@@ -258,12 +258,33 @@ var data_data_songs = [
 		img: "1041.jpg",
 		date: "2020-01-11"
 	},
+    {
+		name: "メルト",
+        vocal: ["时乃空"],
+        id: 1054,
+        img: "1054.jpg",
+        date: "2020-01-14"
+	},
+    {
+		name: "だんご大家族",
+        vocal: ["时乃空","AZKi"],
+        id: 1053,
+        img: "1053.jpg",
+        date: "2020-01-03"
+	},
 	{
 		name: "Only my railgun",
 		vocal: ["白上吹雪"],
 		id: 1009,
 		img: "1009.jpg",
 		date: "2019-12-30"
+	},
+    {
+		name: "blessing",
+        vocal: ["时乃空","樱巫女","夜空梅露","萝卜子","大空昴","AZKi"],
+        id: 1055,
+        img: "1055.jpg",
+        date: "2019-12-24"
 	},
 	{
 		name: "白日",
