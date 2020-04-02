@@ -139,7 +139,7 @@ var data_data_figures = [
 	},
 	{
 		"name": "花丸晴琉",
-		"jpname": "",
+		"jpname": "花丸はれる",
 		"img": "花丸晴琉.png",
 		"group": ["花寄女子寮"],
 		"links":{
