@@ -157,4 +157,14 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCRXBTd80F5IIWWY4HatJ5Ug",
 		}
 	},
+    {
+		"name": "时乃空",
+		"jpname": "ときのそら",
+		"img": "时乃空.jpg",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/286179206",
+			"Youtube": "https://www.youtube.com/channel/UCp6993wxpyDPHUpavwDFqgg",
+		}
+	},
 ]
