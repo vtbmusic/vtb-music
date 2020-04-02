@@ -401,4 +401,12 @@ var data_data_songs = [
 		img: "1047.jpg",
 		date: "2019-03-31"
 	},
+    {
+        //BV19s411c7Tz
+		name: "太阳系Disco",
+		vocal: ["时乃空"],
+		id: 1070,
+		img: "1070.jpg",
+		date: "2018-07-30"
+	},
 ]
