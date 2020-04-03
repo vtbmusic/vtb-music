@@ -5,15 +5,17 @@ var data = {
 			url: app_config.data_path_2 + '1data.json',
 			success:function(result){
 				let tmp = result['data'];
-				data_data_songs.concat(tmp);
+				data_data_songs = data_data_songs.concat(tmp);
 				data_data_songs.sort(function(a,b){
 					if(a.date > b.date) return -1;
 					if(a.date == b.date) return 0;
 					if(a.date < b.date) return 1;
 				}) // fix me
+				app.init();
 			},
 			error:function(){
 				console.log('erro')
+				app.init();
 			}
 		});
 	},

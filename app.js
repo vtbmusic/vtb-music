@@ -35,7 +35,6 @@ var app = {
 			if(status!='success') alert('Erro. \n Can\'t get data.');
 			app_data.template_figure_card_ext = data;
 		});
-		data.merge_data();
         app.switch_app(app_index);
 		player.init();
 		ui.init();
@@ -640,7 +639,7 @@ var app_config = {
 }
 
 $(document).ready(function(){
-	app.init();
+	data.merge_data();
 });
 
 window.onbeforeunload = function(ev){
