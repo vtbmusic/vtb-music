@@ -3,11 +3,11 @@
 	<div class="music-card-subtitle">{{name}}</div>
 	<div class="music-card-body">
 		<div class="music-card-img" style="background: url({{img}});"></div>
-		<span class="cover" ondblclick="ui.btn_sm_play_pause({{song_id}})"></span>
-		<span class="btn-sm btn-sm-play" onclick="ui.btn_sm_play_pause({{song_id}})" data-btn-play="{{song_id}}"></span>
+		<span class="cover" ondblclick="ui.btn_sm_play_pause('{{song_id}}')"></span>
+		<span class="btn-sm btn-sm-play" onclick="ui.btn_sm_play_pause('{{song_id}}')" data-btn-play="{{song_id}}"></span>
 		<div class="btn-sm btn-sm-more">
 			<div class="dropdown-content">
-				<a href="javascript:void(0);" onclick="player.add_song_to_list({{song_id}})">添加到列表</a>
+				<a href="javascript:void(0);" onclick="player.add_song_to_list('{{song_id}}')">添加到列表</a>
 				{{vocals_link}}
 				<a href="{{song_path}}{{song_id}}.mp3" download="{{name}}">下载</a>
 			</div>
