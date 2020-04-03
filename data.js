@@ -8,7 +8,9 @@ var data = {
 	},
 	get_song_index: function(song_id){
 		for(let item in data_data_songs)
-			if(data_data_songs[item]['id'] == song_id) return item;
+			if(data_data_songs[item]['id'] == song_id){
+				return item;
+			}
 		return -1;
 	},
 	get_song_from_vocal: function(vocal){

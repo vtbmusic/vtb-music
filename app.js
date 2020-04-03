@@ -316,10 +316,11 @@ var app_album = {
 		if(album == null) return;
 		$('#album-img').css('background', 'url(' + app_config.img_path+ album['img'] + ')');
 		$('#album-name').text(album['name']);
-		$('#album-name-jp').text(tools.get_vocal_name(album['vocal']));
+		$('#album-name-jp').text(tools.get_vocal_name_text(album['vocal']));
 		$('#album-song-list').empty();
 		for(let i in album.songs){
 			let song = data.get_song(album.songs[i]);
+			if(song == null) continue;
 			$('#album-song-list').append(model_song_list.load_template_song_item(song));
 		}
 		ui.refresh_ui();
