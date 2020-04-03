@@ -237,4 +237,14 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCRXBTd80F5IIWWY4HatJ5Ug",
 		}
 	},
+	{
+		"name": "皆守英雄",
+		"jpname": "皆守ひいろ",
+		"img": "皆守英雄.jpg",
+		"group": ["ENTUM"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/395814787",
+			"Youtube": "https://www.youtube.com/channel/UCuGMkxJA_icuiF01u8f3Y2Q",
+		}
+	}
 ]
