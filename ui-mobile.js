@@ -142,7 +142,7 @@ var ui = {
 	},
 	load_song: function(song_id){
 		let song = data_data_songs[data.get_song_index(song_id)];
-		$('#nav-music-card-img').attr('style', 'background: url(' + tools.get_img_link(song['img'] || (song['vocal'][0]+'.jpg')) + ')');
+		$('#nav-music-card-img').attr('style', 'background: url(' + data.get_img_link(song['img'] || (song['vocal'][0]+'.jpg'), song_id) + ')');
 		$('#nav-music-card-title').text(song['name']);
 		$('#nav-music-card-subtitle').html(tools.load_template_vocal(song['vocal']));
 	},
