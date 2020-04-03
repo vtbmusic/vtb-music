@@ -445,7 +445,7 @@ var model_load_lyric = {
 		model_load_lyric.lyric_data = [];
 		clearInterval(model_load_lyric.scroll_timer);
 		$.ajax({
-			url:app_config.lyric_path + song_id + "T.txt",
+			url: data.get_lyric_link(song_id, true),
 			success:function(result){
 				lyric_data = result;
 				html_data = model_load_lyric.load_lyric_with_time(lyric_data);
@@ -456,7 +456,7 @@ var model_load_lyric = {
 			},
 			error:function(){
 				$.ajax({
-					url:app_config.lyric_path + song_id + ".txt",
+					url: data.get_lyric_link(song_id, false),
 					success:function(result){
 						lyric_data = result;
 						html_data = model_load_lyric.load_lyric(lyric_data);
