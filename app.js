@@ -35,6 +35,11 @@ var app = {
 			if(status!='success') alert('Erro. \n Can\'t get data.');
 			app_data.template_figure_card_ext = data;
 		});
+		data_data_songs.sort(function(a,b){
+			if(a.date > b.date) return -1;
+			if(a.date == b.date) return 0;
+			if(a.date < b.date) return 1;
+		})
         app.switch_app(app_index);
 		player.init();
 		ui.init();
@@ -329,6 +334,7 @@ var app_all_song = {
 	dom_jq: $('#app-all-songs'),
 	init: function(){
 		model_song_list.load_song_list($('#all-songs-music-cards-list'), data_data_songs);
+		ui.refresh_ui();
 		app_all_song.dom_jq.show();
 	},
 	exit: function(){
