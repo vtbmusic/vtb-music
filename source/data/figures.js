@@ -246,5 +246,13 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/395814787",
 			"Youtube": "https://www.youtube.com/channel/UCuGMkxJA_icuiF01u8f3Y2Q",
 		}
+	},
+    {
+		"name": "苍月艾莉",
+		"jpname": "蒼月エリ(已隐退)",
+		"img": "苍月艾莉.jpg",
+		"group": ["Honey Strap"],
+		"links":{
+		}
 	}
 ]
