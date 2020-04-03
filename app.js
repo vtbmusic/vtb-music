@@ -35,11 +35,7 @@ var app = {
 			if(status!='success') alert('Erro. \n Can\'t get data.');
 			app_data.template_figure_card_ext = data;
 		});
-		data_data_songs.sort(function(a,b){
-			if(a.date > b.date) return -1;
-			if(a.date == b.date) return 0;
-			if(a.date < b.date) return 1;
-		})
+		data.merge_data();
         app.switch_app(app_index);
 		player.init();
 		ui.init();
@@ -83,7 +79,7 @@ var player = {
 	mode_play_random: false,
 	mode_play_repeat: false,
 	load_song: function(song_id){
-		player.dom.src = app_config.song_path + song_id + '.mp3';
+		player.dom.src = data.get_song_link(song_id);
 		player.cur_song = song_id;
 		//player.dom.load();
 		ui.load_song(song_id);
@@ -257,12 +253,12 @@ var app_index = {
 		}
 	},
 	load_template_album_card: function(name, vocal, img){
-		let data = tools.load_template({
+		let tmp = tools.load_template({
 			'name': name,
 			'vocal': vocal,
-			'img': tools.get_img_link(img),
+			'img': data.get_album_img_link(img),
 		},app_data.template_album_card);
-		$('#index-alums-list').append(data);
+		$('#index-alums-list').append(tmp);
 	}
 }
 
@@ -273,8 +269,8 @@ var app_bigplayer = {
 		let tmp = $('.bigplayer-lyric-p');
 		model_load_lyric.init(tmp, song_id);
 		let song = data.get_song(song_id);
-		$('.bigplayer-bg').css('background', 'url(' + tools.get_img_link(song['img'] || song['vocal'][0]+'.jpg') + ')');
-		$('#bigplayer-btn-download').attr('href', tools.get_song_link(song_id));
+		$('.bigplayer-bg').css('background', 'url(' + data.get_img_link(song['img'], song_id) + ')');
+		$('#bigplayer-btn-download').attr('href', data.get_song_link(song_id));
 		$('#bigplayer-btn-download').attr('download', song.name);
 		$('#bigplayer-btn-share').attr('data-clipboard-text', tools.get_song_share_link(song_id));
 		$('#bigplayer-btn-share').click(app_bigplayer.event_share);
@@ -409,15 +405,15 @@ var model_music_card = {
 		return res;
 	},
 	load_template_music_card: function(song_id, name, vocal, img){
-		let data = tools.load_template({
+		let tmp = tools.load_template({
 			'song_id': song_id,
 			'name': name,
 			'vocals_name': tools.get_vocal_name(vocal),
 			'vocals_link': tools.load_template_vocal(vocal),
-			'img': tools.get_img_link(img || vocal[0]+'.jpg'),
+			'img': data.get_img_link(img || vocal[0]+'.jpg', song_id),
 			'song_path': app_config.song_path,
 		},app_data.template_music_card);
-		return data;
+		return tmp;
 	},
 }
 
@@ -574,12 +570,6 @@ var tools = {
 		}
 		return vocal_name;
 	},
-	get_img_link: function(img){
-		return app_config.img_path + img;
-	},
-	get_song_link: function(song_id){
-		return app_config.song_path + song_id + '.mp3';
-	},
 	get_song_share_link: function(song_id){
 		return app_config.site_path + '?song_id=' + song_id;
 	},
@@ -644,6 +634,7 @@ var app_config = {
 	// for release:
 	lyric_path: 'https://santiego.gitee.io/vtb-music-source-lyric/lyric/',
 	song_path: 'https://santiego.gitee.io/vtb-music-source-song/song/',
+	data_path_2: 'https://santiego.gitee.io/vtb-music-source-data-2/',
 	img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/',
 	figure_img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/figure/'
 }
