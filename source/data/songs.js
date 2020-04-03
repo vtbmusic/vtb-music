@@ -13,7 +13,7 @@ var data_data_songs = [
 		img: "1046.jpg",
 		date: "2020-03-30"
 	},
-     {
+    {
 		name: "紅蓮華",
 		vocal: ["星街彗星"],
 		id: 1028,
