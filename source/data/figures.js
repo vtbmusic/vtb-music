@@ -228,7 +228,7 @@ var data_data_figures = [
 		}
 	},
     {
-		"name": "花园Sereena",
+		"name": "花园Serena",
 		"jpname": "花園セレナ",
 		"img": "花园Serena.jpg",
 		"group": [],
