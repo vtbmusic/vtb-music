@@ -21,6 +21,83 @@ var data_data_songs = [
 		date: "2020-03-27"
 	},
     {
+		name: "ロキ(Roki)",
+		vocal: ["星街彗星"],
+		id: "星街彗星-roki",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "紅蓮華",
+		vocal: ["星街彗星"],
+		id: 1028,
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "ロキ(Roki)",
+		vocal: ["星街彗星"],
+		id: "星街彗星-roki",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "名前のない怪物",
+		vocal: ["星街彗星"],
+		id: "星街彗星-名前のない怪物",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "The Everlasting Guilty Crown",
+		vocal: ["星街彗星"],
+		id: "星街彗星-The Everlasting Guilty Crown",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "Departures 〜あなたにおくるアイの歌〜",
+		vocal: ["星街彗星"],
+		id: "星街彗星-Departures 〜あなたにおくるアイの歌〜",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "もうそうえくすぷれす",
+		vocal: ["星街彗星"],
+		id: "星街彗星-もうそうえくすぷれす",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "ヴィーナスとジーザス",
+		vocal: ["星街彗星"],
+		id: "星街彗星-ヴィーナスとジーザス",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "君の銀の庭",
+		vocal: ["星街彗星"],
+		id: "星街彗星-君の銀の庭",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "丸の内サディスティック",
+		vocal: ["星街彗星"],
+		id: "星街彗星-丸の内サディスティック",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
+		name: "いかないで",
+		vocal: ["星街彗星"],
+		id: "星街彗星-いかないで",
+		img: "1028.jpg",
+		date: "2020-03-27"
+	},
+    {
 		name: "NEXT COLOR PLANET",
 		vocal: ["星街彗星"],
 		id: 1020,
