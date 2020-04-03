@@ -2,7 +2,7 @@ var data = {
 	//
 	merge_data: function(){
 		$.ajax({
-			url: app_config.data_path_2 + '1data.js',
+			url: app_config.data_path_2 + '1data.json',
 			success:function(result){
 				let tmp = JSON.parse(result)['data'];
 				data_data_songs.concat(tmp);
