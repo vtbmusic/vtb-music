@@ -160,6 +160,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "兔田佩克拉",
+		"jpname": "兎田ぺこら",
+		"img": "兔田佩克拉.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/443305053",
+			"Youtube": "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ",
+		}
+	},
+    {
 		"name": "萝卜子",
 		"jpname": "Roboko-san",
 		"img": "萝卜子.png",
