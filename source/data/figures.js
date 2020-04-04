@@ -217,6 +217,14 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCt0clH12Xk1-Ej5PXKGfdPA",
 		}
 	},
+    {
+		"name": "谢林·勃艮第",
+		"jpname": "Shellin Burgundy",
+		"img": "谢林·勃艮第.png",
+		"group": ["彩虹社"],
+		"links":{
+		}
+	},
 	{
 		"name": "花丸晴琉",
 		"jpname": "花丸はれる",
