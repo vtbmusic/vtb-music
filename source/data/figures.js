@@ -313,4 +313,13 @@ var data_data_figures = [
 		"links":{
 		}
 	}
+    {
+		"name": "梅丽莎·金莲花",
+		"jpname": "メリッサ・キンレンカ",
+		"img": "梅丽莎·金莲花.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCwcyyxn6h9ex4sMXGtpQE_g",
+		}
+	},
 ]
