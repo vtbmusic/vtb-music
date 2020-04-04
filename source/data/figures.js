@@ -245,6 +245,16 @@ var data_data_figures = [
 		"links":{
 		}
 	},
+    {
+		"name": "绿仙",
+		"jpname": "",
+		"img": "绿仙.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/403930401",
+			"Youtube": "https://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw",
+		}
+	},
 	{
 		"name": "花丸晴琉",
 		"jpname": "花丸はれる",
