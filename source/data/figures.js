@@ -9,16 +9,6 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A",
 		}
 	},
-    {
-		"name": "亚绮-罗森",
-		"jpname": "アキロゼ",
-		"img": "亚绮-罗森.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/389857131/",
-			"Youtube": "https://www.youtube.com/channel/UCFTLzh12_nrtzqBPsTCqenA",
-		}
-	},
 	{
 		"name": "夏色祭",
 		"jpname": "夏色 まつり",
@@ -147,6 +137,16 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/389056211",
 			"Youtube": "https://www.youtube.com/channel/UC0TXe_LYZ4scaW2XMyi5_kw",
+		}
+	},
+    {
+		"name": "亚绮-罗森",
+		"jpname": "アキロゼ",
+		"img": "亚绮-罗森.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389857131/",
+			"Youtube": "https://www.youtube.com/channel/UCFTLzh12_nrtzqBPsTCqenA",
 		}
 	},
     {
