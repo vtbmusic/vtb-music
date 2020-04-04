@@ -238,7 +238,7 @@ var data_data_figures = [
     {
 		"name": "小东人鱼",
 		"jpname": "小東ひとな",
-		"img": "小东人鱼.png",
+		"img": "小东人鱼.jpg",
 		"group": ["花寄女子寮"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/441382432/",
