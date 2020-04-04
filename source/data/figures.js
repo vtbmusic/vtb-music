@@ -312,7 +312,7 @@ var data_data_figures = [
 		"group": ["Honey_Strap"],
 		"links":{
 		}
-	}
+	},
     {
 		"name": "梅丽莎·金莲花",
 		"jpname": "メリッサ・キンレンカ",
