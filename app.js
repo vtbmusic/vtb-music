@@ -316,7 +316,12 @@ var app_vocal = {
 	dom_jq: $('#app-vocal'),
 	init: function(vocal){
 		let figure = data.get_figure(vocal);
-		if(figure == null) return;
+		if(figure == null){
+			info_app.init('暂未收录此人物')
+			setTimeout(info_app.close, 1000);
+			app.close_app();
+			return;
+		}
 		$('#vocal-img').css('background', 'url(' + tools.get_figure_img_link(figure['img']) + ')');
 		$('#vocal-name').text(figure['name']);
 		$('#vocal-name-jp').text(figure['jpname']);
@@ -527,9 +532,10 @@ var model_load_lyric = {
 		res.stime = stime;
 		return res;
 	},
+	pre_lyric: 0,
 	scroll_lyric: function(){
 		if(model_load_lyric.scroll_disabled||model_load_lyric.lyric_data.length==0) return;
-		$('.lyric-text').removeClass('lyric-text-on');
+		$('#lyric-text-' + model_load_lyric.pre_lyric).removeClass('lyric-text-on');
 		let iter = 0;
 		while(iter+1!=model_load_lyric.lyric_data.length&&model_load_lyric.lyric_data[iter+1].stime<=player.dom.currentTime) iter++;
 		let id = model_load_lyric.lyric_data[iter].id;
@@ -538,6 +544,7 @@ var model_load_lyric = {
 			scrollTop: ($('.bigplayer-lyric-p').scrollTop()+$('#lyric-text-'+id).offset().top-$('.bigplayer-lyric-p').height()/3-$('.bigplayer-lyric-p').offset().top)+'px',
 		});
 		$('#lyric-text-'+id).addClass('lyric-text-on');
+		model_load_lyric.pre_lyric = id;
 	},
 	event_player_on_scroll: function(){
 		model_load_lyric.scroll_disabled = true;
