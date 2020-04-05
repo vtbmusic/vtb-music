@@ -337,7 +337,7 @@ var data_data_figures = [
 	},
     {
 		"name": "苍月艾莉",
-		"jpname": "蒼月エリ(已隐退)",
+		"jpname": "蒼月エリ",
 		"img": "苍月艾莉.jpg",
 		"group": ["Honey_Strap"],
 		"links":{
