@@ -342,4 +342,14 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCwcyyxn6h9ex4sMXGtpQE_g",
 		}
 	},
+    {
+		"name": "织田信姬",
+		"jpname": "織田信姫",
+		"img": "织田信姬.png",
+		"group": ["upd8"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/80387576",
+			"Youtube": "https://www.youtube.com/channel/UCGcD5iUDG8xiywZeeDxye-A",
+		}
+	},
 ]
