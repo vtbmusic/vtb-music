@@ -14,7 +14,7 @@ var data = {
 				app.init();
 			},
 			error:function(){
-				console.log('erro')
+				info_app.init_block('网站后台正在更新，请稍后刷新');
 				app.init();
 			}
 		});

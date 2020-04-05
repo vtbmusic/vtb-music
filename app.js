@@ -102,6 +102,8 @@ var player = {
 		player.dom.onplay = player.event_onplay;
 		player.dom.onpause = player.event_onpause;
 		player.dom.onended = player.event_play_on_end;
+		player.dom.onloadstart = player.event_start_load;
+		player.dom.oncanplay = player.event_load_end;
 		setInterval(player.event_updata, 500);
 		$("#nav-play-bar-bg").mousedown(function(ev){
 			let tmp = (ev.clientX - $(this).offset().left)/$("#nav-play-bar-bg").width();
@@ -197,7 +199,30 @@ var player = {
 	event_onplay: function(){
 		ui.switch_play(player.cur_song);
 		app_playlist.load_playlist();
+	},
+	event_start_load: function(){
+		info_app.init('正在加载');
+	},
+	event_load_end: function(){
+		info_app.close();
 	}
+}
+
+var info_app = {
+	block: false,
+	init: function(text){
+		if(info_app.block) return;
+		$('#info-text').html(text);
+		$('#info').fadeIn(500);
+	},
+	init_block: function(text){
+		info_app.init(text);
+		info_app.block = true;
+	},
+	close: function(){
+		if(info_app.block) return;
+		$('#info').fadeOut(500);
+	},
 }
 
 var app_playlist = {

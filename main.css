@@ -1,3 +1,17 @@
+.info{
+	position: fixed;
+    z-index: 4;
+    top: 10%;
+   	right:2%;
+    padding: 0.5rem 1rem;
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: rgba(158, 158, 158, 0.37);
+    box-shadow: 0rem 0.1rem 0.1rem 0rem rgba(0,0,0,0.2);
+	-webkit-backdrop-filter: blur(0.5rem);
+	backdrop-filter: blur(0.5rem);
+}
 .nav-player{
 	height: 4rem;
 	width: 100%;
