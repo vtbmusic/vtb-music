@@ -1,5 +1,34 @@
 var data_data_figures = [
     {
+		"name": "本间向日葵",
+		"jpname": "本間ひまわり",
+		"img": "本间向日葵.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/403928672",
+			"Youtube": "https://www.youtube.com/channel/UC0g1AE0DOjBYnLhkgoRWN1w",
+		}
+	},
+    {
+		"name": "社筑",
+		"jpname": "社築",
+		"img": "社筑.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/458154141",
+			"Youtube": "https://www.youtube.com/channel/UCKMYISTJAQ8xTplUPHiABlA",
+		}
+	},
+    {
+		"name": "早稻叽",
+		"jpname": "",
+		"img": "早稻叽.png",
+		"group": ["Duckdriver"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/1950658",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
