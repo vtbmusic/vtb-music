@@ -301,14 +301,14 @@ var app_bigplayer = {
 		$('#bigplayer-btn-share').attr('data-clipboard-text', tools.get_song_share_link(song_id));
 		$('#bigplayer-btn-share').click(app_bigplayer.event_share);
 		new ClipboardJS('#bigplayer-btn-share');
-		app_bigplayer.dom_jq.fadeIn(500);
+		app_bigplayer.dom_jq.show();
 	},
 	event_share: function(){
 		$('#bigplayer-btn-share').text('已复制歌曲链接');
 		setTimeout(function(){$('#bigplayer-btn-share').text('分享');}, 500);
 	},
 	exit: function(){
-		app_bigplayer.dom_jq.fadeOut(500);
+		app_bigplayer.dom_jq.hide();
 	}
 }
 

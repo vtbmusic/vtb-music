@@ -109,14 +109,14 @@
 	position: relative;
 }
 .nav-music-card-title{
-	font-size: 0.2rem;
+	font-size: 0.8rem;
 	cursor: default;
 }
 .nav-music-card-title:hover{
     color: rgb(15,127,254);
 }
 .nav-music-card-subtitle a{
-	font-size: 0.1rem;
+	font-size: 0.7rem;
 	color: gray;
 	cursor: default;
 	margin-left: 0.2rem;
@@ -234,7 +234,7 @@
 .playlist-btn-remove{
 	display: none;
 	float: right;
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 	color: gray;
 	cursor: default;
 }
@@ -402,7 +402,7 @@
 	color: rgb(15,127,254);
 }
 .music-card-subtitle{
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 	color: gray;
 }
 .music-card-body{
@@ -446,7 +446,7 @@
 	font-size: 1rem;
 }
 .album-card-subtitle{
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 	color: gray;
 }
 .album-card-body{
@@ -490,6 +490,7 @@
 	margin-bottom: 0.5rem;
 	display: inline-block;
 	text-align: center;
+	width: 10rem;
 }
 .figure-img{
 	width: 8rem;
@@ -509,7 +510,7 @@
 	margin-left: 1rem;
 }
 .figure-name{
-	margin-top: 60%;
+	margin-top: 0.5rem;
 	font-weight: bold;
 }
 .figure-jpname{
@@ -572,7 +573,7 @@
 }
 .playlist-btn-primary{
 	float: right;
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 	color: gray;
 	cursor: default;
 	padding-right: 1rem;
@@ -724,7 +725,7 @@ body{
 }
 .footer-text-block{
 	text-align: left;
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 }
 .footer a{
 	color: #888;
