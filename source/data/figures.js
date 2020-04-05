@@ -250,7 +250,7 @@ var data_data_figures = [
 	{
 		"name": "皆守英雄",
 		"jpname": "皆守ひいろ",
-		"img": "皆守英雄.jpg",
+		"img": "皆守英雄.png",
 		"group": ["ENTUM"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/395814787",
