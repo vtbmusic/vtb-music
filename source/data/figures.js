@@ -1,15 +1,5 @@
 var data_data_figures = [
     {
-		"name": "大神澪",
-		"jpname": "大神ミオ",
-		"img": "大神澪.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/389862071",
-			"Youtube": "https://www.youtube.com/channel/UCp-5t9SrOQwXMU7iIjQfARg",
-		}
-	},
-    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
@@ -177,6 +167,16 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/443305053",
 			"Youtube": "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ",
+		}
+	},
+    {
+		"name": "大神澪",
+		"jpname": "大神ミオ",
+		"img": "大神澪.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389862071",
+			"Youtube": "https://www.youtube.com/channel/UCp-5t9SrOQwXMU7iIjQfARg",
 		}
 	},
     {
