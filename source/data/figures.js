@@ -30,6 +30,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "宝钟玛琳",
+		"jpname": "宝鐘マリン",
+		"img": "宝钟玛琳.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/454955503",
+			"Youtube": "https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg",
+		}
+	},
+    {
 		"name": "神乐七奈",
 		"jpname": "かぐらなな",
 		"img": "神乐七奈.png",
