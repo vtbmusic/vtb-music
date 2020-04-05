@@ -249,6 +249,15 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UC04QM30wwa0qMs101Mwz29w",
 		}
 	},
+    {
+		"name": "名取纱那",
+		"jpname": "名取さな",
+		"img": "名取纱那.png",
+		"group": [],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA",
+		}
+	},        
 	{
 		"name": "泠鸢yousa",
 		"jpname": "",
