@@ -30,6 +30,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "天曰ひよ",
+		"jpname": "天曰ひよ",
+		"img": "天曰ひよ.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/27403816",
+			"Youtube": "https://www.youtube.com/channel/UC04QM30wwa0qMs101Mwz29w",
+		}
+	},
+    {
 		"name": "神乐七奈",
 		"jpname": "かぐらなな",
 		"img": "神乐七奈.png",
