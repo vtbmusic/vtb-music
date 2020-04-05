@@ -139,7 +139,6 @@ var ui = {
 	},
 	load_song: function(song_id){
 		let song = data.get_song(song_id);
-		console.log(song);
 		$('#nav-music-card-img').attr('style', 'background: url(' + data.get_img_link(song['img'] || (song['vocal'][0]+'.jpg'), song['id']) + ')');
 		$('#nav-music-card-title').text(song['name']);
 		$('#nav-music-card-subtitle').html(tools.load_template_vocal(song['vocal']));

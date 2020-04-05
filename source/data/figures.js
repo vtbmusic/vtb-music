@@ -140,6 +140,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "亚绮-罗森",
+		"jpname": "アキロゼ",
+		"img": "亚绮-罗森.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389857131/",
+			"Youtube": "https://www.youtube.com/channel/UCFTLzh12_nrtzqBPsTCqenA",
+		}
+	},
+    {
 		"name": "大空昴",
 		"jpname": "大空 スバル",
 		"img": "大空昴.png",
@@ -147,6 +157,26 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/389859190",
 			"Youtube": "https://www.youtube.com/channel/UCvzGlP9oQwU--Y0r9id_jnA",
+		}
+	},
+    {
+		"name": "兔田佩克拉",
+		"jpname": "兎田ぺこら",
+		"img": "兔田佩克拉.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/443305053",
+			"Youtube": "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ",
+		}
+	},
+    {
+		"name": "大神澪",
+		"jpname": "大神ミオ",
+		"img": "大神澪.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389862071",
+			"Youtube": "https://www.youtube.com/channel/UCp-5t9SrOQwXMU7iIjQfARg",
 		}
 	},
     {
@@ -189,6 +219,45 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UC9mf_ZVpouoILRY9NUIaK-w",
 		}
 	},
+    {
+		"name": "本间向日葵",
+		"jpname": "本間ひまわり",
+		"img": "本间向日葵.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/403928672",
+			"Youtube": "https://www.youtube.com/channel/UC0g1AE0DOjBYnLhkgoRWN1w",
+		}
+	},
+    {
+		"name": "社筑",
+		"jpname": "社築",
+		"img": "社筑.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/458154141",
+			"Youtube": "https://www.youtube.com/channel/UCKMYISTJAQ8xTplUPHiABlA",
+		}
+	},
+    {
+		"name": "天曰ひよ",
+		"jpname": "天曰ひよ",
+		"img": "天曰ひよ.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/27403816",
+			"Youtube": "https://www.youtube.com/channel/UC04QM30wwa0qMs101Mwz29w",
+		}
+	},
+    {
+		"name": "名取纱那",
+		"jpname": "名取さな",
+		"img": "名取纱那.png",
+		"group": [],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA",
+		}
+	},        
 	{
 		"name": "泠鸢yousa",
 		"jpname": "",
@@ -218,6 +287,34 @@ var data_data_figures = [
 		}
 	},
 	{
+		"name": "戌亥床",
+		"jpname": "戌亥 とこ",
+		"img": "戌亥床.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/458154142",
+			"Youtube": "https://www.youtube.com/channel/UCXRlIK3Cw_TJIQC5kSJJQMg",
+		}
+	},
+    {
+		"name": "谢林·勃艮第",
+		"jpname": "Shellin Burgundy",
+		"img": "谢林·勃艮第.png",
+		"group": ["彩虹社"],
+		"links":{
+		}
+	},
+    {
+		"name": "绿仙",
+		"jpname": "",
+		"img": "绿仙.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/403930401",
+			"Youtube": "https://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw",
+		}
+	},
+	{
 		"name": "花丸晴琉",
 		"jpname": "花丸はれる",
 		"img": "花丸晴琉.png",
@@ -225,6 +322,16 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/441381282",
 			"Youtube": "https://www.youtube.com/channel/UCyIcOCH-VWaRKH9IkR8hz7Q",
+		}
+	},
+    {
+		"name": "小东人鱼",
+		"jpname": "小東ひとな",
+		"img": "小东人鱼.jpg",
+		"group": ["花寄女子寮"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/441382432/",
+			"Youtube": "https://www.youtube.com/channel/UCV2m2UifDGr3ebjSnDv5rUA",
 		}
 	},
     {
@@ -256,5 +363,41 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/395814787",
 			"Youtube": "https://www.youtube.com/channel/UCuGMkxJA_icuiF01u8f3Y2Q",
 		}
-	}
+	},
+    {
+		"name": "苍月艾莉",
+		"jpname": "蒼月エリ",
+		"img": "苍月艾莉.jpg",
+		"group": ["Honey_Strap"],
+		"links":{
+		}
+	},
+    {
+		"name": "梅丽莎·金莲花",
+		"jpname": "メリッサ・キンレンカ",
+		"img": "梅丽莎·金莲花.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCwcyyxn6h9ex4sMXGtpQE_g",
+		}
+	},
+    {
+		"name": "织田信姬",
+		"jpname": "織田信姫",
+		"img": "织田信姬.png",
+		"group": ["upd8"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/80387576",
+			"Youtube": "https://www.youtube.com/channel/UCGcD5iUDG8xiywZeeDxye-A",
+		}
+	},
+    {
+		"name": "早稻叽",
+		"jpname": "",
+		"img": "早稻叽.png",
+		"group": ["Duckdriver"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/1950658",
+		}
+	},
 ]

@@ -1,3 +1,17 @@
+.info{
+	position: fixed;
+    z-index: 4;
+    top: 1%;
+   	right:1%;
+    padding: 0.5rem 1rem;
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: rgba(158, 158, 158, 0.37);
+    box-shadow: 0rem 0.1rem 0.1rem 0rem rgba(0,0,0,0.2);
+	-webkit-backdrop-filter: blur(0.5rem);
+	backdrop-filter: blur(0.5rem);
+}
 .nav-player{
 	height: 4rem;
 	width: 100%;
@@ -189,6 +203,8 @@
 	margin-bottom: 0.5rem;
 	padding: 0.5rem;
 	border-bottom: 0.05rem gainsboro solid;
+	width: 95%;
+	margin-right: 0.5rem;
 }
 .playlist-song:hover{
 	transform: scale(1.025,1.025);
@@ -595,7 +611,7 @@
 	width: 1rem;
 	height: 1rem;
 	padding: 0.5rem;
-	margin-bottom: 1rem;
+	margin: 1rem;
 }
 .song-list-btn-back:hover{
 	transform: scale(1.1,1.1);
@@ -645,6 +661,7 @@
 	width: 1rem;
 	height: 1rem;
 	padding: 0.5rem;
+	margin: 1rem;
 }
 .all-song-list-btn-back:hover{
 	transform: scale(1.1,1.1);
@@ -656,6 +673,7 @@
 	margin-left: 0.2rem;
 	font-size: 1.4rem;
 	font-weight: bold;
+	margin-inline-start: 0.5rem;
 }
 .headline{
 	padding-left: 0.25rem;
@@ -677,7 +695,6 @@ body{
 	margin: 0rem;
 }
 .block{
-	margin: 1rem 0.6rem;
 }
 .dropdown-content {
 	display: none;

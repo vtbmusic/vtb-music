@@ -102,6 +102,8 @@ var player = {
 		player.dom.onplay = player.event_onplay;
 		player.dom.onpause = player.event_onpause;
 		player.dom.onended = player.event_play_on_end;
+		player.dom.onloadstart = player.event_start_load;
+		player.dom.oncanplay = player.event_load_end;
 		setInterval(player.event_updata, 500);
 		$("#nav-play-bar-bg").mousedown(function(ev){
 			let tmp = (ev.clientX - $(this).offset().left)/$("#nav-play-bar-bg").width();
@@ -197,7 +199,32 @@ var player = {
 	event_onplay: function(){
 		ui.switch_play(player.cur_song);
 		app_playlist.load_playlist();
+	},
+	first_load: true,
+	event_start_load: function(){
+		if(player.first_load) player.first_load=false;
+		else info_app.init('正在加载');
+	},
+	event_load_end: function(){
+		info_app.close();
 	}
+}
+
+var info_app = {
+	block: false,
+	init: function(text){
+		if(info_app.block) return;
+		$('#info-text').html(text);
+		$('#info').fadeIn(500);
+	},
+	init_block: function(text){
+		info_app.init(text);
+		info_app.block = true;
+	},
+	close: function(){
+		if(info_app.block) return;
+		$('#info').fadeOut(500);
+	},
 }
 
 var app_playlist = {
@@ -274,14 +301,14 @@ var app_bigplayer = {
 		$('#bigplayer-btn-share').attr('data-clipboard-text', tools.get_song_share_link(song_id));
 		$('#bigplayer-btn-share').click(app_bigplayer.event_share);
 		new ClipboardJS('#bigplayer-btn-share');
-		app_bigplayer.dom_jq.show();
+		app_bigplayer.dom_jq.fadeIn(500);
 	},
 	event_share: function(){
 		$('#bigplayer-btn-share').text('已复制歌曲链接');
 		setTimeout(function(){$('#bigplayer-btn-share').text('分享');}, 500);
 	},
 	exit: function(){
-		app_bigplayer.dom_jq.hide();
+		app_bigplayer.dom_jq.fadeOut(500);
 	}
 }
 
@@ -289,7 +316,12 @@ var app_vocal = {
 	dom_jq: $('#app-vocal'),
 	init: function(vocal){
 		let figure = data.get_figure(vocal);
-		if(figure == null) return;
+		if(figure == null){
+			info_app.init('暂未收录此人物')
+			setTimeout(info_app.close, 1000);
+			app.close_app();
+			return;
+		}
 		$('#vocal-img').css('background', 'url(' + tools.get_figure_img_link(figure['img']) + ')');
 		$('#vocal-name').text(figure['name']);
 		$('#vocal-name-jp').text(figure['jpname']);
@@ -297,10 +329,10 @@ var app_vocal = {
 		$('#vocal-links').append(tools.load_template_links(figure.links));
 		model_song_list.load_song_list($('#vocal-song-list'), data.get_song_from_vocal(vocal));
 		ui.refresh_ui();
-		app_vocal.dom_jq.show();
+		app_vocal.dom_jq.fadeIn(200);
 	},
 	exit: function(){
-		app_vocal.dom_jq.hide();
+		app_vocal.dom_jq.fadeOut(200);
 	}
 }
 
@@ -319,10 +351,10 @@ var app_album = {
 			$('#album-song-list').append(model_song_list.load_template_song_item(song));
 		}
 		ui.refresh_ui();
-		app_album.dom_jq.show();
+		app_album.dom_jq.fadeIn(200);
 	},
 	exit: function(){
-		app_album.dom_jq.hide();
+		app_album.dom_jq.fadeOut(200);
 	}
 }
 
@@ -331,7 +363,7 @@ var app_all_song = {
 	init: function(){
 		model_song_list.load_song_list($('#all-songs-music-cards-list'), data_data_songs);
 		ui.refresh_ui();
-		app_all_song.dom_jq.show();
+		app_all_song.dom_jq.fadeIn(200);
 	},
 	exit: function(){
 		app_all_song.dom_jq.hide();
@@ -346,7 +378,7 @@ var app_all_figures = {
 		for(let i in figures){
 			app_all_figures.load_figure_card(figures[i]);
 		}
-		app_all_figures.dom_jq.show();
+		app_all_figures.dom_jq.fadeIn(200);
 	},
 	load_figure_card: function(figure){
 		if(figure == null) return;
@@ -383,7 +415,7 @@ var model_song_list = {
 			'song_id': song['id'],
 			'name': song['name'],
 			'date': song['date'],
-			'song_path': app_config.song_path,
+			'song_path': data.get_song_link(song.id),
 			'vocals_link': tools.load_template_vocal(song['vocal']),
 		},app_data.template_song_item);
 		return tmp;
@@ -410,7 +442,7 @@ var model_music_card = {
 			'vocals_name': tools.get_vocal_name(vocal),
 			'vocals_link': tools.load_template_vocal(vocal),
 			'img': data.get_img_link(img || vocal[0]+'.jpg', song_id),
-			'song_path': app_config.song_path,
+			'song_path': data.get_song_link(song_id),
 		},app_data.template_music_card);
 		return tmp;
 	},
@@ -500,9 +532,10 @@ var model_load_lyric = {
 		res.stime = stime;
 		return res;
 	},
+	pre_lyric: 0,
 	scroll_lyric: function(){
 		if(model_load_lyric.scroll_disabled||model_load_lyric.lyric_data.length==0) return;
-		$('.lyric-text').removeClass('lyric-text-on');
+		$('#lyric-text-' + model_load_lyric.pre_lyric).removeClass('lyric-text-on');
 		let iter = 0;
 		while(iter+1!=model_load_lyric.lyric_data.length&&model_load_lyric.lyric_data[iter+1].stime<=player.dom.currentTime) iter++;
 		let id = model_load_lyric.lyric_data[iter].id;
@@ -511,6 +544,7 @@ var model_load_lyric = {
 			scrollTop: ($('.bigplayer-lyric-p').scrollTop()+$('#lyric-text-'+id).offset().top-$('.bigplayer-lyric-p').height()/3-$('.bigplayer-lyric-p').offset().top)+'px',
 		});
 		$('#lyric-text-'+id).addClass('lyric-text-on');
+		model_load_lyric.pre_lyric = id;
 	},
 	event_player_on_scroll: function(){
 		model_load_lyric.scroll_disabled = true;

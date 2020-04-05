@@ -25,10 +25,13 @@
     <title>Vtb-Music</title>
 	</head>
 	<body>
-		<audio id="player">
+		<audio id="player" preload="auto">
   			<source type="audio/mpeg">
 			抱歉，请升级您的浏览器
 		</audio>
+		<div id="info" class="info" style="display: none">
+			<span id="info-text">正在加载</span>
+		</div>
 		<div id="nav" class="nav-player">
 			<div style="width: 100%;display: inline-block;text-align: center;">
 				<div class="nav-btns" style="padding-left: 1.5rem;">
@@ -87,6 +90,7 @@
 					<div class="bigplayer-bar">
 						<span class="bigplayer-btns">
 							<a href="javascript:void(0);" id="bigplayer-btn-share" class="bigplayer-share">分享</a>
+							<a href="javascript:void(0);" id="bigplayer-btn-close2">关闭</a>
 						</span>
 					</div>
 					<div class="bigplayer-lyric-p" id="bigplayer-lyric-p">
@@ -171,7 +175,7 @@
 					</div>
 					<div class="all-song-list-title">所有人物</div>
 				</div>
-				<div id="all-figures-body">
+				<div id="all-figures-body" style="margin-left: 0.5rem;">
 				</div>
 			</div>
 		</div>
@@ -196,7 +200,7 @@
 				<div class="footer-text-block">
 					<div>项目部署于<a href="https://gitee.com/santiego/vtb-music" target="_blank">Gitee</a> 欢迎参与开发 </div>
 					<div>
-						<a href="https://gitee.com/santiego/vtb-music/tree/master#%E4%B8%8A%E4%BC%A0%E6%AD%8C%E6%9B%B2" target="_blank">上传歌曲</a>
+						<a href="https://gitee.com/santiego/vtb-music/wikis/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E6%AD%8C%E6%9B%B2" target="_blank">上传歌曲</a>
 						<span class="divider"></span>
 						<a href="https://gitee.com/santiego/vtb-music/tree/master#vtb-music" target="_blank">关于本站</a>
 					</div>

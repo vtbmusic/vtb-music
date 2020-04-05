@@ -61,7 +61,8 @@ var ui = {
 		$('#app-bigplayer').height(document.documentElement.clientHeight - $('.nav').height() - $('.nav-music-card').height());
 		$('#app-bigplayer').css('margin-top', $('.nav').height()+'px');
 		$('.footer').css('margin-bottom', $('.nav-music-card').height());
-		
+		$('.playlist-list').css('margin-bottom', $('.nav-music-card').height());
+		$('#bigplayer-btn-close2').click(ui.btn_show_hide_bigplayer);
 	},
 	init_music_cards: function(){
 		$('.music-card-body .btn-sm-more').click(function(){
@@ -79,6 +80,10 @@ var ui = {
 		$('.cover').click(function(){
 			var tmp = $(this).parent().find('.btn-sm-more').find('div');
 			tmp.css('display', 'none');
+		});
+		$('#index-music-cards-list .btn-sm-play').click(function(){
+			if($(this).hasClass('btn-sm-play')) return;
+			ui.btn_show_hide_bigplayer();
 		});
 	},
 	init_figure_cards: function(){

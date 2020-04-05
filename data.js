@@ -2,7 +2,7 @@ var data = {
 	//
 	merge_data: function(){
 		$.ajax({
-			url: app_config.data_path_2 + '1data.json',
+			url: app_config.data_path_2 + '1data.json?' + String(tools.get_random_num(1, 10000)),
 			success:function(result){
 				let tmp = result['data'];
 				data_data_songs = data_data_songs.concat(tmp);
@@ -14,7 +14,7 @@ var data = {
 				app.init();
 			},
 			error:function(){
-				console.log('erro')
+				info_app.init_block('网站后台正在更新，请稍后刷新');
 				app.init();
 			}
 		});
