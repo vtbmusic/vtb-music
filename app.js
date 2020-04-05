@@ -408,7 +408,7 @@ var model_song_list = {
 			'song_id': song['id'],
 			'name': song['name'],
 			'date': song['date'],
-			'song_path': app_config.song_path,
+			'song_path': data.get_song_link(song.id),
 			'vocals_link': tools.load_template_vocal(song['vocal']),
 		},app_data.template_song_item);
 		return tmp;
@@ -435,7 +435,7 @@ var model_music_card = {
 			'vocals_name': tools.get_vocal_name(vocal),
 			'vocals_link': tools.load_template_vocal(vocal),
 			'img': data.get_img_link(img || vocal[0]+'.jpg', song_id),
-			'song_path': app_config.song_path,
+			'song_path': data.get_song_link(song_id),
 		},app_data.template_music_card);
 		return tmp;
 	},
