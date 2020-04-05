@@ -200,8 +200,10 @@ var player = {
 		ui.switch_play(player.cur_song);
 		app_playlist.load_playlist();
 	},
+	first_load: true,
 	event_start_load: function(){
-		info_app.init('正在加载');
+		if(player.first_load) player.first_load=false;
+		else info_app.init('正在加载');
 	},
 	event_load_end: function(){
 		info_app.close();
@@ -299,14 +301,14 @@ var app_bigplayer = {
 		$('#bigplayer-btn-share').attr('data-clipboard-text', tools.get_song_share_link(song_id));
 		$('#bigplayer-btn-share').click(app_bigplayer.event_share);
 		new ClipboardJS('#bigplayer-btn-share');
-		app_bigplayer.dom_jq.show();
+		app_bigplayer.dom_jq.fadeIn(500);
 	},
 	event_share: function(){
 		$('#bigplayer-btn-share').text('已复制歌曲链接');
 		setTimeout(function(){$('#bigplayer-btn-share').text('分享');}, 500);
 	},
 	exit: function(){
-		app_bigplayer.dom_jq.hide();
+		app_bigplayer.dom_jq.fadeOut(500);
 	}
 }
 
@@ -322,10 +324,10 @@ var app_vocal = {
 		$('#vocal-links').append(tools.load_template_links(figure.links));
 		model_song_list.load_song_list($('#vocal-song-list'), data.get_song_from_vocal(vocal));
 		ui.refresh_ui();
-		app_vocal.dom_jq.show();
+		app_vocal.dom_jq.fadeIn(200);
 	},
 	exit: function(){
-		app_vocal.dom_jq.hide();
+		app_vocal.dom_jq.fadeOut(200);
 	}
 }
 
@@ -344,10 +346,10 @@ var app_album = {
 			$('#album-song-list').append(model_song_list.load_template_song_item(song));
 		}
 		ui.refresh_ui();
-		app_album.dom_jq.show();
+		app_album.dom_jq.fadeIn(200);
 	},
 	exit: function(){
-		app_album.dom_jq.hide();
+		app_album.dom_jq.fadeOut(200);
 	}
 }
 
@@ -356,7 +358,7 @@ var app_all_song = {
 	init: function(){
 		model_song_list.load_song_list($('#all-songs-music-cards-list'), data_data_songs);
 		ui.refresh_ui();
-		app_all_song.dom_jq.show();
+		app_all_song.dom_jq.fadeIn(200);
 	},
 	exit: function(){
 		app_all_song.dom_jq.hide();
@@ -371,7 +373,7 @@ var app_all_figures = {
 		for(let i in figures){
 			app_all_figures.load_figure_card(figures[i]);
 		}
-		app_all_figures.dom_jq.show();
+		app_all_figures.dom_jq.fadeIn(200);
 	},
 	load_figure_card: function(figure){
 		if(figure == null) return;
