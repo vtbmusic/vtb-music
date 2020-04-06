@@ -250,6 +250,35 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "葛叶",
+		"jpname": "葛葉",
+		"img": "葛叶.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434563422",
+			"Youtube": "https://www.youtube.com/channel/UCSFCh5NL4qXrAy9u-u2lX3g",
+		}
+	},
+    {
+		"name": "多拉",
+		"jpname": "ドーラ",
+		"img": "多拉.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UC53UDnhAAYwvNO7j_2Ju1cQ",
+		}
+	},
+    {
+		"name": "郡道美玲",
+		"jpname": "",
+		"img": "郡道美玲.png",
+		"group": ["彩虹社"],
+		"links":{
+            "Bilibili": "https://space.bilibili.com/458154139",
+			"Youtube": "https://www.youtube.com/channel/UCeShTCVgZyq2lsBW9QwIJcw",
+		}
+	},
+    {
 		"name": "天曰ひよ",
 		"jpname": "天曰ひよ",
 		"img": "天曰ひよ.png",
