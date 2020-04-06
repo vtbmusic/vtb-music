@@ -382,6 +382,7 @@ var app_all_figures = {
 	},
 	load_figure_card: function(figure){
 		if(figure == null) return;
+		if(figure.group.length == 0) figure.group.push('个人势')
 		let group = $('#figures-list-'+figure.group);
 		if(group.length == 0){
 			$('#all-figures-body').append(tools.load_template_figure_title(figure.group));
@@ -668,6 +669,7 @@ var app_config = {
 	lyric_path: 'https://santiego.gitee.io/vtb-music-source-lyric/lyric/',
 	song_path: 'https://santiego.gitee.io/vtb-music-source-song/song/',
 	data_path_2: 'https://santiego.gitee.io/vtb-music-source-data-2/',
+	data_path_3: 'https://santiego.gitee.io/vtb-music-source-data-3/',
 	img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/',
 	figure_img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/figure/'
 }
