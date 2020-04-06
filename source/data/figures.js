@@ -1,4 +1,64 @@
 var data_data_figures = [
+     {
+		"name": "姬森璐娜",
+		"jpname": "姫森ルーナ",
+		"img": "姬森璐娜.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474052/",
+			"Youtube": "https://www.youtube.com/channel/UCa9Y57gfeY0Zro_noHRVrnw",
+		}
+	},
+     {
+		"name": "桐生可可",
+		"jpname": "桐生ココ",
+		"img": "桐生可可.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474049/",
+			"Youtube": "https://www.youtube.com/channel/UCS9uQI-jC3DE0L4IpXyvr6w",
+		}
+	},
+     {
+		"name": "常暗永远",
+		"jpname": "常闇トワ",
+		"img": "常暗永远.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474051/",
+			"Youtube": "https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw",
+		}
+	},
+    {
+		"name": "戌神沁音",
+		"jpname": "戌神ころね",
+		"img": "戌神沁音.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/412135619/",
+			"Youtube": "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q",
+		}
+	},
+    {
+		"name": "猫又小粥",
+		"jpname": "猫又おかゆ",
+		"img": "猫又小粥.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/412135222/",
+			"Youtube": "https://www.youtube.com/channel/UCvaTdHTWBGv3MKj3KVqJVCw",
+		}
+	},
+    {
+		"name": "癒月巧可",
+		"jpname": "癒月ちょこ",
+		"img": "癒月巧可.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389858754/",
+			"Youtube": "https://www.youtube.com/channel/UC1suqwovbL1kzsoaZgFZLKg",
+		}
+	},
     {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
