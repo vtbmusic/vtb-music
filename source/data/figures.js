@@ -70,6 +70,36 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "不知火芙蕾雅",
+		"jpname": "不知火フレア",
+		"img": "不知火芙蕾雅.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/454737600",
+			"Youtube": "https://www.youtube.com/channel/UCvInZx9h3jC2JzsIzoOebWg",
+		}
+	},
+    {
+		"name": "白银诺艾尔",
+		"jpname": "白銀ノエル",
+		"img": "白银诺艾尔.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/454733056",
+			"Youtube": "https://www.youtube.com/channel/UCdyqAaZDKHXg4Ahi7VENThQ",
+		}
+	},
+    {
+		"name": "润羽露西娅",
+		"jpname": "潤羽るしあ",
+		"img": "润羽露西娅.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/443300418",
+			"Youtube": "https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
