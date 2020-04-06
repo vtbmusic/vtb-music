@@ -325,6 +325,24 @@ var data_data_figures = [
 		}
 	},
 	{
+		"name": "中单光一",
+		"jpname": "",
+		"img": "中单光一.png",
+		"group": ["VirtuaReal"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434401868",
+		}
+	},
+	{
+		"name": "一果Ichigo",
+		"jpname": "",
+		"img": "一果Ichigo.png",
+		"group": ["VirtuaReal"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434341786",
+		}
+	},
+	{
 		"name": "物述有栖",
 		"jpname": "",
 		"img": "物述有栖.png",
