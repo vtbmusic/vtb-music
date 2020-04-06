@@ -100,6 +100,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "hololive",
+		"jpname": "",
+		"img": "hololive.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/286700005/",
+			"Youtube": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
