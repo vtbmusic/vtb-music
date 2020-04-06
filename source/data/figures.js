@@ -269,6 +269,15 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "真白",
+		"jpname": "ましろ",
+		"img": "真白.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCfki3lMEF6SGBFiFfo9kvUA",
+		}
+	},
+    {
 		"name": "郡道美玲",
 		"jpname": "",
 		"img": "郡道美玲.png",
