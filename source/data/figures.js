@@ -1,125 +1,5 @@
 var data_data_figures = [
     {
-		"name": "修女克蕾雅",
-		"jpname": "シスター・クレア",
-		"img": "修女克蕾雅.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/477780496",
-			"Youtube": "https://www.youtube.com/channel/UC1zFJrfEKvCixhsjNSb1toQ",
-		}
-	},
-     {
-		"name": "姬森璐娜",
-		"jpname": "姫森ルーナ",
-		"img": "姬森璐娜.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/491474052/",
-			"Youtube": "https://www.youtube.com/channel/UCa9Y57gfeY0Zro_noHRVrnw",
-		}
-	},
-     {
-		"name": "桐生可可",
-		"jpname": "桐生ココ",
-		"img": "桐生可可.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/491474049/",
-			"Youtube": "https://www.youtube.com/channel/UCS9uQI-jC3DE0L4IpXyvr6w",
-		}
-	},
-     {
-		"name": "常暗永远",
-		"jpname": "常闇トワ",
-		"img": "常暗永远.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/491474051/",
-			"Youtube": "https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw",
-		}
-	},
-    {
-		"name": "戌神沁音",
-		"jpname": "戌神ころね",
-		"img": "戌神沁音.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/412135619/",
-			"Youtube": "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q",
-		}
-	},
-    {
-		"name": "猫又小粥",
-		"jpname": "猫又おかゆ",
-		"img": "猫又小粥.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/412135222/",
-			"Youtube": "https://www.youtube.com/channel/UCvaTdHTWBGv3MKj3KVqJVCw",
-		}
-	},
-    {
-		"name": "癒月巧可",
-		"jpname": "癒月ちょこ",
-		"img": "癒月巧可.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/389858754/",
-			"Youtube": "https://www.youtube.com/channel/UC1suqwovbL1kzsoaZgFZLKg",
-		}
-	},
-    {
-		"name": "角卷绵芽",
-		"jpname": "角巻わため",
-		"img": "角卷绵芽.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/491474050/",
-			"Youtube": "https://www.youtube.com/channel/UCqm3BQLlJfvkTsX_hvm0UmA",
-		}
-	},
-    {
-		"name": "不知火芙蕾雅",
-		"jpname": "不知火フレア",
-		"img": "不知火芙蕾雅.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/454737600",
-			"Youtube": "https://www.youtube.com/channel/UCvInZx9h3jC2JzsIzoOebWg",
-		}
-	},
-    {
-		"name": "白银诺艾尔",
-		"jpname": "白銀ノエル",
-		"img": "白银诺艾尔.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/454733056",
-			"Youtube": "https://www.youtube.com/channel/UCdyqAaZDKHXg4Ahi7VENThQ",
-		}
-	},
-    {
-		"name": "润羽露西娅",
-		"jpname": "潤羽るしあ",
-		"img": "润羽露西娅.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/443300418",
-			"Youtube": "https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ",
-		}
-	},
-    {
-		"name": "hololive",
-		"jpname": "",
-		"img": "hololive.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/286700005/",
-			"Youtube": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg",
-		}
-	},
-    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
@@ -147,26 +27,6 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/491474048",
 			"Youtube": "https://www.youtube.com/channel/UCZlDXzGoo7d44bwdNObFacg",
-		}
-	},
-    {
-		"name": "宝钟玛琳",
-		"jpname": "宝鐘マリン",
-		"img": "宝钟玛琳.png",
-		"group": ["hololive"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/454955503",
-			"Youtube": "https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg",
-		}
-	},
-    {
-		"name": "神乐七奈",
-		"jpname": "かぐらなな",
-		"img": "神乐七奈.png",
-		"group": [],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/386900246",
-			"Youtube": "https://www.youtube.com/channel/UCbfv8uuUXt3RSJGEwxny5Rw",
 		}
 	},
     {
@@ -207,6 +67,16 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/375504219",
 			"Youtube": "https://www.youtube.com/channel/UC1opHUrw8rvnsadT-iGp7Cg",
+		}
+	},
+    {
+		"name": "神乐七奈",
+		"jpname": "かぐらなな",
+		"img": "神乐七奈.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/386900246",
+			"Youtube": "https://www.youtube.com/channel/UCbfv8uuUXt3RSJGEwxny5Rw",
 		}
 	},
     {
@@ -330,6 +200,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "宝钟玛琳",
+		"jpname": "宝鐘マリン",
+		"img": "宝钟玛琳.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/454955503",
+			"Youtube": "https://www.youtube.com/channel/UCCzUftO8KOVkV4wQG1vkUvg",
+		}
+	},
+    {
 		"name": "樱巫女",
 		"jpname": "Sakura Miko",
 		"img": "樱巫女.png",
@@ -337,6 +217,126 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/366690056",
 			"Youtube": "https://www.youtube.com/channel/UC-hM6YJuNYVAmUWxeIr9FeA",
+		}
+	},
+    {
+		"name": "修女克蕾雅",
+		"jpname": "シスター・クレア",
+		"img": "修女克蕾雅.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/477780496",
+			"Youtube": "https://www.youtube.com/channel/UC1zFJrfEKvCixhsjNSb1toQ",
+		}
+	},
+     {
+		"name": "姬森璐娜",
+		"jpname": "姫森ルーナ",
+		"img": "姬森璐娜.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474052/",
+			"Youtube": "https://www.youtube.com/channel/UCa9Y57gfeY0Zro_noHRVrnw",
+		}
+	},
+     {
+		"name": "桐生可可",
+		"jpname": "桐生ココ",
+		"img": "桐生可可.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474049/",
+			"Youtube": "https://www.youtube.com/channel/UCS9uQI-jC3DE0L4IpXyvr6w",
+		}
+	},
+     {
+		"name": "常暗永远",
+		"jpname": "常闇トワ",
+		"img": "常暗永远.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474051/",
+			"Youtube": "https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw",
+		}
+	},
+    {
+		"name": "戌神沁音",
+		"jpname": "戌神ころね",
+		"img": "戌神沁音.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/412135619/",
+			"Youtube": "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q",
+		}
+	},
+    {
+		"name": "猫又小粥",
+		"jpname": "猫又おかゆ",
+		"img": "猫又小粥.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/412135222/",
+			"Youtube": "https://www.youtube.com/channel/UCvaTdHTWBGv3MKj3KVqJVCw",
+		}
+	},
+    {
+		"name": "癒月巧可",
+		"jpname": "癒月ちょこ",
+		"img": "癒月巧可.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/389858754/",
+			"Youtube": "https://www.youtube.com/channel/UC1suqwovbL1kzsoaZgFZLKg",
+		}
+	},
+    {
+		"name": "角卷绵芽",
+		"jpname": "角巻わため",
+		"img": "角卷绵芽.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474050/",
+			"Youtube": "https://www.youtube.com/channel/UCqm3BQLlJfvkTsX_hvm0UmA",
+		}
+	},
+    {
+		"name": "不知火芙蕾雅",
+		"jpname": "不知火フレア",
+		"img": "不知火芙蕾雅.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/454737600",
+			"Youtube": "https://www.youtube.com/channel/UCvInZx9h3jC2JzsIzoOebWg",
+		}
+	},
+    {
+		"name": "白银诺艾尔",
+		"jpname": "白銀ノエル",
+		"img": "白银诺艾尔.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/454733056",
+			"Youtube": "https://www.youtube.com/channel/UCdyqAaZDKHXg4Ahi7VENThQ",
+		}
+	},
+    {
+		"name": "润羽露西娅",
+		"jpname": "潤羽るしあ",
+		"img": "润羽露西娅.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/443300418",
+			"Youtube": "https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ",
+		}
+	},
+    {
+		"name": "hololive",
+		"jpname": "",
+		"img": "hololive.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/286700005/",
+			"Youtube": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg",
 		}
 	},
     {
