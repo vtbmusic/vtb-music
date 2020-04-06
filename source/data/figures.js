@@ -1,5 +1,15 @@
 var data_data_figures = [
     {
+		"name": "角卷绵芽",
+		"jpname": "角巻わため",
+		"img": "角卷绵芽.png",
+		"group": ["hololive"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/491474050/",
+			"Youtube": "https://www.youtube.com/channel/UCqm3BQLlJfvkTsX_hvm0UmA",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
