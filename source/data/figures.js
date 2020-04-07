@@ -223,7 +223,7 @@ var data_data_figures = [
 		"name": "修女克蕾雅",
 		"jpname": "シスター・クレア",
 		"img": "修女克蕾雅.png",
-		"group": ["hololive"],
+		"group": ["彩虹社"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/477780496",
 			"Youtube": "https://www.youtube.com/channel/UC1zFJrfEKvCixhsjNSb1toQ",
