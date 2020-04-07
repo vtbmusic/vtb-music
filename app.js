@@ -361,9 +361,18 @@ var app_album = {
 var app_all_song = {
 	dom_jq: $('#app-all-songs'),
 	init: function(){
+		$('#search-input')[0].oninput =  app_all_song.search_song;
+		$('#search-input').change(app_all_song.search_song);
 		model_song_list.load_song_list($('#all-songs-music-cards-list'), data_data_songs);
 		ui.refresh_ui();
 		app_all_song.dom_jq.fadeIn(200);
+	},
+	search_song: function(){
+		let tmp;
+		if($('#search-input').val() == "") tmp = data_data_songs;
+		else tmp = data.search_song($('#search-input').val());
+		model_song_list.load_song_list($('#all-songs-music-cards-list'), tmp);
+		ui.refresh_ui();
 	},
 	exit: function(){
 		app_all_song.dom_jq.hide();

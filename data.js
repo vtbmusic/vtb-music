@@ -96,6 +96,18 @@ var data = {
 		}
 		return res;
 	},
+	search_song: function(text){
+		let keywords = text.split(' ');
+		let songs = [];
+		for(let iter in data_data_songs)
+			for(let i in keywords)
+				if(data_data_songs[iter].name.toLowerCase().search(keywords[i].toLowerCase()) != -1 || data_data_songs[iter].vocal.indexOf(keywords[i]) != -1){
+					songs.push(data_data_songs[iter]);
+					break;
+				}
+		
+		return songs;
+	},
 	//figures
 	get_figure: function(figure_name){
 		return data_data_figures[data.get_figure_index(figure_name)];

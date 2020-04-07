@@ -633,8 +633,6 @@
 	cursor: default;
 }
 #all-songs-music-cards-list{
-	padding-left: 6rem;
-	padding-right: 6rem;
 }
 .all-song-list-btn-back{
 	display: inline-block;
@@ -754,6 +752,14 @@ span{
 }
 .bigplayer-lyric-p::-webkit-scrollbar{
 	color: transparent;
+}
+
+.input{
+	border: none;
+    background: gainsboro;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.2rem;
+	outline: none;
 }
 /*div ::-webkit-scrollbar{
 	color: transparent;

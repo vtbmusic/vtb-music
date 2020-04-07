@@ -628,7 +628,6 @@
 	float: right;
 	font-size: 0.8rem;
 	color: gray;
-	padding-top: 0.5rem;
 	padding-left: 1rem;
 	cursor: default;
 }
@@ -784,6 +783,14 @@ span{
 	text-decoration: none;
 	font-size: 0.8rem;
 }
+.input{
+	border: none;
+    background: gainsboro;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.2rem;
+	outline: none;
+}
+
 *{
 	-webkit-overflow-scrolling: touch;
 }
