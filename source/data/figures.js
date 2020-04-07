@@ -1,5 +1,15 @@
 var data_data_figures = [
     {
+		"name": "梦追翔",
+		"jpname": "夢追翔",
+		"img": "梦追翔.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/511613154",
+			"Youtube": "https://www.youtube.com/channel/UCTIE7LM5X15NVugV7Krp9Hw",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
