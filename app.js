@@ -115,9 +115,10 @@ var player = {
 		});
 		player.load_settings_from_cookie();
 	},
-	play: function(){
+	play: function(time){
 		ui.switch_play(player.cur_song);
 		player.dom.play();
+		if(time != null) player.dom.currentTime = time;
 	},
 	pause: function(){
 		ui.switch_pause(player.cur_song);
@@ -383,11 +384,15 @@ var app_all_figures = {
 	dom_jq: $('#app-all-figures'),
 	init: function(){
 		$('#all-figures-body').empty();
+		// $('#figure-search-input')[0].oninput = app_all_figures.search_figure;
 		let figures = data_data_figures;
-		for(let i in figures){
-			app_all_figures.load_figure_card(figures[i]);
-		}
+		app_all_figures.load_figure_list(figures);
 		app_all_figures.dom_jq.fadeIn(200);
+	},
+	load_figure_list: function(list){
+		$('#all-figures-body').empty();
+		for(let i in list)
+			app_all_figures.load_figure_card(list[i]);
 	},
 	load_figure_card: function(figure){
 		if(figure == null) return;
@@ -398,6 +403,12 @@ var app_all_figures = {
 		}
 		group = $('#figures-list-'+figure.group);
 		group.append(app_all_figures.load_template_figure_card(figure.name, figure.img, figure.jpname));
+	},
+	search_figure: function(){
+		let tmp;
+		if($('#figure-search-input').val() == "") tmp = data_data_figures;
+		else tmp = data.search_figure($('#figure-search-input').val());
+		app_all_figures.load_figure_list(tmp);
 	},
 	load_template_figure_card: function(name, img, jpname){
 		let data = tools.load_template({
@@ -486,6 +497,7 @@ var model_load_lyric = {
 		let html_data = "";
 		model_load_lyric.lyric_data = [];
 		clearInterval(model_load_lyric.scroll_timer);
+		$('.lyric-text').dblclick(model_load_lyric.play_from_lyric);
 		$.ajax({
 			url: data.get_lyric_link(song_id, true),
 			success:function(result){
@@ -513,7 +525,7 @@ var model_load_lyric = {
 	},
 	load_lyric_with_time: function(data){
 		let tmp = data.split('[');
-		let template = "<div class=\"lyric-text\" id=\"lyric-text-{{id}}\"><p>{{text}}</p></div>";
+		let template = "<div class=\"lyric-text\" id=\"lyric-text-{{id}}\" data-lyric-idx=\"{{id}}\"><p>{{text}}</p></div>";
   		let res = "";
 		for(let i in tmp){
 			if(tmp[i] == "") continue;
@@ -555,6 +567,10 @@ var model_load_lyric = {
 		});
 		$('#lyric-text-'+id).addClass('lyric-text-on');
 		model_load_lyric.pre_lyric = id;
+	},
+	play_from_lyric: function(){
+		let lyric_idx = Number($(this).attr('data-lyric-idx')) - 1;
+		player.play(model_load_lyric.lyric_data[lyric_idx]);
 	},
 	event_player_on_scroll: function(){
 		model_load_lyric.scroll_disabled = true;

@@ -414,6 +414,12 @@
 	margin: 10px;
 	display: inline-block;
 }
+.music-card-vocal{
+	overflow: hidden;
+    width: 16rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .music-card-title{
 	font-size: 1rem;
 	cursor: default;

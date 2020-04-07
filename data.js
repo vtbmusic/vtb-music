@@ -101,12 +101,19 @@ var data = {
 		let songs = [];
 		for(let iter in data_data_songs)
 			for(let i in keywords)
-				if(data_data_songs[iter].name.toLowerCase().search(keywords[i].toLowerCase()) != -1 || data_data_songs[iter].vocal.indexOf(keywords[i]) != -1){
+				if(data_data_songs[iter].name.toLowerCase().search(keywords[i].toLowerCase()) != -1 || data._search_vocal(data_data_songs[iter].vocal, keywords[i])){
 					songs.push(data_data_songs[iter]);
 					break;
 				}
 		
 		return songs;
+	},
+	_search_vocal: function(vocal, text){
+		text = text.toLowerCase();
+		for(let i in vocal)
+			if(vocal[i].toLowerCase().search(text) != -1)
+				return true;
+		return false;
 	},
 	//figures
 	get_figure: function(figure_name){
@@ -119,6 +126,13 @@ var data = {
 		for(let item in data_data_figures)
 			if(data_data_figures[item]['name'] == name) return item;
 		return -1;
+	},
+	search_figure: function(text){
+		let figures = [];
+		for(let i in data_data_figures)
+			if(data_data_figures[i].name.search(text) != -1 || data_data_figures[i].jpname.search(text) != -1)
+				figures.push(data_data_figures[i]);
+		return figures;
 	},
 	//albums
 	get_album: function(album_name){
