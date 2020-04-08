@@ -1,15 +1,5 @@
 var data_data_figures = [
     {
-		"name": "千条アリア",
-		"jpname": "",
-		"img": "千条アリア.png",
-		"group": [""],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/398642121",
-			"Youtube": "https://www.youtube.com/channel/UC8UZk3EE_LPxWNyQ7RUDCYA",
-		}
-	},
-    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
@@ -575,6 +565,16 @@ var data_data_figures = [
 		"group": ["彩虹社"],
 		"links":{
 			"Youtube": "https://www.youtube.com/channel/UCwcyyxn6h9ex4sMXGtpQE_g",
+		}
+	},
+    {
+		"name": "千条アリア",
+		"jpname": "",
+		"img": "千条アリア.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/398642121",
+			"Youtube": "https://www.youtube.com/channel/UC8UZk3EE_LPxWNyQ7RUDCYA",
 		}
 	},
     {
