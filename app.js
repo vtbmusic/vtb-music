@@ -141,7 +141,7 @@ var player = {
 		app_playlist.load_playlist();
 	},
 	add_songs_to_list: function(song_list){
-		player.playlist.concat(song_list);
+		player.playlist = player.playlist.concat(song_list);
 		Cookies.set('playlist', player.playlist, { expires: app_config.cookies_save_day });
 		app_playlist.load_playlist();
 	},
@@ -578,6 +578,7 @@ var model_load_lyric = {
 	},
 	play_from_lyric: function(){
 		let lyric_idx = Number($(this).attr('data-lyric-idx')) - 1;
+		model_load_lyric.scroll_disabled = false;
 		player.play(model_load_lyric.lyric_data[lyric_idx]);
 	},
 	event_player_on_scroll: function(){
