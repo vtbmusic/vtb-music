@@ -579,7 +579,7 @@ var model_load_lyric = {
 	play_from_lyric: function(){
 		let lyric_idx = Number($(this).attr('data-lyric-idx')) - 1;
 		model_load_lyric.scroll_disabled = false;
-		player.play(model_load_lyric.lyric_data[lyric_idx]);
+		player.play(model_load_lyric.lyric_data[lyric_idx].stime);
 	},
 	event_player_on_scroll: function(){
 		model_load_lyric.scroll_disabled = true;
