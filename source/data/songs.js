@@ -157,6 +157,7 @@ var data_data_songs = [
 		name: "被生命所厌恶",
 		vocal: ["神乐mea"],
 		id: 1006,
+        img: "1006.jpg",
 		date: "2020-02-26"
 	},
     {
