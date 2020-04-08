@@ -160,13 +160,6 @@ var data_data_songs = [
 		date: "2020-02-26"
 	},
     {
-		name: "ヒトリゴト（自言自语）",
-		vocal: ["神乐七奈","鹿乃"],
-		id: 1034,
-		img: "1034.jpg",
-		date: "2020-02-14"
-	},
-    {
 		name: "chocolate box",
         vocal: ["时乃空","夏色祭"],
         id: 1062,
