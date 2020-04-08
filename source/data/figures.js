@@ -1,5 +1,15 @@
 var data_data_figures = [
     {
+		"name": "高槻律",
+		"jpname": "高槻りつ",
+		"img": "高槻律.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/6055289/",
+			"Youtube": "https://www.youtube.com/channel/UCL9dLCVvHyMiqjp2RDgowqQ",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
