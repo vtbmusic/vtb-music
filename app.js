@@ -97,6 +97,9 @@ var player = {
 		else player.load_song(data_data_songs[0]['id']);
 		let c_cur_playtime = Cookies.get('curplaytime');
 		if(c_cur_playtime != null) player.dom.currentTime = c_cur_playtime;
+		let c_volume = Cookies.get('volume');
+		if(c_volume != null) player.dom.volume = c_volume;
+		else player.dom.volume = 0.1;
 	},
 	init: function(){
 		player.dom.onplay = player.event_onplay;
@@ -134,6 +137,11 @@ var player = {
 	add_song_to_list: function(song_id){
 		if(player.get_song_index(song_id) != null) return;
 		player.playlist.push(song_id);
+		Cookies.set('playlist', player.playlist, { expires: app_config.cookies_save_day });
+		app_playlist.load_playlist();
+	},
+	add_songs_to_list: function(song_list){
+		player.playlist.concat(song_list);
 		Cookies.set('playlist', player.playlist, { expires: app_config.cookies_save_day });
 		app_playlist.load_playlist();
 	},
@@ -497,7 +505,7 @@ var model_load_lyric = {
 		let html_data = "";
 		model_load_lyric.lyric_data = [];
 		clearInterval(model_load_lyric.scroll_timer);
-		$('.lyric-text').dblclick(model_load_lyric.play_from_lyric);
+		$('.lyric-text p').dblclick(model_load_lyric.play_from_lyric);
 		$.ajax({
 			url: data.get_lyric_link(song_id, true),
 			success:function(result){
@@ -525,7 +533,7 @@ var model_load_lyric = {
 	},
 	load_lyric_with_time: function(data){
 		let tmp = data.split('[');
-		let template = "<div class=\"lyric-text\" id=\"lyric-text-{{id}}\" data-lyric-idx=\"{{id}}\"><p>{{text}}</p></div>";
+		let template = "<div class=\"lyric-text\" id=\"lyric-text-{{id}}\"><p data-lyric-idx=\"{{id}}\">{{text}}</p></div>";
   		let res = "";
 		for(let i in tmp){
 			if(tmp[i] == "") continue;
@@ -705,4 +713,5 @@ $(document).ready(function(){
 
 window.onbeforeunload = function(ev){
 	Cookies.set('curplaytime', player.dom.currentTime);
+	Cookies.set('volume', player.dom.volume);
 };

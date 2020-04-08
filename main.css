@@ -770,6 +770,37 @@ span{
 .input-figure{
 	margin-top: 0.5rem;
 }
+.nav-vol-control-icon{
+	display: inline-block;
+	background: url(./source/icon/icon-sound.png);
+	background-size: cover;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+.nav-vol-control-bg{
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	background-color: gainsboro;
+	border-radius: 0.5rem;
+	height: 0.4rem;
+	top: 0;
+}
+.nav-vol-control-now{
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	background-color: gray;
+	border-radius: 0.5rem;
+	height: 0.4rem;
+	top: 0;
+}
+.nav-vol-control-body{
+	position: relative;
+	display: inline-block;
+	vertical-align: text-top;
+	width: 6rem;
+}
 /*div ::-webkit-scrollbar{
 	color: transparent;
 }*/
