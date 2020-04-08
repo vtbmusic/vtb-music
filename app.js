@@ -505,13 +505,13 @@ var model_load_lyric = {
 		let html_data = "";
 		model_load_lyric.lyric_data = [];
 		clearInterval(model_load_lyric.scroll_timer);
-		$('.lyric-text p').dblclick(model_load_lyric.play_from_lyric);
 		$.ajax({
 			url: data.get_lyric_link(song_id, true),
 			success:function(result){
 				lyric_data = result;
 				html_data = model_load_lyric.load_lyric_with_time(lyric_data);
 				target.append(html_data);
+				$('.lyric-text p').dblclick(model_load_lyric.play_from_lyric);
 				model_load_lyric.scroll_timer = setInterval(model_load_lyric.scroll_lyric, 500);
 				$('#bigplayer-lyric-p').scroll(model_load_lyric.event_player_on_scroll);
 				model_load_lyric.scroll_lyric();
