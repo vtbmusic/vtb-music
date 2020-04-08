@@ -326,11 +326,8 @@
 .bigplayer-bar a:hover{
 	color: rgb(15,127,254);
 }
-.bigplayer-bar:hover .bigplayer-btns{
-	display: inline-block;
-}
 .bigplayer-btns{
-	display: none;
+	display: inline-block;
 	float: right;
 }
 .btn-sm{

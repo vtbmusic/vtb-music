@@ -483,6 +483,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "梦追翔",
+		"jpname": "夢追翔",
+		"img": "梦追翔.jpg",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/511613154",
+			"Youtube": "https://www.youtube.com/channel/UCTIE7LM5X15NVugV7Krp9Hw",
+		}
+	},
+    {
 		"name": "谢林·勃艮第",
 		"jpname": "Shellin Burgundy",
 		"img": "谢林·勃艮第.png",
@@ -568,6 +578,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "千条アリア",
+		"jpname": "",
+		"img": "千条アリア.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/398642121",
+			"Youtube": "https://www.youtube.com/channel/UC8UZk3EE_LPxWNyQ7RUDCYA",
+		}
+	},
+    {
 		"name": "织田信姬",
 		"jpname": "織田信姫",
 		"img": "织田信姬.png",
@@ -575,6 +595,36 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/80387576",
 			"Youtube": "https://www.youtube.com/channel/UCGcD5iUDG8xiywZeeDxye-A",
+		}
+	},
+    {
+		"name": "铃木雏",
+		"jpname": "鈴木ヒナ",
+		"img": "铃木雏.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/296909317",
+			"Youtube": "https://www.youtube.com/channel/UCFv2z4iM5vHrS8bZPq4fHQQ",
+		}
+	},
+    {
+		"name": "田中姬",
+		"jpname": "田中ヒメ",
+		"img": "田中姬.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/296909317",
+			"Youtube": "https://www.youtube.com/channel/UCFv2z4iM5vHrS8bZPq4fHQQ",
+		}
+	},
+    {
+		"name": "高槻律",
+		"jpname": "高槻りつ",
+		"img": "高槻律.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/6055289/",
+			"Youtube": "https://www.youtube.com/channel/UCL9dLCVvHyMiqjp2RDgowqQ",
 		}
 	},
     {

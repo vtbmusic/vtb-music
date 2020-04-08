@@ -157,14 +157,8 @@ var data_data_songs = [
 		name: "被生命所厌恶",
 		vocal: ["神乐mea"],
 		id: 1006,
+        img: "1006.jpg",
 		date: "2020-02-26"
-	},
-    {
-		name: "ヒトリゴト（自言自语）",
-		vocal: ["神乐七奈","鹿乃"],
-		id: 1034,
-		img: "1034.jpg",
-		date: "2020-02-14"
 	},
     {
 		name: "chocolate box",
