@@ -1,15 +1,5 @@
 var data_data_figures = [
     {
-		"name": "高槻律",
-		"jpname": "高槻りつ",
-		"img": "高槻律.png",
-		"group": [""],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/6055289/",
-			"Youtube": "https://www.youtube.com/channel/UCL9dLCVvHyMiqjp2RDgowqQ",
-		}
-	},
-    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
@@ -605,6 +595,36 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/80387576",
 			"Youtube": "https://www.youtube.com/channel/UCGcD5iUDG8xiywZeeDxye-A",
+		}
+	},
+    {
+		"name": "铃木雏",
+		"jpname": "鈴木ヒナ",
+		"img": "铃木雏.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/296909317",
+			"Youtube": "https://www.youtube.com/channel/UCFv2z4iM5vHrS8bZPq4fHQQ",
+		}
+	},
+    {
+		"name": "田中姬",
+		"jpname": "田中ヒメ",
+		"img": "田中姬.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/296909317",
+			"Youtube": "https://www.youtube.com/channel/UCFv2z4iM5vHrS8bZPq4fHQQ",
+		}
+	},
+    {
+		"name": "高槻律",
+		"jpname": "高槻りつ",
+		"img": "高槻律.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/6055289/",
+			"Youtube": "https://www.youtube.com/channel/UCL9dLCVvHyMiqjp2RDgowqQ",
 		}
 	},
     {
