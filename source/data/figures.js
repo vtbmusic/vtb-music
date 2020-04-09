@@ -581,7 +581,7 @@ var data_data_figures = [
 		"name": "千条アリア",
 		"jpname": "",
 		"img": "千条アリア.png",
-		"group": [""],
+		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/398642121",
 			"Youtube": "https://www.youtube.com/channel/UC8UZk3EE_LPxWNyQ7RUDCYA",
@@ -601,7 +601,7 @@ var data_data_figures = [
 		"name": "铃木雏",
 		"jpname": "鈴木ヒナ",
 		"img": "铃木雏.png",
-		"group": [""],
+		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/296909317",
 			"Youtube": "https://www.youtube.com/channel/UCFv2z4iM5vHrS8bZPq4fHQQ",
@@ -611,7 +611,7 @@ var data_data_figures = [
 		"name": "田中姬",
 		"jpname": "田中ヒメ",
 		"img": "田中姬.png",
-		"group": [""],
+		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/296909317",
 			"Youtube": "https://www.youtube.com/channel/UCFv2z4iM5vHrS8bZPq4fHQQ",
