@@ -1,25 +1,5 @@
 var data_data_figures = [
     {
-		"name": "叶",
-		"jpname": "かなえ",
-		"img": "叶.png",
-		"group": ["彩虹社"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/434563934",
-			"Youtube": "https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA",
-		}
-	},
-    {
-		"name": "加贺美隼人",
-		"jpname": "加賀美 ハヤト",
-		"img": "加贺美隼人.png",
-		"group": ["彩虹社"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/3612946",
-			"Youtube": "https://www.youtube.com/channel/UCmovZ2th3Sqpd00F5RdeigQ",
-		}
-	},
-    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
@@ -530,6 +510,26 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw",
 		}
 	},
+    {
+		"name": "叶",
+		"jpname": "かなえ",
+		"img": "叶.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434563934",
+			"Youtube": "https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA",
+		}
+	},
+    {
+		"name": "加贺美隼人",
+		"jpname": "加賀美 ハヤト",
+		"img": "加贺美隼人.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/3612946",
+			"Youtube": "https://www.youtube.com/channel/UCmovZ2th3Sqpd00F5RdeigQ",
+		}
+	},
 	{
 		"name": "花丸晴琉",
 		"jpname": "花丸はれる",
@@ -558,6 +558,16 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/380829248",
 			"Youtube": "https://www.youtube.com/channel/UCRXBTd80F5IIWWY4HatJ5Ug",
+		}
+	},
+    {
+		"name": "织田信姬",
+		"jpname": "織田信姫",
+		"img": "织田信姬.png",
+		"group": ["upd8"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/80387576",
+			"Youtube": "https://www.youtube.com/channel/UCGcD5iUDG8xiywZeeDxye-A",
 		}
 	},
 	{
@@ -605,16 +615,6 @@ var data_data_figures = [
 		"links":{
 			"Bilibili": "https://space.bilibili.com/398642121",
 			"Youtube": "https://www.youtube.com/channel/UC8UZk3EE_LPxWNyQ7RUDCYA",
-		}
-	},
-    {
-		"name": "织田信姬",
-		"jpname": "織田信姫",
-		"img": "织田信姬.png",
-		"group": ["upd8"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/80387576",
-			"Youtube": "https://www.youtube.com/channel/UCGcD5iUDG8xiywZeeDxye-A",
 		}
 	},
     {
