@@ -1,5 +1,25 @@
 var data_data_figures = [
     {
+		"name": "叶",
+		"jpname": "かなえ",
+		"img": "叶.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434563934",
+			"Youtube": "https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA",
+		}
+	},
+    {
+		"name": "加贺美隼人",
+		"jpname": "加賀美 ハヤト",
+		"img": "加贺美隼人.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/3612946",
+			"Youtube": "https://www.youtube.com/channel/UCmovZ2th3Sqpd00F5RdeigQ",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
