@@ -10,6 +10,8 @@
 
 交流&开发QQ群： `737972812`，欢迎加入讨论贡献
 
+[Wiki](https://gitee.com/santiego/vtb-music/wikis/Vtb-Music)
+
 ## 开发
 
 **Vtb-Music**没有使用任何框架，全部由原生`jQuery`开发，虽然是静态网页，但由数据驱动、动态渲染。另外如你所见，**Vtb-Music**基于Gitee Pages 服务，所有网页、歌曲、数据均保存在Gitee仓库中，也正因如此，直接省去了网站后端，也使各位有能DD可以**直接参与**到**Vtb-Music**的开发维护（决定因素还是因为不用租服务器🤣）。但有利有弊，由于Gitee Pages 服务的限制，后端全部由前端完成渲染，并且用户部分交互需要通过Gitee完成，较为繁琐。
@@ -25,8 +27,6 @@
 - [x] 滚动字幕
 - [ ] 考虑使用`vue.js`重构
 
-## 声明
-
-网站非盈利，仅为个人学习欣赏使用
+## [声明](https://gitee.com/santiego/vtb-music/wikis/%E5%A3%B0%E6%98%8E)
 
 
