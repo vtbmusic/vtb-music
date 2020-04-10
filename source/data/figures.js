@@ -83,7 +83,7 @@ var data_data_figures = [
 		"name": "犬山玉姬",
 		"jpname": "犬山たまき",
 		"img": "犬山玉姬.png",
-		"group": [],
+		"group": ["Noripro"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/12362451",
 			"Youtube": "https://www.youtube.com/channel/UC8NZiqKx6fsDT3AVcMiVFyA",
@@ -494,10 +494,11 @@ var data_data_figures = [
 	},
     {
 		"name": "谢林·勃艮第",
-		"jpname": "Shellin Burgundy",
+		"jpname": "シェリン・バーガンディ",
 		"img": "谢林·勃艮第.png",
 		"group": ["彩虹社"],
 		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCHBhnG2G-qN0JrrWmMO2FTA",
 		}
 	},
     {
