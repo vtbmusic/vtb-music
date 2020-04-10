@@ -679,7 +679,7 @@ var data_data_figures = [
 	{
 		"name": "神宮司玉藻",
 		"jpname": "じんぐうじ たまも",
-		"img": "神宮司玉藻.png",
+		"img": "神宫司玉藻.png",
 		"group": ["战斗吧歌姬"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/364225566",
