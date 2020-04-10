@@ -561,6 +561,66 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "罗兹·巴雷特",
+		"jpname": "ローズ・バレット",
+		"img": "罗兹巴雷特.png",
+		"group": ["战斗吧歌姬"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/364225566",
+			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
+		}
+	},
+	{
+		"name": "李清歌",
+		"jpname": "リ セイカ",
+		"img": "李清歌.png",
+		"group": ["战斗吧歌姬"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/364225566",
+			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
+		}
+	},
+	{
+		"name": "神宮司玉藻",
+		"jpname": "じんぐうじ たまも",
+		"img": "神宫司玉藻.png",
+		"group": ["战斗吧歌姬"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/364225566",
+			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
+		}
+	},
+	{
+		"name": "墨汐",
+		"jpname": "モーシィ",
+		"img": "墨汐.png",
+		"group": ["战斗吧歌姬"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/364225566",
+			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
+		}
+	},
+	{
+		"name": "卡缇娅·乌拉诺娃",
+		"jpname": "カティア・ヴラーノヴァ",
+		"img": "卡缇娅乌拉诺娃.png",
+		"group": ["战斗吧歌姬"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/364225566",
+			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
+		}
+	},
+	{
+		"name": "伊莎贝拉·霍利",
+		"jpname": "イザベラ・ホリー",
+		"img": "伊莎贝拉霍利.png",
+		"group": ["战斗吧歌姬"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/364225566",
+			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
+		}
+	},
+    {
 		"name": "织田信姬",
 		"jpname": "織田信姫",
 		"img": "织田信姬.png",
@@ -641,7 +701,7 @@ var data_data_figures = [
 		"name": "高槻律",
 		"jpname": "高槻りつ",
 		"img": "高槻律.png",
-		"group": [""],
+		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/6055289/",
 			"Youtube": "https://www.youtube.com/channel/UCL9dLCVvHyMiqjp2RDgowqQ",
@@ -654,66 +714,6 @@ var data_data_figures = [
 		"group": ["Duckdriver"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/1950658",
-		}
-	},
-    {
-		"name": "罗兹·巴雷特",
-		"jpname": "ローズ・バレット",
-		"img": "罗兹巴雷特.png",
-		"group": ["战斗吧歌姬"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/364225566",
-			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
-		}
-	},
-	{
-		"name": "李清歌",
-		"jpname": "リ セイカ",
-		"img": "李清歌.png",
-		"group": ["战斗吧歌姬"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/364225566",
-			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
-		}
-	},
-	{
-		"name": "神宮司玉藻",
-		"jpname": "じんぐうじ たまも",
-		"img": "神宫司玉藻.png",
-		"group": ["战斗吧歌姬"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/364225566",
-			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
-		}
-	},
-	{
-		"name": "墨汐",
-		"jpname": "モーシィ",
-		"img": "墨汐.png",
-		"group": ["战斗吧歌姬"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/364225566",
-			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
-		}
-	},
-	{
-		"name": "卡缇娅·乌拉诺娃",
-		"jpname": "カティア・ヴラーノヴァ",
-		"img": "卡缇娅乌拉诺娃.png",
-		"group": ["战斗吧歌姬"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/364225566",
-			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
-		}
-	},
-	{
-		"name": "伊莎贝拉·霍利",
-		"jpname": "イザベラ・ホリー",
-		"img": "伊莎贝拉霍利.png",
-		"group": ["战斗吧歌姬"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/364225566",
-			"Youtube": "https://www.youtube.com/channel/UC1AYIkgyMfM0UT8xZnvzWGQ",
 		}
 	},
 ]
