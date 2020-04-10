@@ -430,7 +430,7 @@ var data_data_figures = [
 		"name": "泠鸢yousa",
 		"jpname": "",
 		"img": "泠鸢yousa.png",
-		"group": ["VirtuaReal_Star"],
+		"group": ["VirtuaReal"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/282994",
 		}
