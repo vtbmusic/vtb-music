@@ -99,7 +99,7 @@ var player = {
 		if(c_cur_playtime != null) player.dom.currentTime = c_cur_playtime;
 		let c_volume = Cookies.get('volume');
 		if(c_volume != null) player.dom.volume = c_volume;
-		else player.dom.volume = 0.1;
+		else player.dom.volume = 1;
 	},
 	init: function(){
 		player.dom.onplay = player.event_onplay;
