@@ -641,6 +641,16 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCupCAZz1l52vV8m-dvaoBVQ/",
 		}
 	},
+    {
+		"name": "京华",
+		"jpname": "キョウカ",
+		"img": "京华.png",
+		"group": ["OveRidea"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/18149131?",
+			"Youtube": "https://www.youtube.com/channel/UCupCAZz1l52vV8m-dvaoBVQ/",
+		}
+	},
 	{
 		"name": "皆守英雄",
 		"jpname": "皆守ひいろ",
