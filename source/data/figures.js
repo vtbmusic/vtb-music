@@ -425,6 +425,14 @@ var data_data_figures = [
 		"links":{
 			"Youtube": "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA",
 		}
+	},
+    {
+		"name": "药袋卡尔蒂",
+		"jpname": "薬袋カルテ",
+		"img": "药袋卡尔蒂.png",
+		"group": [""],
+		"links":{
+		}
 	},        
 	{
 		"name": "泠鸢yousa",
