@@ -462,6 +462,15 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/434341786",
 		}
 	},
+    {
+		"name": "菫妃奈",
+		"jpname": "",
+		"img": "菫妃奈.png",
+		"group": ["VirtuaReal"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/98181",
+		}
+	},
 	{
 		"name": "物述有栖",
 		"jpname": "",
