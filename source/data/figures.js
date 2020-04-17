@@ -108,6 +108,16 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/389857640",
 			"Youtube": "https://www.youtube.com/channel/UCXTpFs_3PqI41qX2d9tL2Rw",
 		}
+	},  
+    {
+		"name": "野野宫ののの",
+		"jpname": "野々宮ののの",
+		"img": "野野宫ののの.png",
+		"group": ["花寄女子寮"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/441403698",
+			"Youtube": "https://www.youtube.com/channel/UCiexEBp7-D46FXUtQ-BpgWg",
+		}
 	},
     {
 		"name": "鹿乃",
