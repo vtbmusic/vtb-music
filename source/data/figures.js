@@ -1,5 +1,15 @@
 var data_data_figures = [
     {
+		"name": "NoiR",
+		"jpname": "のわるど",
+		"img": "NoiR.png",
+		"group": ["NoWorld"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434662713/",
+			"Youtube": "https://www.youtube.com/channel/UC-3piUPtXhIu-KAdEs7fT8A",
+		}
+	},
+    {
 		"name": "星街彗星",
 		"jpname": "星街すいせい",
 		"img": "星街彗星.png",
