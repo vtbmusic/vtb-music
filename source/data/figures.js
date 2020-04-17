@@ -348,7 +348,17 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/286700005/",
 			"Youtube": "https://www.youtube.com/channel/UCJFZiqLMntJufDCHc6bQixg",
 		}
-	},
+	}, 
+    { 		
+        "name": "奏手一弦", 		
+        "jpname": "奏手イヅル", 		
+        "img": "奏手一弦.png", 		
+        "group": ["hololive"], 		
+        "links":{ 			
+            "Bilibili": "https://space.bilibili.com/456232604", 			
+            "Youtube": "https://m.youtube.com/channel/UCZgOv3YDEs-ZnZWDYVwJdmA", 		
+        }
+    },
     {
 		"name": "律可",
 		"jpname": "りっか",
