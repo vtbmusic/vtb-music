@@ -450,7 +450,7 @@ var data_data_figures = [
 		"name": "药袋卡尔蒂",
 		"jpname": "薬袋カルテ",
 		"img": "药袋卡尔蒂.png",
-		"group": [""],
+		"group": [],
 		"links":{
 		}
 	},        
