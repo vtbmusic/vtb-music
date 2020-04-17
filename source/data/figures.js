@@ -70,16 +70,6 @@ var data_data_figures = [
 		}
 	},
     {
-		"name": "神乐七奈",
-		"jpname": "かぐらなな",
-		"img": "神乐七奈.png",
-		"group": [],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/386900246",
-			"Youtube": "https://www.youtube.com/channel/UCbfv8uuUXt3RSJGEwxny5Rw",
-		}
-	},
-    {
 		"name": "犬山玉姬",
 		"jpname": "犬山たまき",
 		"img": "犬山玉姬.png",
