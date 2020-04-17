@@ -660,6 +660,16 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCupCAZz1l52vV8m-dvaoBVQ/",
 		}
 	},
+    {
+		"name": "猫宫日向",
+		"jpname": "猫宮ひなた",
+		"img": "猫宫日向.png",
+		"group": ["ENTUM"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/291296062/",
+			"Youtube": "https://www.youtube.com/channel/UCevD0wKzJFpfIkvHOiQsfLQ",
+		}
+	},
 	{
 		"name": "皆守英雄",
 		"jpname": "皆守ひいろ",
