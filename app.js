@@ -275,7 +275,7 @@ var app_index = {
 		model_music_card.init_music_cards($('#index-music-cards-list'), data.get_songs(1, app_config.music_cards_list_num));
 	},
 	init_figure_cards: function(){
-		model_figure_card.init_figure_cards($('#index-figures-list'), data_data_figures);
+		model_figure_card.init_figure_cards($('#index-figures-list'), data.get_figures(1, app_config.figure_list_num));
 	},
 	init_album_cards: function(){
 		let tmp = data_data_albums;
@@ -692,6 +692,7 @@ var app_data = {
 var app_config = {
 	//ui
 	music_cards_list_num: 10,
+    figure_list_num: 10,
 	
 	//data
 	site_path: 'https://santiego.gitee.io/vtb-music/',
