@@ -727,4 +727,13 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/1950658",
 		}
 	},
+    {
+		"name": "希薇娅",
+		"jpname": "",
+		"img": "希薇娅.jpg",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/354411419/",
+		}
+	},
 ]
