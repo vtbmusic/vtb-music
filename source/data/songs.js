@@ -311,7 +311,7 @@ var data_data_songs = [
     {
         //BV1AJ411v7QK
 		name: "Ubiquitous dB",
-		vocal: ["凑阿库娅"],
+		vocal: ["湊阿库娅"],
 		id: 1059,
 		img: "1059.jpg",
 		date: "2019-12-08"
@@ -327,7 +327,7 @@ var data_data_songs = [
     {
         // BV19J411U7MG
 		name: "お願いマッスル (拜托了肌肉) ",
-		vocal: ["凑阿库娅","犬山玉姬"],
+		vocal: ["湊阿库娅","犬山玉姬"],
 		id: 1056,
 		img: "1056.jpg",
 		date: "2019-11-15"
