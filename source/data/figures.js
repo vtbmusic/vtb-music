@@ -60,7 +60,7 @@ var data_data_figures = [
 		}
 	},
     {
-		"name": "凑阿库娅",
+		"name": "湊阿库娅",
 		"jpname": "湊 あくあ",
 		"img": "凑阿库娅.png",
 		"group": ["hololive"],
