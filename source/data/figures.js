@@ -399,6 +399,15 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "星川莎拉",
+		"jpname": "星川サラ",
+		"img": "星川莎拉.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UC9V3Y3_uzU5e-usObb6IE1w",
+		}
+	},
+    {
 		"name": "真白",
 		"jpname": "ましろ",
 		"img": "真白.png",
