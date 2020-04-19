@@ -776,11 +776,65 @@ var data_data_figures = [
 	},
     {
 		"name": "希薇娅",
-		"jpname": "",
-		"img": "希薇娅.jpg",
+		"jpname": "希薇娅Civia",
+		"img": "希薇娅.png",
 		"group": ["hololiveChina"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/354411419/",
+		}
+	},
+    {
+		"name": "夜霧",
+		"jpname": "夜霧Yogiri",
+		"img": "夜霧.png",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/427061218",
+		}
+	},
+    {
+		"name": "黑桃影",
+		"jpname": "黑桃影echo",
+		"img": "黑桃影.png",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/456368455",
+		}
+	},
+    {
+		"name": "朵莉丝",
+		"jpname": "朵莉丝Doris",
+		"img": "朵莉丝.png",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/511613156",
+		}
+	},
+    {
+		"name": "阿媂娅",
+		"jpname": "阿媂娅Artia",
+		"img": "阿媂娅.png",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/511613155",
+		}
+	},
+    {
+		"name": "罗莎琳",
+		"jpname": "罗莎琳Rosalyn",
+		"img": "罗莎琳.png",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/511613157",
+		}
+	},
+    {
+		"name": "罗莎琳",
+		"jpname": "罗莎琳Rosalyn",
+		"img": "罗莎琳.png",
+		"group": ["hololiveChina"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/511613157",
 		}
 	},
 ]
