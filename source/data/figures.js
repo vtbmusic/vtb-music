@@ -589,6 +589,16 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "白百合莉莉",
+		"jpname": "白百合リリィ",
+		"img": "白百合莉莉.png",
+		"group": ["ViViD"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/421347849",
+			"Youtube": "https://www.youtube.com/channel/UCl-3q6t6zdZwgIsFZELb7Zg",
+		}
+	},
+    {
 		"name": "罗兹·巴雷特",
 		"jpname": "ローズ・バレット",
 		"img": "罗兹巴雷特.png",
