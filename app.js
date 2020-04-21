@@ -147,13 +147,10 @@ var player = {
 	},
 	add_album_to_list: function(album_name){
 		let tmp = data.get_album_songs_id(album_name);
-		info_app.init_block('正在添加歌曲');
 		if(tmp == null) return;
 		for(let i in tmp)
 			player.add_song_to_list(tmp[i]);
 		app_playlist.load_playlist();
-		info_app.init_block('添加歌曲成功');
-		info_app.close();
 	},
 	delete_song_from_list: function(song_id){
 		let index = player.get_song_index(song_id);
