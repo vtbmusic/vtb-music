@@ -510,6 +510,16 @@ var data_data_figures = [
 		}
 	},
     {
+        "name": "莉泽·赫露艾斯塔",
+        "jpname": "リゼ・ヘルエスタ",
+        "img": "莉泽·赫露艾斯塔.png",
+        "group": ["彩虹社"],
+        "links": {
+            "BiliBili": "https://space.bilibili.com/436596841",
+            "Youtube": "https://www.youtube.com/channel/UCZ1xuCK1kNmn5RzPYIZop3w"
+        }
+    },
+    {
 		"name": "梦追翔",
 		"jpname": "夢追翔",
 		"img": "梦追翔.jpg",
