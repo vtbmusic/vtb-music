@@ -857,13 +857,4 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/511613157",
 		}
 	},
-    {
-		"name": "罗莎琳",
-		"jpname": "罗莎琳Rosalyn",
-		"img": "罗莎琳.png",
-		"group": ["hololiveChina"],
-		"links":{
-			"Bilibili": "https://space.bilibili.com/511613157",
-		}
-	},
 ]
