@@ -23,7 +23,6 @@ var data = {
 	merge_data_3: function(){
 		$.ajax({
 			url: app_config.data_path_3 + '1data.json?' + String(tools.get_random_num(1, 10000)),
-            dataType:'jsonp',crossDomain: true,
 			success:function(result){
 				let tmp = result['data'];
 				data_data_songs = data_data_songs.concat(tmp);
