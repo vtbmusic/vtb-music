@@ -776,7 +776,7 @@ var data_data_figures = [
 	},
     {
 		"name": "NoiR",
-		"jpname": "のわるど",
+		"jpname": "のわる",
 		"img": "NoiR.png",
 		"group": ["NoWorld"],
 		"links":{
