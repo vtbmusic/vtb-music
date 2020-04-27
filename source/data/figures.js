@@ -626,6 +626,25 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "天死ちゃん",
+		"jpname": "天死ちゃん",
+		"img": "天死ちゃん.png",
+		"group": [],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UC3LJj-dWaa0wkEOYgopHq2Q",
+		}
+	},
+    {
+		"name": "希萝",
+		"jpname": "Hiiro",
+		"img": "希萝.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/508963009",
+			"Youtube": "https://www.youtube.com/channel/UCTbFf0IcWd9XE5HxBuYTt1w",
+		}
+	},
+    {
 		"name": "白百合莉莉",
 		"jpname": "白百合リリィ",
 		"img": "白百合莉莉.png",
