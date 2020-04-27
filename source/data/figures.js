@@ -343,7 +343,7 @@ var data_data_figures = [
         "name": "奏手一弦", 		
         "jpname": "奏手イヅル", 		
         "img": "奏手一弦.png", 		
-        "group": ["hololive"], 		
+        "group": ["holostar"], 		
         "links":{ 			
             "Bilibili": "https://space.bilibili.com/456232604", 			
             "Youtube": "https://m.youtube.com/channel/UCZgOv3YDEs-ZnZWDYVwJdmA", 		
@@ -353,7 +353,7 @@ var data_data_figures = [
 		"name": "律可",
 		"jpname": "りっか",
 		"img": "律可.png",
-		"group": ["hololive"],
+		"group": ["holostar"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/350631685",
 			"Youtube": "https://www.youtube.com/channel/UC9mf_ZVpouoILRY9NUIaK-w",
