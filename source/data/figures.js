@@ -894,4 +894,14 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/511613157",
 		}
 	},
+    {
+		"name": "福山Master",
+		"jpname": "ふくやマスター",
+		"img": "福山Master.png",
+		"group": ["upd8"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/404931526",
+			"Youtube": "https://www.youtube.com/channel/UCvGaQlF9hISC0EodUeY5jcg",
+		}
+	},
 ]
