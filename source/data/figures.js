@@ -426,6 +426,24 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCeShTCVgZyq2lsBW9QwIJcw",
 		}
 	},
+	{
+		"name": "Hana Macchia",
+		"jpname": "",
+		"img": "Hana Macchia.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCpJtk0myFr5WnyfsmnInP-w",
+		}
+	},
+    {
+		"name": "红晓音",
+		"jpname": "",
+		"img": "红晓音.png",
+		"group": ["Project SP"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/899804",
+		}
+	},
     {
 		"name": "天曰ひよ",
 		"jpname": "天曰ひよ",
