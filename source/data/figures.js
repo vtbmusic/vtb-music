@@ -470,6 +470,53 @@ var data_data_figures = [
 		"group": [],
 		"links":{
 		}
+	},
+    {
+		"name": "因幡Haneru",
+		"jpname": "因幡はねる",
+		"img": "因幡Haneru.png",
+		"group": ["upd8"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UC0Owc36U9lOyi9Gx9Ic-4qg",
+		}
+	},
+    {
+		"name": "东云惠",
+		"jpname": "東雲めぐ",
+		"img": "东云惠.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/308751411",
+			"Youtube": "https://www.youtube.com/channel/UCNA0XC_zxS63d4Q-JMIMyug",
+		}
+	},
+    {
+		"name": "天神子兔音",
+		"jpname": "天神子兎音",
+		"img": "天神子兔音.png",
+		"group": [],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/360221708",
+			"Youtube": "https://www.youtube.com/channel/UCAr7rLi_Wn09G-XfTA07d4g",
+		}
+	},
+    {
+		"name": "羽子田チカ",
+		"jpname": "羽子田チカ",
+		"img": "羽子田チカ.png",
+		"group": [],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UC46Vheyn2Wlc65fVGlzfO7A",
+		}
+	},
+    {
+		"name": "八木迪之",
+		"jpname": "",
+		"img": "八木迪之.png",
+		"group": ["VirtuaReal"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/480675481",
+		}
 	},        
 	{
 		"name": "泠鸢yousa",
