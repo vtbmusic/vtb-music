@@ -439,7 +439,7 @@ var data_data_figures = [
 		"name": "红晓音",
 		"jpname": "",
 		"img": "红晓音.png",
-		"group": ["Project SP"],
+		"group": ["Project_SP"],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/899804",
 		}
