@@ -429,7 +429,7 @@ var data_data_figures = [
 	{
 		"name": "Hana Macchia",
 		"jpname": "",
-		"img": "Hana Macchia.png",
+		"img": "HanaMacchia.png",
 		"group": ["彩虹社"],
 		"links":{
 			"Youtube": "https://www.youtube.com/channel/UCpJtk0myFr5WnyfsmnInP-w",
