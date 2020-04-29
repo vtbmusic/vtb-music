@@ -484,6 +484,7 @@
 .figures-list{
 	height: 11rem;
 	overflow-x: auto;
+    overflow-y: hidden;
 	white-space: nowrap;
 }
 .figure-card{
