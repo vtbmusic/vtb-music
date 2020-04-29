@@ -416,6 +416,15 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCfki3lMEF6SGBFiFfo9kvUA",
 		}
 	},
+    },
+        "name": "龙胆尊",
+		"jpname": "竜胆尊",
+		"img": "龙胆尊.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/434564604/",
+			"Youtube": "https://www.youtube.com/channel/UCPvGypSgfDkVe7JG2KygK7A",
+    {
     {
 		"name": "郡道美玲",
 		"jpname": "",
