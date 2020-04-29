@@ -50,8 +50,6 @@ var data = {
                     if (a.date == b.date) return 0;
                     if (a.date < b.date) return 1;
                 }) // fix me
-
-                console.log(data_data_songs);
                 app.init();
             },
             error: function() {
