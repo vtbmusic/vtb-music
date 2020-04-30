@@ -705,6 +705,7 @@ var app_config = {
 	song_path: 'https://santiego.gitee.io/vtb-music-source-song/song/',
 	data_path_2: 'https://santiego.gitee.io/vtb-music-source-data-2/',
 	data_path_3: 'https://aqua.chat:64456/',
+    data_path_4: 'https://santiego.gitee.io/vtb-music-source-data-4/',
 	img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/',
 	figure_img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/figure/'
 }
