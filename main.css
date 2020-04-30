@@ -108,16 +108,9 @@
 	text-align: center;
 	position: relative;
 }
-#scoller-body {
-	overflow: hidden;
-}
-.nav-music-card-scoller {
-	overflow: hidden;
-}
 .nav-music-card-title{
 	font-size: 0.8rem;
 	cursor: default;
-	display: inline-block;
 }
 .nav-music-card-title:hover{
     color: rgb(15,127,254);
