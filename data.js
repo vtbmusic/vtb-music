@@ -85,6 +85,8 @@ var data = {
             return app_config.data_path_2 + song_id + '.mp3';
         else if (String(song_id)[0] == '3')
             return app_config.data_path_3 + song_id + '.mp3';
+        else if (String(song_id)[0] == '4')
+            return app_config.data_path_4 + song_id + '.mp3';
     },
     get_lyric_link: function(song_id, is_scroll) {
         let path = "";
@@ -94,6 +96,8 @@ var data = {
             path = app_config.data_path_2;
         else if (String(song_id)[0] == '3')
             path = app_config.data_path_3;
+        else if (String(song_id)[0] == '4')
+            path = app_config.data_path_4;
         if (is_scroll) return path + song_id + "T.txt";
         else return path + song_id + ".txt";
     },
@@ -104,6 +108,8 @@ var data = {
             return app_config.data_path_2 + img_name;
         else if (String(song_id)[0] == '3')
             return app_config.data_path_3 + img_name;
+        else if (String(song_id)[0] == '4')
+            return app_config.data_path_4 + img_name;
         return 'none'
     },
     get_album_img_link: function(img) {
