@@ -154,7 +154,6 @@ var ui = {
 		$('#nav-music-card-img').attr('style', 'background: url(' + data.get_img_link(song['img'] || (song['vocal'][0]+'.jpg'), song['id']) + ')');
 		$('#nav-music-card-title').text(song['name']);
 		$('#nav-music-card-subtitle').html(tools.load_template_vocal(song['vocal']));
-		this.switch_scroll();
 	},
 	btn_show_hide_bigplayer: function(){
 		if(app_bigplayer.dom_jq.css('display') == 'none')
@@ -182,31 +181,6 @@ var ui = {
 			list.push(song_id);
 		}
 		player.add_songs_to_list(list);
-	},
-	// 针对超长歌名，开启或关闭歌名滚动
-	switch_scroll: function () {
-		let info_scr = document.querySelector('#scoller-body');
-		let div = document.querySelector('#nav-music-card-scoller');
-		let p = document.querySelector('#nav-music-card-title');
-		let div_w = info_scr.offsetWidth;
-		let p_w = p.offsetWidth;
-		if (div_w > p_w) {
-			div.style.width = 'auto';
-			let p_2 = document.querySelectorAll('#nav-music-card-title')[1];
-			if (p_2) {
-				p_2.remove();
-			}
-			return false;
-		}
-		div.style.width = '50rem';
-		div.innerHTML += div.innerHTML;
-		setInterval(function () {
-			if (p_w <= info_scr.scrollLeft) {
-				info_scr.scrollLeft -= p_w;
-			} else {
-				info_scr.scrollLeft++;
-			}
-		}, 30);
 	},
 	// 相关ui进入play模式
 	switch_play: function(song_id){
