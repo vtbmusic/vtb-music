@@ -69,7 +69,7 @@ var data = {
 					if(a.date == b.date) return 0;
 					if(a.date < b.date) return 1;
 				}) // fix me
-				app.init();
+				data.merge_data_5();
 			},
 			error:function(){
 				info_app.init_block('网站后台正在更新，请稍后刷新');
