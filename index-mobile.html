@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<script type="text/javascript">
+		function check_mobile() {
+			if ('ontouchstart' in window) return true;
+			else return false
+		}
+		if (!check_mobile()) {
+			let tmp = './index.html';
+			if (window.location.href.indexOf('?') != -1)
+				tmp += window.location.href.substring(window.location.href.indexOf('?'));
+			window.location.href = tmp;
+		}
+	</script>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="main-mobile.css">
+	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css" />
+	<title>Vtb-Music</title>
+</head>
+<body>
+	<audio id="player" preload="auto">
+		<source type="audio/mpeg">
+		抱歉，请升级您的浏览器
+	</audio>
+	<div id="info" class="info" style="display: none">
+		<span id="info-text">正在加载</span>
+	</div>
+	<div id="nav" class="nav-player">
+		<div style="width: 100%;display: inline-block;text-align: center;">
+			<div class="nav-btns" style="padding-left: 1.5rem;">
+				<a class="nav-btn nav-btn-play-random" id="btn-nav-random"></a>
+				<a class="nav-btn nav-btn-pre" id="btn-nav-pre"></a>
+				<a class="nav-btn nav-btn-play" id="btn-nav-play"></a>
+				<a class="nav-btn nav-btn-nxt" id="btn-nav-nxt"></a>
+				<a class="nav-btn nav-btn-play-repeat" id="btn-nav-repeat"></a>
+
+			</div>
+			<div class="nav-btns" style="float: right;">
+				<a class="nav-btn nav-btn-list btn-scale" id="btn-nav-list"></a>
+			</div>
+		</div>
+	</div>
+	<div class="playlist" id="playlist" data-ui-on="false">
+		<div class="playlist-title">
+			<span>播放列表</span>
+			<span class="playlist-clear" id="btn-playlist-clear">清空</span>
+		</div>
+		<div class="playlist-list" id="playlist-list">
+		</div>
+	</div>
+	<div id="app-index" style="display: none;">
+		<div class="block" id="app-gallery" style="margin-top: 5rem;">
+			<div>
+				<div class="headline">浏览</div>
+				<div class="left-link" id="index-btn-show-all-songs">所有歌曲</div>
+			</div>
+			<div class="hr"></div>
+			<div class="music-cards-list" id="index-music-cards-list">
+			</div>
+		</div>
+		<div class="block" id="app-figures">
+			<div>
+				<div class="headline">人物</div>
+				<div class="left-link" id="index-btn-show-all-figures">所有人物</div>
+			</div>
+			<div class="hr"></div>
+			<div class="figures-list" id="index-figures-list">
+			</div>
+		</div>
+		<div class="block" id="app-alums">
+			<div class="headline">歌单</div>
+			<div class="hr"></div>
+			<div class="album-cards-list" id="index-alums-list">
+
+			</div>
+		</div>
+	</div>
+	<div id="app-bigplayer" class="app-bigplayer" style="display: none;">
+		<div class="bigplayer-bg" style="background: url(./source/img/%E5%A4%8F%E8%89%B2%E7%A5%AD.jpg);">
+		</div>
+		<div class="bigplayer-lyric">
+			<div style="position: relative;height: 100%;width: 100%">
+				<div class="bigplayer-bar">
+					<span class="bigplayer-btns">
+						<a href="javascript:void(0);" id="bigplayer-btn-share" class="bigplayer-share">分享</a>
+						<a href="javascript:void(0);" id="bigplayer-btn-download">下载</a>
+						<a href="javascript:void(0);" id="bigplayer-btn-close2">关闭</a>
+					</span>
+				</div>
+				<div class="bigplayer-lyric-p" id="bigplayer-lyric-p">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="app-vocal" style="display: none;">
+		<div class="vocal-body block">
+			<div class="song-list-btn-back" btn-role="back">
+				<div class="btn-back"></div>
+			</div>
+			<div>
+				<div style="text-align: center;">
+					<div class="vocal-img" style="background: url(./source/img/figure/夏色祭.png)" id="vocal-img"></div>
+				</div>
+				<div class="vocal-info">
+					<div class="vocal-info-text">
+						<div class="vocal-name" id="vocal-name">夏色祭</div>
+						<div class="vocal-name-jp" id="vocal-name-jp">夏色 まつり</div>
+						<div class="vocal-links" id="vocal-links">
+						</div>
+						<div>
+							<div class="vocal-btn" id="vocal-btn-playlist-add-all" onclick="ui.song_list_add_all_songs('#app-vocal')">全部添加到列表</div>
+							<div class="vocal-btn" id="vocal-btn-play-all" onclick="ui.song_list_play_all_songs('#app-vocal')">播放全部</div>
+						</div>
+					</div>
+					<div class="song-list" id="vocal-song-list">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="app-album" style="display: none;">
+		<div class="vocal-body block">
+			<div class="song-list-btn-back" btn-role="back">
+				<div class="btn-back"></div>
+			</div>
+			<div>
+				<div style="text-align: center;">
+					<div class="vocal-img" style="background: url(./source/img/figure/夏色祭.png)" id="album-img"></div>
+				</div>
+				<div class="vocal-info">
+					<div class="vocal-info-text">
+						<div class="vocal-name" id="album-name">夏色祭</div>
+						<div class="vocal-name-jp" id="album-name-jp">夏色 まつり</div>
+						<div>
+							<div class="vocal-btn" id="album-btn-playlist-add-all" onclick="ui.song_list_add_all_songs('#app-album')">全部添加到列表</div>
+							<div class="vocal-btn" id="album-btn-play-all" onclick="ui.song_list_play_all_songs('#app-album')">播放全部</div>
+						</div>
+					</div>
+					<div class="song-list" id="album-song-list">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="app-all-songs" style="display: none">
+		<div class="all-songs-body block">
+			<div style="padding-bottom: 2rem;">
+				<div>
+					<div class="all-song-list-btn-back" btn-role="back">
+						<div class="btn-back"></div>
+					</div>
+					<div class="all-song-list-title">所有歌曲</div>
+				</div>
+				<div style="margin-top: 0.5rem; margin-left: 0.5rem;">
+					<input id="search-input" type="text" class="input" placeholder="搜索" />
+					<div class="vocal-btn" id="album-btn-playlist-add-all" onclick="ui.song_list_add_all_songs('#all-songs-music-cards-list')">全部添加到列表</div>
+					<div class="vocal-btn" id="album-btn-play-all" onclick="ui.song_list_play_all_songs('#all-songs-music-cards-list')">播放全部</div>
+				</div>
+			</div>
+			<div class="song-list" id="all-songs-music-cards-list">
+
+			</div>
+		</div>
+	</div>
+	<div id="app-all-figures" style="display: none;">
+		<div class="all-songs-body block">
+			<div style="margin-bottom: 1rem;">
+				<div class="all-song-list-btn-back" btn-role="back">
+					<div class="btn-back"></div>
+				</div>
+				<div class="all-song-list-title">所有人物</div>
+			</div>
+			<div id="all-figures-body" style="margin-left: 0.5rem;">
+			</div>
+		</div>
+	</div>
+	<div class="nav-music-card">
+		<div class="nav-music-card-body" id="nav-music-card-body">
+			<div class="nav-text">
+				<div class="nav-music-card-title" id="nav-music-card-title">Vtb-Music</div>
+				<div class="nav-music-card-subtitle" id="nav-music-card-subtitle">...</div>
+			</div>
+			<div class="nav-play-items">
+				<div class="nav-play-bar" id="bar-nav-play"></div>
+				<div class="nav-play-bar-bg" id="nav-play-bar-bg"></div>
+			</div>
+			<div class="nav-play-time" id="nav-play-time">...</div>
+		</div>
+	</div>
+	<footer id="footer" class="footer">
+		<div class="footer-block">
+			<div style="padding-top: 1rem;">Vtb-Music</div>
+			<div style="font-size: 0.5rem;">目前收录<span id="footer-song-cnt"></span>首歌曲，<span id="footer-figure-cnt"></span>个vtuber</div>
+			<div style="font-size: 0.5rem; margin-top: 0.3rem; font-weight: bold;">本站所有资源均来自网络，如有侵权请联系我们，我们将及时删除</div>
+			<hr>
+			<div class="footer-text-block">
+				<div>项目部署于<a href="https://gitee.com/santiego/vtb-music" target="_blank">Gitee</a> 欢迎参与开发 </div>
+				<div>
+					<a href="https://gitee.com/santiego/vtb-music/wikis/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E6%AD%8C%E6%9B%B2" target="_blank">上传歌曲</a>
+					<span class="divider"></span>
+					<a href="https://gitee.com/santiego/vtb-music/tree/master#vtb-music" target="_blank">关于本站</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+	<script src="data.js"></script>
+	<script src="app.js"></script>
+	<script src="ui-mobile.js"></script>
+<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+	<script>Swal.fire(
+			'公告!',
+			'目前有人通过各种途径付费卖以我们网站为基础做成的app，请不要上当受骗，我们近期会发布免费的官方App，请不要再购买相关付费软件。交流QQ群：737972812',
+			'question	'); </script>
+	<!-- Data -->
+	<script src="./source/data/songs.js"></script>
+	<script src="./source/data/figures.js"></script>
+	<script src="./source/data/albums.js"></script>
+
+	<!-- Plug -->
+	<script src="./plug/js-cookie.js"></script>
+	<script src="./plug/clipboard.min.js"></script>
+</body>
+</html>
