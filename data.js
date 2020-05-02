@@ -62,13 +62,6 @@ var data = {
 		$.ajax({
 			url: app_config.data_path_4 + '1data.json?' + String(tools.get_random_num(1, 10000)),
 			success:function(result){
-				let tmp = result['data'];
-				data_data_songs = data_data_songs.concat(tmp);
-				data_data_songs.sort(function(a,b){
-					if(a.date > b.date) return -1;
-					if(a.date == b.date) return 0;
-					if(a.date < b.date) return 1;
-				}) // fix me
 				data.merge_data_5();
 			},
 			error:function(){
