@@ -1,24 +1,7 @@
 var data = {
     //
     merge_data: function() {
-        $.ajax({
-            url: app_config.data_path_2 + '1data.json?' + String(tools.get_random_num(1, 10000)),
-            success: function(result) {
-                let tmp = result['data'];
-                data_data_songs = data_data_songs.concat(tmp);
-
-                data_data_songs.sort(function(a, b) {
-                        if (a.date > b.date) return -1;
-                        if (a.date == b.date) return 0;
-                        if (a.date < b.date) return 1;
-                    }) // fix me
                 data.merge_data_3();
-            },
-            error: function() {
-                info_app.init_block('网站后台正在更新，请稍后刷新');
-                app.init();
-            }
-        });
     },
 
     merge_data_3: function() {
@@ -50,7 +33,7 @@ var data = {
                     if (a.date == b.date) return 0;
                     if (a.date < b.date) return 1;
                 }) // fix me
-                data.merge_data_4();
+                data.merge_data_5();
             },
             error: function() {
                 info_app.init_block('网站后台正在更新，请稍后刷新');
