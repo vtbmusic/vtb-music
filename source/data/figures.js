@@ -370,6 +370,25 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "樋口枫",
+		"jpname": "樋口楓",
+		"img": "樋口枫.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/410455162",
+			"Youtube": "https://www.youtube.com/channel/UCsg-YqdqQ-KFF0LNk23BY4A",
+		}
+	},
+    {
+		"name": "周·力一",
+		"jpname": "ジョー・力一",
+		"img": "周力一.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UChUJbHiTVeGrSkTdBzVfNCQ",
+		}
+	},
+    {
 		"name": "社筑",
 		"jpname": "社築",
 		"img": "社筑.png",
