@@ -951,6 +951,16 @@ var data_data_figures = [
 			"Bilibili": "https://space.bilibili.com/511613157",
 		}
 	},
+    {   		
+        "name": "莱娅",   		
+        "jpname": "Leia",   		
+        "img": "莱娅.png",   		
+        "group": [],   		
+        "links":{   			
+            "Bilibili": "https://space.bilibili.com/441416698",   			
+            "Youtube": "https://www.youtube.com/channel/UCQsrCme_kzlgQxvfNdCG6Ng",   		
+        }   	
+    },
     {
 		"name": "福山Master",
 		"jpname": "ふくやマスター",
