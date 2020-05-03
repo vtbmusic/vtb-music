@@ -829,20 +829,20 @@ span{
 	height:50px;
 	outline-offset:-2px;
 	outline:2px solid rgba(255, 255, 255, 0.979);
-	  -webkit-border-radius:4px;
+	-webkit-border-radius:4px;
 	border: 2px solid rgb(255, 255, 255);
-   }
-   ::-webkit-scrollbar{
+}
+::-webkit-scrollbar{
 	width:8px;
 	height:8px;
-   }
-   ::-webkit-scrollbar-track-piece{
+}
+::-webkit-scrollbar-track-piece{
 	background-color:#fff;
-	  -webkit-border-radius:0;
-   }
-   ::-webkit-scrollbar-thumb:hover{
+  -webkit-border-radius:0;
+}
+::-webkit-scrollbar-thumb:hover{
 	background-color:rgb(146, 172, 255);
 	height:50px;
-	  -webkit-border-radius:4px;
-   }
+  -webkit-border-radius:4px;
+}
    
