@@ -14,13 +14,15 @@
 
 ## 开发
 
-目前网站暂时依托于`Gitee`，全部由前端实现，是一个静态网站，所有歌曲上传等都通过`pull request`手动修改数据文件实现。
+目前网站暂时依托于`Gitee Pages`服务，已拥有网站自己的服务器和后端，后端上传歌曲功能即将上线(之前是通过用户提交`pull request`来上传歌曲的)
 
 **网站后端（[项目地址](https://gitee.com/Dishone/vtb-music-admin-netcore)）正在由[Dishone](https://gitee.com/Dishone)开发中**，即将上线。
 
-**网站新前端（适配后端api）：[vtb-music-web](https://gitee.com/mrams/vtb-music-web)** 以后开发会转移到此项目
+**网站前端**（适配后端api）：[vtb-music-web](https://gitee.com/mrams/vtb-music-web) **在此仓库进行最新开发**
 
-没有使用任何框架，全部由原生`jQuery`开发，虽然是静态网页，但由数据驱动、动态渲染。另外如你所见，**Vtb-Music**基于Gitee Pages 服务，所有网页、歌曲、数据均保存在Gitee仓库中，也正因如此，直接省去了网站后端，也使各位有能DD可以**直接参与**到**Vtb-Music**的开发维护（决定因素还是因为不用租服务器🤣）。但有利有弊，由于Gitee Pages 服务的限制，后端全部由前端完成渲染，并且用户部分交互需要通过Gitee完成，较为繁琐。
+网站前端没有使用任何框架，全部由原生`jQuery`开发，虽然是静态网页，但由数据驱动、动态渲染。另外如你所见，**Vtb-Music**基于Gitee Pages 服务，所有网页、歌曲、数据均保存在Gitee仓库中，也正因如此，直接省去了网站后端，也使各位有能DD可以**直接参与**到**Vtb-Music**的开发维护（决定因素还是因为不用租服务器🤣）。但有利有弊，由于Gitee Pages 服务的限制，后端全部由前端完成渲染，并且用户部分交互需要通过Gitee完成，较为繁琐。
+
+目前需要有能man使用框架重构前端代码（比如`vue.js`）
 
 本站是完全开源开放且部署在[gitee](https://gitee.com/)上的，所以各位dd可以通过gitee上传歌曲甚至参与开发，**欢迎各位有能DD参与开发**。
 因为开发者本人为在校高中生，所以`pull request`审核可能稍慢，网站代码质量、可读性望包涵。
