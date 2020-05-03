@@ -613,6 +613,15 @@ var data_data_figures = [
 		}
 	},
     {
+		"name": "远北千南",
+		"jpname": "あちきた ちなみ ",
+		"img": "远北千南.png",
+		"group": ["彩虹社"],
+		"links":{
+			"Youtube": "https://www.youtube.com/channel/UCuz0vzQgC8LRdS6lVV0UkUg",
+		}
+	},
+    {
         "name": "莉泽·赫露艾斯塔",
         "jpname": "リゼ・ヘルエスタ",
         "img": "莉泽·赫露艾斯塔.png",
