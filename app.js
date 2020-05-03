@@ -8,7 +8,7 @@ var app = {
 		ui.init();
 		href_vars = tools.get_vars_from_href();
 		if(href_vars['song_id'] != null){
-			player.load_song(Number(href_vars['song_id']));
+			player.load_song(String(href_vars['song_id']));
 			app.switch_app(app_bigplayer, player.cur_song);
 		}
 	},
