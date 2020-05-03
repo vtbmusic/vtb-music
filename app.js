@@ -71,7 +71,12 @@ var player = {
 		if(c_playlist != null) player.playlist = c_playlist.split(',');
 		let c_cur_song = Cookies.get('cur_song');
 		if(c_cur_song != null) player.load_song(c_cur_song);
-		else player.load_song(data_data_songs[0].Id);
+		else{
+			for(let i in data.data_song){
+				player.load_song(data.data_song[i].Id);
+				break;
+			}
+		}
 		let c_cur_playtime = Cookies.get('curplaytime');
 		if(c_cur_playtime != null) player.dom.currentTime = c_cur_playtime;
 		let c_volume = Cookies.get('volume');
@@ -382,7 +387,9 @@ var app_all_song = {
 	},
 	search_song: function(){
 		let tmp;
-		if($('#search-input').val() == "") tmp = data_data_songs;
+		if($('#search-input').val() == ""){
+			return;
+		}
 		else tmp = data.search_song($('#search-input').val());
 		if(tmp.length == 0) return;
 		model_song_list.load_song_list($('#all-songs-music-cards-list'), tmp);
@@ -717,6 +724,9 @@ var app_data = {
 }
 
 var app_config = {
+	// 防止浏览器缓存
+	version: '20050301',
+	
 	//ui config
 	music_cards_list_num: 15,
     figure_list_num: 10,
