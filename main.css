@@ -108,9 +108,17 @@
 	text-align: center;
 	position: relative;
 }
+#scoller-body {
+	overflow: hidden;
+}
+.nav-music-card-scoller {
+	overflow: hidden;
+}
 .nav-music-card-title{
 	font-size: 0.8rem;
 	cursor: default;
+	display: inline-block;
+	white-space: nowrap;
 }
 .nav-music-card-title:hover{
     color: rgb(15,127,254);
@@ -607,6 +615,12 @@
 	background: url(./source/icon/icon-left-back.png);
 	background-size: cover!important;
 }
+.btn-back-home{
+	width: 1rem;
+	height: 1rem;
+	background: url(./source/icon/icon-home.png);
+	background-size: cover!important;
+}
 .vocal-btn{
 	float: right;
 	font-size: 0.8rem;
@@ -647,6 +661,8 @@
 	width: 1rem;
 	height: 1rem;
 	padding: 0.5rem;
+	margin-right: 0.5rem;
+	margin-bottom: 0.2rem;
 }
 .all-song-list-btn-back:hover{
 	transform: scale(1.1,1.1);

@@ -2,39 +2,7 @@ var app = {
 	name : "Vtb-Music",
 	auther: "Santiego",
 	init: function(){
-		// load app_index
-		$.get(app_config.template_path + "music_card.html", function(data,status){
-			if(status!='success') alert('Erro. \n Can\'t get data.');
-			app_data.template_music_card = 	data;
-			app_index.init_music_cards();
-			ui.init_music_cards();
-		});
-		$.get(app_config.template_path + "figure_card.html", function(data,status){
-			if(status!='success') alert('Erro. \n Can\'t get data.');
-			app_data.template_figure_card = data;
-			app_index.init_figure_cards();
-			ui.init_figure_cards();
-		});
-		$.get(app_config.template_path + "album_card.html", function(data,status){
-			if(status!='success') alert('Erro. \n Can\'t get data.');
-			app_data.template_album_card = data;
-			app_index.init_album_cards();
-			ui.init_album_cards();
-		});
-		$.get(app_config.template_path + "playlist-item.html", function(data,status){
-			if(status!='success') alert('Erro. \n Can\'t get data.');
-			app_data.template_playlist_item = data;
-			app_playlist.load_playlist();
-			ui.init_playlist();
-		});
-		$.get(app_config.template_path + "song-item.html", function(data,status){
-			if(status!='success') alert('Erro. \n Can\'t get data.');
-			app_data.template_song_item = data;
-		});
-		$.get(app_config.template_path + "figure_card_ext.html", function(data,status){
-			if(status!='success') alert('Erro. \n Can\'t get data.');
-			app_data.template_figure_card_ext = data;
-		});
+		app_index.init_for_first_use();
         app.switch_app(app_index);
 		player.init();
 		ui.init();
@@ -60,6 +28,15 @@ var app = {
 		}
 		app.app_info_list.unshift(app.create_app_info(toapp, 0, vars));
 		toapp.init(vars);
+		$('html').scrollTop(0);
+	},
+	// 返回首页
+	back_to_home: function(){
+		if(app.app_info_list.length != 0)
+			app.app_info_list[0].app.exit();
+		app.app_info_list = [];
+		app.app_info_list.unshift(app.create_app_info(app_index, 0));
+		app_index.init();
 		$('html').scrollTop(0);
 	},
 	close_app: function(){
@@ -94,7 +71,7 @@ var player = {
 		if(c_playlist != null) player.playlist = c_playlist.split(',');
 		let c_cur_song = Cookies.get('cur_song');
 		if(c_cur_song != null) player.load_song(c_cur_song);
-		else player.load_song(data_data_songs[0]['id']);
+		else player.load_song(data_data_songs[0].Id);
 		let c_cur_playtime = Cookies.get('curplaytime');
 		if(c_cur_playtime != null) player.dom.currentTime = c_cur_playtime;
 		let c_volume = Cookies.get('volume');
@@ -247,11 +224,11 @@ var app_playlist = {
 		let song = data.get_song(song_id);
 		if(song == null) return;
 		let tmp = tools.load_template({
-			'song_id': song['id'],
-			'name': song['name'],
-			'vocal': song['vocal'],
-			'vocals_link': tools.load_template_vocal(song['vocal']),
-		},app_data.template_playlist_item);
+			'song_id': song.Id,
+			'name': song.name,
+			'vocal': song.vocal,
+			'vocals_link': tools.load_template_vocal(song.vocal),
+		},data_template["playlist-item"]);
 		app_playlist.dom_jq.append(tmp);
 		let btn = $(".playlist-song [data-btn-play='" + player.cur_song + "']");
 		if(!player.dom.paused){
@@ -268,23 +245,39 @@ var app_index = {
 	init: function(){
 		app_index.dom_jq.show();
 	},
+	// 只有第一次会加载数据
+	init_for_first_use: function(){
+		app_index.init_music_cards();
+		ui.init_music_cards();
+		
+		app_index.init_figure_cards();
+		ui.init_figure_cards();
+		
+		app_index.init_album_cards();
+		ui.init_album_cards();
+		
+		app_index.dom_jq.show();
+	},
 	exit: function(){
 		app_index.dom_jq.hide();
 	},
 	init_music_cards: function(){
+		$('#index-music-cards-list').empty();
 		model_music_card.init_music_cards($('#index-music-cards-list'), data.get_songs(1, app_config.music_cards_list_num));
 	},
 	init_figure_cards: function(){
+		$('#index-figures-list').empty();
 		model_figure_card.init_figure_cards($('#index-figures-list'), data.get_figures(1, app_config.figure_list_num));
 	},
 	init_album_cards: function(){
+		$('#index-alums-list').empty();
 		let tmp = data_data_albums;
 		app_index.load_album_cards(tmp);
 	},
 	load_album_cards: function(data){
 		for(let i=0;i<data.length;i++){
 			if(data[i] == null) break;
-			app_index.load_template_album_card(data[i]['name'], data[i]['vocal'], data[i]['img']);
+			app_index.load_template_album_card(data[i].name, data[i].vocal, data[i].img);
 		}
 	},
 	load_template_album_card: function(name, vocal, img){
@@ -292,7 +285,7 @@ var app_index = {
 			'name': name,
 			'vocal': vocal,
 			'img': data.get_album_img_link(img),
-		},app_data.template_album_card);
+		},data_template.album_card);
 		$('#index-alums-list').append(tmp);
 	}
 }
@@ -304,12 +297,15 @@ var app_bigplayer = {
 		let tmp = $('.bigplayer-lyric-p');
 		model_load_lyric.init(tmp, song_id);
 		let song = data.get_song(song_id);
-		$('.bigplayer-bg').css('background', 'url(' + data.get_img_link(song['img'], song_id) + ')');
+		$('.bigplayer-bg').css('background', 'url(' + data.get_img_link(song.img, song_id) + ')');
 		$('#bigplayer-btn-download').attr('href', data.get_song_link(song_id));
 		$('#bigplayer-btn-download').attr('download', song.name);
 		$('#bigplayer-btn-share').attr('data-clipboard-text', tools.get_song_share_link(song_id));
 		$('#bigplayer-btn-share').click(app_bigplayer.event_share);
 		new ClipboardJS('#bigplayer-btn-share');
+		
+		$('#app-bigplayer').height(document.documentElement.clientHeight - $('.nav').height() - $('.nav-music-card').height());
+		$('#app-bigplayer').css('margin-top', $('.nav').height()+'px');
 		app_bigplayer.dom_jq.show();
 	},
 	event_share: function(){
@@ -369,10 +365,18 @@ var app_album = {
 
 var app_all_song = {
 	dom_jq: $('#app-all-songs'),
+	_data_page_index: 1,
+	_no_more_data: false,
 	init: function(){
-		$('#search-input')[0].oninput =  app_all_song.search_song;
+		//$('#search-input')[0].oninput =  app_all_song.search_song;
 		$('#search-input').change(app_all_song.search_song);
-		model_song_list.load_song_list($('#all-songs-music-cards-list'), data_data_songs);
+		$(window).scroll(function(){
+			if(document.documentElement.clientHeight+document.documentElement.scrollTop >= document.documentElement.scrollHeight)
+				app_all_song.event_load_data();
+		});
+		app_all_song._data_page_index = 1;
+		app_all_song._no_more_data = false;
+		model_song_list.load_song_list($('#all-songs-music-cards-list'), data.get_songs(app_all_song._data_page_index,50));
 		ui.refresh_ui();
 		app_all_song.dom_jq.fadeIn(200);
 	},
@@ -380,10 +384,24 @@ var app_all_song = {
 		let tmp;
 		if($('#search-input').val() == "") tmp = data_data_songs;
 		else tmp = data.search_song($('#search-input').val());
+		if(tmp.length == 0) return;
 		model_song_list.load_song_list($('#all-songs-music-cards-list'), tmp);
 		ui.refresh_ui();
 	},
+	// 用户滚动条到底，自动加载新数据
+	event_load_data: function(){
+		if(app_all_song._no_more_data) return;
+		app_all_song._data_page_index += 1;
+		let res_data = data.get_songs(app_all_song._data_page_index,50);
+		if(res_data.length == 0){
+			app_all_song._no_more_data = true;
+			return;
+		}
+		model_song_list.load_song_list($('#all-songs-music-cards-list'), res_data, true);
+		ui.refresh_ui();
+	},
 	exit: function(){
+		$(window).off("scroll", app_all_song.event_load_data);
 		app_all_song.dom_jq.hide();
 	}
 }
@@ -423,7 +441,7 @@ var app_all_figures = {
 			'name': name,
 			'jpname': jpname,
 			'img': tools.get_figure_img_link(img),
-		},app_data.template_figure_card_ext);
+		},data_template.figure_card_ext);
 		return data;
 	},
 	exit: function(){
@@ -434,19 +452,19 @@ var app_all_figures = {
 
 
 var model_song_list = {
-	load_song_list: function(target, song_list){
-		target.empty();
+	load_song_list: function(target, song_list, append){
+		if(append == null) target.empty();
 		for(let i in song_list)
 			target.append(model_song_list.load_template_song_item(song_list[i]));
 	},
 	load_template_song_item: function(song){
 		let tmp = tools.load_template({
-			'song_id': song['id'],
-			'name': song['name'],
-			'date': song['date'],
-			'song_path': data.get_song_link(song.id),
-			'vocals_link': tools.load_template_vocal(song['vocal']),
-		},app_data.template_song_item);
+			'song_id': song.Id,
+			'name': song.name,
+			'date': song.CreateTime.substring(0, 10),
+			'song_path': data.get_song_link(song.Id),
+			'vocals_link': tools.load_template_vocal(song.vocal),
+		},data_template["song-item"]);
 		return tmp;
 	},
 }
@@ -460,7 +478,7 @@ var model_music_card = {
 		let res = "";
 		for(let i in data){
 			if(data[i] == null) break;
-			res += model_music_card.load_template_music_card(data[i]['id'], data[i]['name'], data[i]['vocal'], data[i]['img']);
+			res += model_music_card.load_template_music_card(data[i].Id, data[i].name, data[i].vocal, data[i].img);
 		}
 		return res;
 	},
@@ -472,7 +490,7 @@ var model_music_card = {
 			'vocals_link': tools.load_template_vocal(vocal),
 			'img': data.get_img_link(img || vocal[0]+'.jpg', song_id),
 			'song_path': data.get_song_link(song_id),
-		},app_data.template_music_card);
+		},data_template.music_card);
 		return tmp;
 	},
 }
@@ -485,7 +503,7 @@ var model_figure_card = {
 		let res="";
 		for(let i=0;i<data.length;i++){
 			if(data[i] == null) break;
-			res += model_figure_card.load_template_figure_card(data[i]['name'], data[i]['img']);
+			res += model_figure_card.load_template_figure_card(data[i].name, data[i].img);
 		}
 		return res;
 	},
@@ -493,11 +511,12 @@ var model_figure_card = {
 		let data = tools.load_template({
 			'name': name,
 			'img': tools.get_figure_img_link(img),
-		},app_data.template_figure_card);
+		},data_template.figure_card);
 		return data;
 	},
 }
 
+// （滚动）歌词代码
 var model_load_lyric = {
 	init: function(target, song_id){
 		target.empty();
@@ -505,9 +524,15 @@ var model_load_lyric = {
 		let html_data = "";
 		model_load_lyric.lyric_data = [];
 		clearInterval(model_load_lyric.scroll_timer);
+		
 		$.ajax({
-			url: data.get_lyric_link(song_id, true),
+			url: data.get_lyric_link(song_id),
 			success:function(result){
+				if(!model_load_lyric._check_is_lyric_with_time(String(result))){
+					html_data = model_load_lyric.load_lyric(result);
+					target.append(html_data);
+					return;
+				}
 				lyric_data = result;
 				html_data = model_load_lyric.load_lyric_with_time(lyric_data);
 				target.append(html_data);
@@ -517,19 +542,16 @@ var model_load_lyric = {
 				model_load_lyric.scroll_lyric();
 			},
 			error:function(){
-				$.ajax({
-					url: data.get_lyric_link(song_id, false),
-					success:function(result){
-						lyric_data = result;
-						html_data = model_load_lyric.load_lyric(lyric_data);
-						target.append(html_data);
-					},
-					error:function(){
-						target.append('<p>暂无歌词</p>');
-					}
-				});
+				$.target.append('<p>暂无歌词</p>');
 			}
 		});
+	},
+	// 判断是滚动字幕文件还是普通歌词文本文件 后端待优化
+	_check_is_lyric_with_time: function(str){
+		let st = str.indexOf('['),ed=str.indexOf(']');
+		if(st==-1||ed==-1||Number(str.slice(st,ed)) == NaN) return false;
+		return true;
+
 	},
 	load_lyric_with_time: function(data){
 		let tmp = data.split('[');
@@ -539,6 +561,7 @@ var model_load_lyric = {
 			if(tmp[i] == "") continue;
 			let idx = tmp[i].indexOf(']');
 			let stime = tools.get_seconds_from_text(tmp[i].substring(0,idx));
+			if(stime == NaN) continue;
 			let lyric_text = tools.format_lyric(tmp[i].slice(idx+2));
 			res+=tools.load_template({
 				'id': i,
@@ -576,11 +599,13 @@ var model_load_lyric = {
 		$('#lyric-text-'+id).addClass('lyric-text-on');
 		model_load_lyric.pre_lyric = id;
 	},
+	// 从指定歌词开始播放
 	play_from_lyric: function(){
 		let lyric_idx = Number($(this).attr('data-lyric-idx')) - 1;
 		model_load_lyric.scroll_disabled = false;
 		player.play(model_load_lyric.lyric_data[lyric_idx].stime);
 	},
+	// 用户滚动查看歌词时暂时停止自动滚动
 	event_player_on_scroll: function(){
 		model_load_lyric.scroll_disabled = true;
 		clearTimeout(model_load_lyric.scroll_disable_timer);
@@ -681,6 +706,8 @@ var tools = {
 }
 
 var app_data = {
+	total_song_num: 0,
+	
 	template_music_card: '',
 	template_figure_card: '',
 	template_album_card: '',
@@ -690,31 +717,32 @@ var app_data = {
 }
 
 var app_config = {
-	//ui
-	music_cards_list_num: 10,
+	//ui config
+	music_cards_list_num: 15,
     figure_list_num: 10,
 	
-	//data
+	// 
 	site_path: 'https://santiego.gitee.io/vtb-music/',
 	cookies_save_day: 365,
-	template_path: './source/template/',
-	// for local test:
-	//lyric_path: './source/vtb-music-source-lyric/lyric/',
-	// for release:
-	lyric_path: 'https://santiego.gitee.io/vtb-music-source-lyric/lyric/',
-	song_path: 'https://santiego.gitee.io/vtb-music-source-song/song/',
-	data_path_2: 'https://santiego.gitee.io/vtb-music-source-data-2/',
-	data_path_3: 'https://aqua.chat:64456/',
-    data_path_4: 'https://santiego.gitee.io/vtb-music-source-data-4/',
-    data_path_5: 'https://santiego.gitee.io/vtb-music-source-data-5/',
-    data_path_6: 'https://santiego.gitee.io/vtb-music-source-data-6/',
-    data_path_7: 'https://santiego.gitee.io/vtb-music-source-data-7/',
+
+	//
+	data_path_cdn1: 'https://aqua.chat:64456/',
+	data_path_cdn2: 'https://santiego.gitee.io/vtb-music-source-data-2/',
+    data_path_cdn4: 'https://santiego.gitee.io/vtb-music-source-data-4/',
 	img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/',
 	figure_img_path: 'https://santiego.gitee.io/vtb-music-source-img/img/figure/'
 }
 
+// 测试用
+var app_debug = {
+	clear_playlist: function(){
+		player.playlist = [];
+		Cookies.remove('playlist');
+	}
+}
+
 $(document).ready(function(){
-	data.merge_data();
+	data.load_data();
 });
 
 window.onbeforeunload = function(ev){

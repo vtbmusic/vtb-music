@@ -629,6 +629,12 @@
 	background: url(./source/icon/icon-left-back.png);
 	background-size: cover!important;
 }
+.btn-back-home{
+	width: 1rem;
+	height: 1rem;
+	background: url(./source/icon/icon-home.png);
+	background-size: cover!important;
+}
 .vocal-btn{
 	display: inline-block;
 	float: right;
@@ -666,7 +672,8 @@
 	width: 1rem;
 	height: 1rem;
 	padding: 0.5rem;
-	margin: 1rem;
+	margin: 0.5rem;
+	margin-right: 0.1rem;
 }
 .all-song-list-btn-back:hover{
 	transform: scale(1.1,1.1);

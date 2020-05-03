@@ -3,6 +3,7 @@ var ui = {
 		$('#btn-nav-list').click(function(){
 			let tmp = $('#playlist');
 			if(tmp.attr('data-ui-on') == 'false'){
+				app_playlist.load_playlist();
 				tmp.css('left', '5%');
 				tmp.attr('data-ui-on', 'true');
 			}else{
@@ -48,13 +49,15 @@ var ui = {
 		$('[btn-role="back"]').click(function(){
 			app.close_app();
 		})
+		$('[btn-role="back-home"]').click(function(){
+			app.back_to_home();
+		})
 		$('#index-btn-show-all-songs').click(function(){
 			app.switch_app(app_all_song);
 		})
 		$('#index-btn-show-all-figures').click(function(){
 			app.switch_app(app_all_figures);
 		})
-		$('#footer-song-cnt').text(data_data_songs.length);
 		$('#footer-figure-cnt').text(data_data_figures.length);
 		
 		// set player pos,sz
@@ -62,6 +65,7 @@ var ui = {
 		$('#app-bigplayer').css('margin-top', $('.nav').height()+'px');
 		$('.footer').css('margin-bottom', $('.nav-music-card').height());
 		$('.playlist-list').css('margin-bottom', $('.nav-music-card').height());
+        
 		$('#bigplayer-btn-close2').click(ui.btn_show_hide_bigplayer);
 	},
 	init_music_cards: function(){
@@ -146,7 +150,7 @@ var ui = {
 		}
 	},
 	load_song: function(song_id){
-		let song = data_data_songs[data.get_song_index(song_id)];
+		let song = data.get_song(song_id);
 		$('#nav-music-card-img').attr('style', 'background: url(' + data.get_img_link(song['img'] || (song['vocal'][0]+'.jpg'), song_id) + ')');
 		$('#nav-music-card-title').text(song['name']);
 		$('#nav-music-card-subtitle').html(tools.load_template_vocal(song['vocal']));
@@ -165,11 +169,17 @@ var ui = {
 	},
 	song_list_add_all_songs: function(target){
 		let songs = $(target).find('[data-btn-play]');
-		for(let i=0;i<songs.length;++i){
-			let song_id = Number($(songs[i]).attr('data-btn-play'));
-			console.log('song_id', song_id);
-			player.add_song_to_list(song_id);
+		let list = [];
+		if(target == '#all-songs-music-cards-list'){
+			let tmp = data.get_songs(1, app_data.total_song_num);
+			for(let i in tmp)
+				list.push(tmp[i].Id);
 		}
+		else for(let i=0;i<songs.length;++i){
+			let song_id = Number($(songs[i]).attr('data-btn-play'));
+			list.push(song_id);
+		}
+		player.add_songs_to_list(list);
 	},
 	btn_show_hide_bigplayer: function(){
 		if(app_bigplayer.dom_jq.css('display') == 'none')

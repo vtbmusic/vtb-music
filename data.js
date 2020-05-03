@@ -1,202 +1,132 @@
 var data = {
     //
-    merge_data: function() {
-                data.merge_data_3();
+    data_song: {},
+	// 转换后端数据格式
+    _transform_data: function(obj){
+        if('vocal' in obj) obj.vocal = obj.vocal.split(',');
+        if('CreateTime' in obj) obj.CreateTime = obj.CreateTime.substring(0, 10);
+		obj.CDN = obj.CDN.split(':');
+		if(obj.CDN.length == 1) obj.CDN.push(obj.CDN[0], obj.CDN[0]);
+		// 11:12:13 11图片库 12歌曲库 13歌词库
+        return obj;
     },
-
-    merge_data_3: function() {
-        $.ajax({
-            type: "POST",
-            contentType: 'application/json',
-            url: "https://vtb.aqua.chat/Music_Manage/music_data/GetDataList",
-            data: JSON.stringify({ "PageIndex": 1, "PageRows": 999, "SortField": "Id", "SortType": "asc", "Search": {} }),
-            success: function (result) {
-                var JSONArray = result['Data'];
-                var JSONArray2 = [];
-                var tempJson = {};
-                for (var i in JSONArray) {
-                    tempJson = {};
-                    tempJson['id'] = JSONArray[i].Id;
-                    // 设置key=value 并添加进tempJson对象中
-                    tempJson['name'] = JSONArray[i].name;
-                    tempJson['vocal'] = JSONArray[i].vocal.split(',');
-                    tempJson['img'] = JSONArray[i].img;
-                    tempJson['date'] = JSONArray[i].CreateTime.substring(0, 10);
-                    JSONArray2[i] = tempJson;
-                }
-                let tmp = JSONArray2;
-                
-                data_data_songs = data_data_songs.concat(tmp);
-
-                data_data_songs.sort(function(a, b) {
-                    if (a.date > b.date) return -1;
-                    if (a.date == b.date) return 0;
-                    if (a.date < b.date) return 1;
-                }) // fix me
-                data.merge_data_5();
-            },
-            error: function() {
-                info_app.init_block('网站后台正在更新，请稍后刷新');
-                app.init();
-            }
-        });
-    },
-    merge_data_4: function(){
-		$.ajax({
-			url: app_config.data_path_4 + '1data.json?' + String(tools.get_random_num(1, 10000)),
-			success:function(result){
-				data.merge_data_5();
-			},
-			error:function(){
-				info_app.init_block('网站后台正在更新，请稍后刷新');
-				app.init();
-			}
-		});
+	get_cdn_url: function(id){
+		return app_config.CDN[id];
 	},
-    merge_data_5: function(){
-		$.ajax({
-			url: app_config.data_path_5 + '1data.json?' + String(tools.get_random_num(1, 10000)),
-			success:function(result){
-				let tmp = result['data'];
-				data_data_songs = data_data_songs.concat(tmp);
-				data_data_songs.sort(function(a,b){
-					if(a.date > b.date) return -1;
-					if(a.date == b.date) return 0;
-					if(a.date < b.date) return 1;
-				}) // fix me
-				data.merge_data_6();
-			},
-			error:function(){
-				info_app.init_block('网站后台正在更新，请稍后刷新');
-				app.init();
-			}
-		});
-	},
-    merge_data_6: function(){
-		$.ajax({
-			url: app_config.data_path_6 + '1data.json?' + String(tools.get_random_num(1, 10000)),
-			success:function(result){
-				let tmp = result['data'];
-				data_data_songs = data_data_songs.concat(tmp);
-				data_data_songs.sort(function(a,b){
-					if(a.date > b.date) return -1;
-					if(a.date == b.date) return 0;
-					if(a.date < b.date) return 1;
-				}) // fix me
-				data.merge_data_7();
-			},
-			error:function(){
-				info_app.init_block('网站后台正在更新，请稍后刷新');
-				app.init();
-			}
-		});
-	},
-    merge_data_7: function(){
-		$.ajax({
-			url: app_config.data_path_7 + '1data.json?' + String(tools.get_random_num(1, 10000)),
-			success:function(result){
-				let tmp = result['data'];
-				data_data_songs = data_data_songs.concat(tmp);
-				data_data_songs.sort(function(a,b){
-					if(a.date > b.date) return -1;
-					if(a.date == b.date) return 0;
-					if(a.date < b.date) return 1;
-				}) // fix me
-				app.init();
-			},
-			error:function(){
-				info_app.init_block('网站后台正在更新，请稍后刷新');
-				app.init();
-			}
-		});
-	},
-    //
+	// 获取mp3地址
     get_song_link: function(song_id) {
-        if (String(song_id)[0] == '1')
-            return app_config.song_path + song_id + '.mp3';
-        else if (String(song_id)[0] == '2')
-            return app_config.data_path_2 + song_id + '.mp3';
-        else if (String(song_id)[0] == '3')
-            return app_config.data_path_3 + song_id + '.mp3';
-        else if (String(song_id)[0] == '4')
-            return app_config.data_path_4 + song_id + '.mp3';
-        else if (String(song_id)[0] == '5')
-            return app_config.data_path_5 + song_id + '.mp3';
+		let song_data = data.get_song(song_id);
+		return this.get_cdn_url(song_data.CDN[1]) + song_data.music;
     },
-    get_lyric_link: function(song_id, is_scroll) {
-        let path = "";
-        if (String(song_id)[0] == '1')
-            path = app_config.lyric_path;
-        else if (String(song_id)[0] == '2')
-            path = app_config.data_path_2;
-        else if (String(song_id)[0] == '3')
-            path = app_config.data_path_3;
-        else if (String(song_id)[0] == '4')
-            path = app_config.data_path_4;
-        else if (String(song_id)[0] == '5')
-            path = app_config.data_path_5;
-        if (is_scroll) return path + song_id + "T.txt";
-        else return path + song_id + ".txt";
+    get_lyric_link: function(song_id) {
+		let song_data = data.get_song(song_id);
+		return this.get_cdn_url(song_data.CDN[2]) + song_data.Lyric;
     },
     get_img_link: function(img_name, song_id) {
-        if (String(song_id)[0] == '1')
-            return app_config.img_path + img_name;
-        else if (String(song_id)[0] == '2')
-            return app_config.data_path_2 + img_name;
-        else if (String(song_id)[0] == '3')
-            return app_config.data_path_3 + img_name;
-        else if (String(song_id)[0] == '4')
-            return app_config.data_path_4 + img_name;
-        else if (String(song_id)[0] == '5')
-            return app_config.data_path_5 + img_name;
-        return 'none'
+        let song_data = data.get_song(song_id);
+		return this.get_cdn_url(song_data.CDN[0]) + song_data.img;
     },
     get_album_img_link: function(img) {
         return app_config.img_path + img;
     },
-    //songs
+    //songs 
     get_song: function(song_id) {
-        return data_data_songs[data.get_song_index(song_id)];
-    },
-    get_songs: function(page, per_page_num) {
-        return data_data_songs.slice(per_page_num * (page - 1), per_page_num * page);
-    },
-    get_song_index: function(song_id) {
-        for (let item in data_data_songs)
-            if (data_data_songs[item]['id'] == song_id) {
-                return item;
-            }
-        return -1;
-    },
-    get_song_from_vocal: function(vocal) {
-        let res = [];
-        for (let i in data_data_songs) {
-            for (let j in data_data_songs[i]['vocal'])
-                if (data_data_songs[i]['vocal'][j] == vocal) {
-                    res.push(data_data_songs[i]);
-                    break;
-                }
+        if(song_id in data.data_song){
+            // 如果已经请求过则不再请求
+            return data.data_song[song_id];
         }
+        let res;
+        $.ajax({
+            type: "POST",
+            async: false, // 这里是同步请求，虽然这里最好应该使用异步+回调解决
+            contentType: 'application/json',
+            url: "https://vtb.aqua.chat/Music_Manage/music_data/GetTheData",
+            data: JSON.stringify({ "id": String(song_id)}),
+            success: function (result) {
+                let res_data = result['Data'];
+				console.log('get_song', song_id);
+				if(res_data == null){
+					console.error('不存在歌曲', song_id);
+					return null;
+				}
+                res = data.data_song[res_data.Id] = data._transform_data(res_data);
+            },
+            error: function() {
+				console.error('get_song', song_id, 'erro');
+                info_app.init('获取歌曲失败');
+        }})
         return res;
     },
-    search_song: function(text) {
-        let keywords = text.split(' ');
-        let songs = [];
-        for (let iter in data_data_songs)
-            for (let i in keywords)
-                if (data_data_songs[iter].name.toLowerCase().search(keywords[i].toLowerCase()) != -1 || data._search_vocal(data_data_songs[iter].vocal, keywords[i])) {
-                    songs.push(data_data_songs[iter]);
-                    break;
+    // note: pageIndex 从1开始
+    get_songs: function(page, per_page_num) {
+        var res = [];
+        $.ajax({
+            type: "POST",
+            async: false,
+            contentType: 'application/json',
+            url: "https://vtb.aqua.chat/Music_Manage/music_data/GetDataList",
+            data: JSON.stringify({ "pageIndex": page, "pageRows": per_page_num, "SortField": "CreateTime", "SortType": "desc"}),
+            success: function (result) {
+                let res_data = result['Data'];
+                for(let iter in res_data){
+                    let song_data = data._transform_data(res_data[iter]);
+					if(song_data.Deleted) continue;
+                    data.data_song[res_data[iter].Id] = song_data;
+                    res.push(song_data);
                 }
-
-        return songs;
+				app_data.total_song_num = Number(result['Total']);
+				$('#footer-song-cnt').text(result['Total']);
+            },
+            error: function() {
+                info_app.init('获取歌曲失败');
+            }})
+        return res;
     },
-    _search_vocal: function(vocal, text) {
-        text = text.toLowerCase();
-        for (let i in vocal)
-            if (vocal[i].toLowerCase().search(text) != -1)
-                return true;
-        return false;
+	// 通过歌手获取歌曲
+    get_song_from_vocal: function(vocal) {
+        let res = [];
+        $.ajax({
+            type: "POST",
+            async: false,
+            contentType: 'application/json',
+            url: "https://vtb.aqua.chat/Music_Manage/music_data/GetDataList",
+            data: JSON.stringify({ "search": {"condition": "vocal", "keyword": vocal}, "pageIndex": 1, "pageRows": 9999, "SortField": "CreateTime", "SortType": "desc"}),
+            success: function (result) {
+                let res_data = result['Data'];
+                for(let iter in res_data){
+					let song_data = data._transform_data(res_data[iter]);
+					if(song_data.Deleted) continue;
+                    data.data_song[res_data[iter].Id] = song_data;
+                    res.push(song_data);
+                }
+            },
+            error: function() {
+                info_app.init('获取歌曲失败');
+            }})
+        return res;
+    },
+	// 搜索歌曲
+    search_song: function(text) {
+        let songs = [];
+        $.ajax({
+            type: "POST",
+			async: false,
+            contentType: 'application/json',
+            url: "https://vtb.aqua.chat/Music_Manage/music_data/GetDataList",
+            data: JSON.stringify({ "search": {"condition": "name", "keyword": text}, "pageIndex": 1, "pageRows": 9999, "SortField": "CreateTime", "SortType": "desc"}),
+            success: function (result) {
+                let res_data = result['Data'];
+                for(let iter in res_data){
+                    let song_data = data._transform_data(res_data[iter]);
+					if(song_data.Deleted) continue;
+                    data.data_song[res_data[iter].Id] = song_data;
+                    songs.push(song_data);
+                }
+            },
+            error: function() {
+                info_app.init('获取歌曲失败');
+            }})
+        return songs;
     },
     //figures
     get_figure: function(figure_name) {
@@ -231,5 +161,30 @@ var data = {
     },
     get_album_songs_id: function(name) {
         return data.get_album(name).songs;
-    }
+    },
+	// 网页渲染前加载必要数据
+	load_data: function() {
+		// load CDN
+		$.ajax({
+			type: "POST",
+			async: false,
+			contentType: 'application/json',
+			url: "https://vtb.aqua.chat/CDN_Manage/storage_data/GetDataList",
+			data: JSON.stringify({ "PageIndex": 1, "PageRows": 9999}),
+			success: function (result) {
+				let res_data = result['Data'];
+				app_config.CDN = {};
+				for(let i in res_data)
+					app_config.CDN[res_data[i].name] = res_data[i].url;
+			},
+			error: function() {
+				info_app.init('获取CDN失败');
+		}})
+		// 新版上线后最好清除以前的playlist数据
+		if(Cookies.get('vtb-music-version-20050301') == null){
+			Cookies.set('vtb-music-version-20050301', true);
+			app_debug.clear_playlist();
+		}
+		app.init();
+    },
 }

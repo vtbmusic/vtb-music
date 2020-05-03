@@ -3,6 +3,7 @@ var ui = {
 		$('#btn-nav-list').click(function(){
 			let tmp = $('#playlist');
 			if(tmp.attr('data-ui-on') == 'false'){
+				app_playlist.load_playlist();
 				tmp.css('left', '75%');
 				tmp.attr('data-ui-on', 'true');
 			}else{
@@ -48,6 +49,9 @@ var ui = {
 		$('[btn-role="back"]').click(function(){
 			app.close_app();
 		})
+		$('[btn-role="back-home"]').click(function(){
+			app.back_to_home();
+		})
 		$('#index-btn-show-all-songs').click(function(){
 			app.switch_app(app_all_song);
 		})
@@ -69,8 +73,8 @@ var ui = {
 		player.dom.onvolumechange = function(){
 			$("#nav-vol-control-now").css('width', player.dom.volume*100+'%');
 		}
-		$('#footer-song-cnt').text(data_data_songs.length);
 		$('#footer-figure-cnt').text(data_data_figures.length);
+        
 	},
 	init_music_cards: function(){
 		$('.music-card-body .btn-sm-more').click(function(){
@@ -151,9 +155,43 @@ var ui = {
 	},
 	load_song: function(song_id){
 		let song = data.get_song(song_id);
-		$('#nav-music-card-img').attr('style', 'background: url(' + data.get_img_link(song['img'] || (song['vocal'][0]+'.jpg'), song['id']) + ')');
+		$('#nav-music-card-img').attr('style', 'background: url(' + data.get_img_link(song['img'] || (song['vocal'][0]+'.jpg'), song.Id) + ')');
 		$('#nav-music-card-title').text(song['name']);
 		$('#nav-music-card-subtitle').html(tools.load_template_vocal(song['vocal']));
+		//this.switch_scroll();
+	},
+	scroll_timer: null,
+	switch_scroll: function(){
+		let body = $('#scoller-body')[0];
+		let scoller = $('#nav-music-card-scoller')[0];
+		let text = $('#nav-music-card-title')[0];
+		if(body.offsetWidth > text.offsetWidth){
+			clearInterval(this.scroll_timer);
+			scoller.offsetWidth = 0;
+			return;
+		}
+		let info_scr = $('#scoller-body');
+		let div = $('#nav-music-card-scoller');
+		let p = $('#nav-music-card-title')[0];
+		let div_w = info_scr.offsetWidth;
+		let p_w = p.offsetWidth;
+		if (div_w > p_w) {
+			div.style.width = 'auto';
+			let p_2 = $('#nav-music-card-title')[1];
+			if (p_2) {
+				p_2.remove();
+			}
+			return false;
+		}
+		div.style.width = '50rem';
+		div.innerHTML += div.innerHTML;
+		setInterval(function () {
+			if (p_w <= info_scr.scrollLeft) {
+				info_scr.scrollLeft -= p_w;
+			} else {
+				info_scr.scrollLeft++;
+			}
+		}, 30);
 	},
 	btn_show_hide_bigplayer: function(){
 		if(app_bigplayer.dom_jq.css('display') == 'none')
@@ -176,7 +214,12 @@ var ui = {
 	song_list_add_all_songs: function(target){
 		let songs = $(target).find('[data-btn-play]');
 		let list = [];
-		for(let i=0;i<songs.length;++i){
+		if(target == '#all-songs-music-cards-list'){
+			let tmp = data.get_songs(1, app_data.total_song_num);
+			for(let i in tmp)
+				list.push(tmp[i].Id);
+		}
+		else for(let i=0;i<songs.length;++i){
 			let song_id = Number($(songs[i]).attr('data-btn-play'));
 			list.push(song_id);
 		}

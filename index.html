@@ -49,8 +49,12 @@
 						<div class="nav-music-card-img" id="nav-music-card-img"></div>
 					</div>
 					<div class="nav-music-card-body" id="nav-music-card-body">
-						<div class="nav-text">
-							<div class="nav-music-card-title" id="nav-music-card-title">Vtb-Music</div>
+						<div id="nav-text" class="nav-text">
+							<div id="scoller-body">
+								<div id="nav-music-card-scoller" class="nav-music-card-scoller">
+									<div class="nav-music-card-title" id="nav-music-card-title">Vtb-Music</div>
+								</div>
+							</div>
 							<div class="nav-music-card-subtitle" id="nav-music-card-subtitle">...</div>
 						</div>
 						<div class="nav-play-bar-bg" id="nav-play-bar-bg"></div>
@@ -125,8 +129,11 @@
 		</div>
 		<div id="app-vocal" style="display: none;">
 			<div class="vocal-body block">
-				<div class="song-list-btn-back" btn-role="back">
-					 <div class="btn-back"></div>
+				<div class="all-song-list-btn-back" btn-role="back">
+					<div class="btn-back"></div>
+				</div>
+				<div class="all-song-list-btn-back" btn-role="back-home">
+					<div class="btn-back-home"></div>
 				</div>
 				<div>
 					<div class="vocal-img" style="background: url(./source/img/figure/夏色祭.png)" id="vocal-img"></div>
@@ -147,8 +154,11 @@
 		</div>
 		<div id="app-album" style="display: none;">
 			<div class="vocal-body block">
-				<div class="song-list-btn-back" btn-role="back">
-					 <div class="btn-back"></div>
+				<div class="all-song-list-btn-back" btn-role="back">
+					<div class="btn-back"></div>
+				</div>
+				<div class="all-song-list-btn-back" btn-role="back-home">
+					<div class="btn-back-home"></div>
 				</div>
 				<div>
 					<div class="vocal-img" style="background: url(./source/img/figure/夏色祭.png)" id="album-img"></div>
@@ -172,6 +182,9 @@
 						<div class="all-song-list-btn-back" btn-role="back">
 							<div class="btn-back"></div>
 						</div>
+						<div class="all-song-list-btn-back" btn-role="back-home">
+							<div class="btn-back-home"></div>
+						</div>
 						<div class="all-song-list-title">所有歌曲</div>
 					</div>
 					<div style="margin-top: 1rem;">
@@ -189,7 +202,10 @@
 			<div class="all-songs-body block">
 				<div style="margin-bottom: 1rem;">
 					<div class="all-song-list-btn-back" btn-role="back">
-						<div class="btn-back"></div>
+							<div class="btn-back"></div>
+					</div>
+					<div class="all-song-list-btn-back" btn-role="back-home">
+						<div class="btn-back-home"></div>
 					</div>
 					<div class="all-song-list-title">所有人物</div>
 				</div>
@@ -224,7 +240,7 @@
 	<script src="ui.js"></script>
 	
 	<!-- Data -->
-	<script src="./source/data/songs.js"></script>
+	<script src="./template.js"></script>
 	<script src="./source/data/figures.js"></script>
 	<script src="./source/data/albums.js"></script>
 		
