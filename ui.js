@@ -62,6 +62,10 @@ var ui = {
 			ui.btn_show_hide_bigplayer();
 		})
 		
+		$('#btn-playlist-clear').click(function(){
+			player.clear_play_list();
+		})
+		
 		$("#nav-vol-control-bg").mousedown(function(ev){
 			let tmp = (ev.clientX - $(this).offset().left)/$(".nav-vol-control-body").width();
 			player.dom.volume = tmp;		
@@ -114,11 +118,6 @@ var ui = {
 			var tmp = $(this).parent().find('.btn-sm-more').find('div');
 			tmp.css('display', 'none');
 		});
-	},
-	init_playlist: function(){
-		$('#btn-playlist-clear').click(function(){
-			player.clear_play_list();
-		})
 	},
 	btn_nav_play_pause: function(){
 		if(player.dom.paused){
