@@ -830,7 +830,7 @@ var data_data_figures = [
 		}
 	},
 	{
-		"name": "冰糖",
+		"name": "进击的冰糖",
 		"jpname": "",
 		"img": "冰糖.png",
 		"group": [""],
