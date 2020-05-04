@@ -34,6 +34,11 @@ var ui = {
 		$('#btn-nav-pre').click(function(){
 			player.play_pre();
 		});
+		
+		$('#btn-playlist-clear').click(function(){
+			player.clear_play_list();
+		})
+		
 		$('#nav-music-card-title').click(function(){
 			ui.btn_show_hide_bigplayer();
 		})
@@ -110,11 +115,6 @@ var ui = {
 			var tmp = $(this).parent().find('.btn-sm-more').find('div');
 			tmp.css('display', 'none');
 		});
-	},
-	init_playlist: function(){
-		$('#btn-playlist-clear').click(function(){
-			player.clear_play_list();
-		})
 	},
 	btn_nav_play_pause: function(){
 		if(player.dom.paused){

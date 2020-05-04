@@ -549,7 +549,7 @@ var model_load_lyric = {
 				model_load_lyric.scroll_lyric();
 			},
 			error:function(){
-				$.target.append('<p>暂无歌词</p>');
+				target.append('<p>暂无歌词</p>');
 			}
 		});
 	},
