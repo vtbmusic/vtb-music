@@ -829,6 +829,25 @@ var data_data_figures = [
 			"Youtube": "https://www.youtube.com/channel/UCupCAZz1l52vV8m-dvaoBVQ/",
 		}
 	},
+	{
+		"name": "冰糖",
+		"jpname": "",
+		"img": "冰糖.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/198297",
+		}
+	},
+    {
+		"name": "阳向心美",
+		"jpname": "阳向ここみ",
+		"img": "阳向心美.png",
+		"group": [""],
+		"links":{
+			"Bilibili": "https://space.bilibili.com/492862",
+			"Youtube": "https://www.youtube.com/channel/UCU0zun8U7X-d45G0xt4KsiQ",
+		}
+	},
     {
 		"name": "猫宫日向",
 		"jpname": "猫宮ひなた",
