@@ -1,59 +1,51 @@
 # [Vtb-Music](https://santiego.gitee.io/vtb-music/)
 
-[https://santiego.gitee.io/vtb-music/](https://santiego.gitee.io/vtb-music/)
+网站地址: [https://santiego.gitee.io/vtb-music/](https://santiego.gitee.io/vtb-music/)  
+**一个收录 VTuber 歌曲的音乐网站 🎧**
 
-**一个收录VTuber歌曲的音乐网站🎧**
+# 关于本站
 
-得利于Gitee，各位有能DD都可以参与贡献开发！
+记得大概在 3 月下旬左右，当时听完星姐的歌回 LIVE 后，热泪盈眶，一时冲动花了几个中午写了一个网站，利用 Gitee 的 `Pages` 服务，并让用户通过提交 `Pull Request` 的方式来上传歌曲。
 
-如何上传歌曲？如何新建人物？[参考这里！](https://gitee.com/santiego/vtb-music/wikis/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E6%AD%8C%E6%9B%B2?sort_id=2062741)
+之后，越来越多的dd无偿参与到网站的建设，歌曲从原来建站时的两位数猛增到现在的500+！ 
+越来越多的开发大佬加入到我们，如今网站已经开始脱离 Gitee ，开始拥有了自己的服务器和后端 (虽然主站还是部署在 Gitee Pages )  
 
-官方交流QQ大群： `737972812`，欢迎各位`dd`加入讨论、上传歌曲
+# 如果你是一位有能 dd 或单推人...
 
-开发小组QQ群：`392381367`，欢迎开发大佬加入
+### 想要帮忙上传歌曲或者帮忙丰富曲库？
 
-[网站指南Wiki](https://gitee.com/santiego/vtb-music/wikis/Vtb-Music)
+VTB-Music 官方 QQ 大群：[737972812](https://jq.qq.com/?_wv=1027&k=5EqZYKh)  
+官方歌曲上传指南: [https://gitee.com/misaka_l/vtb-music/wikis/如何上传歌曲](https://gitee.com/misaka_l/vtb-music/wikis/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E6%AD%8C%E6%9B%B2)
 
----
+### 想要为网站做开发修 Bug 完善网站功能？
 
-记得大概3月下旬左右，当时听完星姐的歌回LIVE后，热泪盈眶，一时冲动花了几个中午写了一个网站，利用gitee的`pages`服务，并让用户通过提交`pull request`的方式来上传歌曲。
+VTB-Music 开发者小组 QQ 群：[392381367](https://jq.qq.com/?_wv=1027&k=5jg8bYq)  
+给我们反馈 Bug 提建议！: [访问 Issues](https://gitee.com/misaka_l/vtb-music/issues)
 
-之后，越来越多的dd无偿参与到网站的建设，歌曲从原来建站时的两位数猛增到现在的500+；
+### 如果您非常有能，还请继续往下看
 
-越来越多的开发大佬加入到我们，如今网站已经开始脱离gitee，开始拥有了自己的服务器和后端（网页仍部署在gitee上）……
+# 关于开发
 
-但是网站仍然需要更多的开发者参与，网站现在需要**开发App**，需要**重构老旧完全原生的前端**
+Api 文档: [https://www.showdoc.cc/VtbMusic](https://www.showdoc.cc/VtbMusic)
 
-如果你也是一位有能dd，有意愿请加入我们，一起开发、完善这个网站，请联系我们：
+## 前端
 
-vtb-music官方QQ大群：`737972812`
+### 注意事项
 
-vtb-music开发者小组QQ群：`392381367`
+- **Vtb-Music** 基于 `Gitee Pages` 服务，前端和大部分音乐 / 歌词 / 图片数据的保存在 Gitee 的仓库中 ( 主要是没钱租服务器 )
+- 网站前端没有使用任何框架，全部由原生 `jQuery` 开发。
+- 网站目前急需重构前端
+- 虽然是静态网页，但由数据驱动、动态渲染。
+- 网站一部分数据和数据接口已转移到后端服务器上，目前是前后端混用。
 
-（打轴\翻译\剪辑man也可以来哦~）
+## 后端
 
----
-
-## 开发
-
-#### 总
-
-目前网站暂时依托于`Gitee Pages`服务，已拥有网站自己的服务器和后端，后端上传歌曲功能即将上线(之前是通过用户提交`pull request`来上传歌曲的)
-
-**网站后端（[项目地址](https://gitee.com/Dishone/vtb-music-admin-netcore)）正在由[Dishone](https://gitee.com/Dishone)开发中**，即将上线。
+- 网站后端 [项目地址](https://gitee.com/Dishone/vtb-music-admin-netcore) 正在由 [Dishone](https://gitee.com/Dishone) 开发中
+- 后端部分功能已上线
 
 **网站前端**（适配后端api）：[vtb-music-web](https://gitee.com/mrams/vtb-music-web) **（在这个仓库进行最新开发）**
 
-#### 关于前端
-
-网站前端没有使用任何框架，全部由原生`jQuery`开发，虽然是静态网页，但由数据驱动、动态渲染。另外如你所见，**Vtb-Music**基于Gitee Pages 服务，所有网页、歌曲、数据均保存在Gitee仓库中，也正因如此，直接省去了网站后端，也使各位有能DD可以**直接参与**到**Vtb-Music**的开发维护（决定因素还是因为不用租服务器🤣）。但有利有弊，由于Gitee Pages 服务的限制，后端全部由前端完成渲染，并且用户部分交互需要通过Gitee完成，较为繁琐。
-
-目前需要有能man使用框架重构前端代码（比如`vue.js`）
-
-本站是完全开源开放且部署在[gitee](https://gitee.com/)上的，所以各位dd可以通过gitee上传歌曲甚至参与开发，**欢迎各位有能DD参与开发**。
-因为开发者本人为在校高中生，所以`pull request`审核可能稍慢，网站代码质量、可读性望包涵。
-
-下一步开发目标：
+## 开发目标
 
 - [x] 适配手机端
 - [x] 音量控制
@@ -62,17 +54,51 @@ vtb-music开发者小组QQ群：`392381367`
 - [x] 滚动字幕
 - [ ] 考虑使用`vue.js`重构
 
-#### 相关项目仓库地址
+## 相关项目仓库地址
 
-- 网站后端 [vtb-music-admin-netcore](https://gitee.com/Dishone/vtb-music-admin-netcore)
-- 网站新前端 [vtb-music-web](https://gitee.com/mrams/vtb-music-web)
+### 数据仓库
 
-- 网站数据仓库 [data-4](https://gitee.com/santiego/vtb-music-source-data-4)
-- 网站数据仓库 [data-3](https://gitee.com/santiego/vtb-music-source-data-3)（已无法访问）
-- 网站数据仓库 [data-2](https://gitee.com/santiego/vtb-music-source-data-2)
-- 网站数据仓库 [data-1-song](https://gitee.com/santiego/vtb-music-source-song) [data-1-img](https://gitee.com/santiego/vtb-music-source-img) [data-1-lyric](https://gitee.com/santiego/vtb-music-source-lyric)
+- 数据 4 号仓: [data-4](https://gitee.com/santiego/vtb-music-source-data-4)
+- 数据 3 号仓: [data-3](https://gitee.com/santiego/vtb-music-source-data-3) ( 已封仓 )
+- 数据 2 号仓: [data-2](https://gitee.com/santiego/vtb-music-source-data-2) ( 已满 )
+- 数据 1 号仓-歌曲: [data-1-song](https://gitee.com/santiego/vtb-music-source-song)
+- 数据 1 号仓-图片: [data-1-img](https://gitee.com/santiego/vtb-music-source-img)
+- 数据 1 号仓-歌词: [data-1-lyric](https://gitee.com/santiego/vtb-music-source-lyric)
 - 网站图床 [vtb-music-source-img](https://gitee.com/santiego/vtb-music-source-img)
 
-## [声明](https://gitee.com/santiego/vtb-music/wikis/%E5%A3%B0%E6%98%8E)
+**不建议向 1 号仓提交内容,因为网站数据格式已修改**
 
+### 代码仓
 
+- 网站后端代码仓: [vtb-music-admin-netcore](https://gitee.com/Dishone/vtb-music-admin-netcore)
+- 网站新前端: [vtb-music-web](https://gitee.com/mrams/vtb-music-web) ( 已完成迁移 )
+
+# 关于版权
+本站所有资源信息来自互联网免费共享，无广告、无盈利。
+如您认为本站页面信息侵犯了您的权益，请附上版权证明联系以下管理员，我们会尽快回复。
+- [Aatrox](https://gitee.com/Aatroxayi)
+- [清楚担当](https://gitee.com/mima4561834)
+- [toumakasusa](https://gitee.com/toumakasusa)
+- [comnt_uno](https://gitee.com/comnt_uno)
+- [Dishone](https://gitee.com/Dishone)
+
+**下面就是这个关于版权的不同语言版本了**
+# の版権を取
+**このページは機械翻訳である**
+当ステーションのすべての資源の情報はインターネットから無料で共有して、広告がない、利益がない。
+当サイトのページ情報があなたの権益を侵害しているとお考えの場合は、著作権証明書を添付して以下の管理者に連絡してください。
+- [Aatrox](https://gitee.com/Aatroxayi)
+- [清楚担当](https://gitee.com/mima4561834)
+- [toumakasusa](https://gitee.com/toumakasusa)
+- [comnt_uno](https://gitee.com/comnt_uno)
+- [Dishone](https://gitee.com/Dishone)
+
+# About the copyright
+**This page is machine translated**
+All resources of the site information from the Internet free sharing, no advertising, no profit.
+If you think the information on this website infringes your rights and interests, please attach the copyright certificate to contact the following administrator, we will reply as soon as possible.
+- [Aatrox](https://gitee.com/Aatroxayi)
+- [清楚担当](https://gitee.com/mima4561834)
+- [toumakasusa](https://gitee.com/toumakasusa)
+- [comnt_uno](https://gitee.com/comnt_uno)
+- [Dishone](https://gitee.com/Dishone)
