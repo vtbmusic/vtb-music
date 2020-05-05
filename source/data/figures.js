@@ -833,7 +833,7 @@ var data_data_figures = [
 		"name": "进击的冰糖",
 		"jpname": "",
 		"img": "冰糖.png",
-		"group": [""],
+		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/198297",
 		}
@@ -842,7 +842,7 @@ var data_data_figures = [
 		"name": "阳向心美",
 		"jpname": "阳向ここみ",
 		"img": "阳向心美.png",
-		"group": [""],
+		"group": [],
 		"links":{
 			"Bilibili": "https://space.bilibili.com/492862",
 			"Youtube": "https://www.youtube.com/channel/UCU0zun8U7X-d45G0xt4KsiQ",
