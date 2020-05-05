@@ -15,12 +15,11 @@
 ### 想要帮忙上传歌曲或者帮忙丰富曲库？
 
 VTB-Music 官方 QQ 大群：[737972812](https://jq.qq.com/?_wv=1027&k=5EqZYKh)  
-官方歌曲上传指南: [https://gitee.com/misaka_l/vtb-music/wikis/如何上传歌曲](https://gitee.com/misaka_l/vtb-music/wikis/%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E6%AD%8C%E6%9B%B2)
 
 ### 想要为网站做开发修 Bug 完善网站功能？
 
 VTB-Music 开发者小组 QQ 群：[392381367](https://jq.qq.com/?_wv=1027&k=5jg8bYq)  
-给我们反馈 Bug 提建议！: [访问 Issues](https://gitee.com/misaka_l/vtb-music/issues)
+给我们反馈 Bug 提建议！: [访问 Issues](https://gitee.com/santiego/vtb-music/issues)
 
 ### 如果您非常有能，还请继续往下看
 
