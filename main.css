@@ -16,7 +16,7 @@
 	height: 4rem;
 	width: 100%;
 	position: fixed;
-	z-index: 3;
+	z-index: 5;
 	top: 0;
 	background-color: rgba(256,256,2561,0.9);
 	-webkit-backdrop-filter: blur(0.5rem);
@@ -178,6 +178,7 @@
 	top: 8%;
 	left: 100%;
 	overflow-y: auto;
+	overflow-x: hidden;
 	z-index: 3;
 	/*background: white;*/
 	background-color: rgba(256,256,256,0.9);
