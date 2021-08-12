@@ -25,7 +25,7 @@ VTB-Music 开发者小组 QQ 群：[392381367](https://jq.qq.com/?_wv=1027&k=5jg
 
 # 关于开发
 
-Api 文档: [https://www.showdoc.cc/VtbMusic](https://www.showdoc.cc/VtbMusic)
+Api 文档: [https://api.aqua.chat/swagger/index.html](https://api.aqua.chat/swagger/index.html)
 
 ## 前端
 
